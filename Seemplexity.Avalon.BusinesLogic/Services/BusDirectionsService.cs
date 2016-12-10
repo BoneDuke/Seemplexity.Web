@@ -106,7 +106,7 @@ namespace Seemplexity.Avalon.BusinesLogic.Services
             {
                 var tourListKeys = _tourLists.Where(t => t.TL_CNKEY == countryKey).Select(t => t.TL_KEY).ToList();
 
-                var startDate = DateTime.Today.AddDays(-100);
+                var startDate = DateTime.Today;
 
                 var dates = context.TurDates
                     .Where(d => tourListKeys.Contains(d.TD_TRKEY) && d.TD_DATE >= startDate)
