@@ -1,0 +1,360 @@
+﻿@using System.Threading
+@using Seemplexity.Avalon.BusinesLogic.Model
+@using Seemplexity.Resources
+@model Seemplexity.Web.Models.BusViewModel
+
+@{
+    ViewBag.Title = Resources.BusTickets;
+}
+
+@section head
+{
+    @Scripts.Render("~/bundles/datepicker")
+
+    @Styles.Render("~/Content/datepicker")
+    @Scripts.Render("~/Scripts/Pages/Bus.js")
+}
+
+
+<script>
+function set_hotel($city,$hotel,$pitanie){		
+		load_ajax($city,$hotel,$pitanie);
+	}
+	
+function update_all_hotel() {
+set_hotel(8,524);
+/*set_hotel(281,4669); */
+set_hotel(8,102);
+
+set_hotel(131,1833);
+set_hotel(131,1552);
+
+	}
+
+function load_ajax($city,$hotel,$pitanie){   
+	/*url research*/	
+
+   var strSearch   = window.location.search.substr(1);
+  var strPattern  = /([^=]+)=([^&]+)&?/ig;
+  var arrMatch    = strPattern.exec(strSearch);
+  var objRes      = {};
+    while (arrMatch != null) {
+        objRes[arrMatch[1]] = arrMatch[2];
+        arrMatch = strPattern.exec(strSearch);
+    }
+     
+   var urltourtype = objRes['tourtype'];
+		
+		if (urltourtype) {
+		/*document.getElementById('city_from').options[urldepartFrom].selected = true;*/
+		var tourtypeid = urltourtype;
+		} else
+		{ var tourtypeid = 0; } 
+		
+		/*url research*/	
+	
+	var countryid = 4;
+	var countryname = 'bulgaria';
+	
+	var townid = $city;
+	var hotelid = $hotel;
+	
+	var townname = '0';
+    var cityfrom = '0';
+	  
+    var dateFrom = $("#date").val();
+	 var dateTo = $("#date").val();	 
+					
+    var nights = 1;
+	
+	 if ($pitanie === undefined) {
+		var pansion = 0;
+	} 
+	else 
+	{
+		if ($("#pansion_type").val()==0) 
+			{
+			var pansion=$pitanie;
+			} 
+			else 
+			{
+			pansion=$("#pansion_type").val();
+			}
+	}
+  
+	
+	
+	
+	var adults=2;
+	var kids=0;
+	
+	
+	$("#SearchResults"+hotelid).empty();
+	$("#SearchResults"+hotelid).append('<i style="margin:20px 0 0 -5px;" class="fa fa-spinner fa-pulse fa-2x"></i>');
+
+    $.ajax({
+        url: "http://www.justosay.ru/appi/balkan_bron_only_1_pit_booking.php",
+        type: "POST",
+        data: {
+			countryid: countryid,
+            countryname: countryname,
+			townid: townid,
+			townname: townname,
+			cityfrom: cityfrom,
+			tourtype: tourtypeid,
+			hotelid: hotelid,
+            pansion: pansion,            
+			dateFrom: dateFrom,
+			dateTo: dateTo,
+            nights: nights, 
+			kids: kids,
+			adults: adults
+			
+        },
+        dataType: "html",
+        success: function(html){
+		
+		document.getElementById('SearchResults'+hotelid).innerHTML = ""; // очищаем Select
+					
+		$("#SearchResults"+hotelid).append(html+'<span class="rub">EU</span>');		
+		
+		$("#SearchResults"+hotelid+" a").removeAttr('href'); 
+		
+		/*$("#SearchResults"+hotelid+" a").click(function(){ miracle("'"+hotelid+"'"); });*/
+		/*var link = $('a');
+		link.replaceWith(link.text());*/	
+				
+
+        }
+        
+    }); 
+ /*best by table*/
+  
+     }
+	 </script>
+
+
+
+
+<div class="container body-content rwx-10" style="margin-top:50px;">
+<form class="search-form" id="busFilter" action="@Url.Action()">
+
+    <div class="row">
+        <div class="col-md-3" style="display:none;">
+            <div class="form-group">
+                <label for="countryTo">@Resources.Country</label>
+                <select class="form-control" id="countryTo" name="CountryTo">
+                    @foreach (var country in Model.CountriesTo)
+                    {
+                        <option value="@country.Value" selected="@country.Selected">@country.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="cityFrom">@Resources.From</label>
+                <select class="form-control" id="cityFrom" name="CityFrom">
+                    @foreach (var city in Model.CitiesFrom)
+                    {
+                        <option value="@city.Value" selected="@city.Selected">@city.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="cityTo">@Resources.Where</label>
+                <select class="form-control" id="cityTo" name="CityTo">
+                    @foreach (var city in Model.CitiesTo)
+                    {
+                        <option value="@city.Value" selected="@city.Selected">@city.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="date">@Resources.When</label>
+                <div class="date">
+                    <input type="text" class="form-control" name="Date" id="date" value="@(Model.DatesModel.SelectedDate?.ToString("dd.MM.yyyy") ?? string.Empty)" readonly="readonly">
+                </div>
+            </div>
+        </div>
+		<div class="col-md-3">
+			<label for="button">&nbsp;</label>
+				  <div>
+				  <input style="    width: 100%;" type="submit" value="@Resources.FindBuses" class="btn btn-success"/>
+					</div>
+		</div>
+    </div>
+
+    <input type="hidden" id="lang" value="@Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName"/>
+
+    
+
+</form>
+</div>
+
+<div class="clearer"></div>
+
+<div class="result-table" style="display:none;">
+<div class="container body-content rwx-10">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <td>@Resources.Bus</td>
+            <td>@Resources.TicketFrom</td>
+            <td>@Resources.TicketTo</td>
+            <td></td>
+            <td style="text-align: center;">@Resources.NumberOfPlaces</td>
+            <td>@Resources.Price</td>
+            <td>@Resources.Tickets</td>
+        </tr>
+        </thead>
+        <tbody>
+        @{
+            var counter = 0;
+        }
+        @foreach (var res in Model.SearchResult)
+        {
+            counter++;
+			
+				<script>
+			update_all_hotel();		
+			$(".result-table").show(); 
+			/*$(".expo-table").hide(); */
+			</script>
+			
+            <tr id="row_@counter"
+                data-toggle="modal"
+                data-service-list-key="@res.ServiceListKey"
+                data-partner-key="@res.PartnerKey"
+                data-modal-div="modalData"
+                data-modal-div-large="modalDataLarge"
+                data-date="@res.Date.ToString("dd.MM.yyyy")"
+                data-service-list-name="@res.TimeFrom">
+                <td>
+                    <span>@($"{res.TimeFrom}")</span>
+                </td>
+                <td>
+                    <div>@res.CityFrom.Item2.Actual</div>
+                </td>
+                <td>
+                    <span>@res.CityTo.Item2.Actual</span>
+                </td>
+                <td>
+                    @if (res.HasDescription)
+                    {
+                        <i class="fa fa-info-circle info-link js-modal-bus-description" title="@Resources.Info" data-row-counter="@counter"></i>
+                    }
+                </td>
+                <td style="text-align: center;">
+                    @switch (res.QuotaState)
+                    {
+                        case QuotesStates.Availiable:
+                            <button type="button" class="btn btn-success">@res.Places</button>
+                            break;
+                        case QuotesStates.Small:
+                            <button type="button" class="btn btn-info">@res.Places</button>
+                            break;
+                        case QuotesStates.Request:
+                            <button type="button" class="btn btn-warning">@Resources.Request</button>
+                            break;
+                        case QuotesStates.No:
+                            <button type="button" class="btn btn-danger">@Resources.NoPlaces<</button>
+                            break;
+                        case QuotesStates.None:
+                            <button type="button" class="btn btn-default">-</button>
+                            break;
+                    }
+                </td>
+                <td>@res.Price @res.Rate.Actual</td>
+                <td>
+                    <input type="button" value="@Resources.Scheme" class="btn btn-primary js-modal-transport-scheme" data-row-counter="@counter" />
+                </td>
+            </tr>
+        }
+
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+<div class="expo-table">
+<div class="container rwx-10">
+<div class="col-md-3">
+<h4> <i class="fa fa-cc-visa fa-3x"></i>&nbsp;&nbsp;<i class="fa fa-cc-mastercard fa-3x"></i><br/> Безопасная оплата </h4>
+</div>
+<div class="col-md-3">
+<h4> <i class="fa fa-share-alt-square fa-3x"></i><br/>  Быстрое оформление </h4>
+</div>
+<div class="col-md-3">
+
+<h4><i class="fa fa-volume-control-phone fa-3x"></i><br/> Круглосуточная поддержка </h4>
+</div>
+<div class="col-md-3">
+<h4><i class="fa fa-university fa-3x"></i><br/> Возврат средств</h4>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="container rwx-10">
+	 <div class="row">                  
+				  <div class="col-xs-6 col-sm-3 col-md-3">
+                       <div class="thumbnail shadow_hotels">
+							<h4><a onclick="miracle(102);">Добруджа 3* <br/> Албена</a></h4>
+						   <img onclick="miracle(102);" src="http://www.balkan.ru/images/2015/bulgaria/albena/dobrudga.jpg" alt="">
+                            <div class="caption">
+             <div class="searchresults" onclick="miracle(102);" id="SearchResults102"> </div>
+			 <input style="display:none;" id="102" value="/bulgaria/albena/dobrudja.php">
+                            </div>
+                        </div>
+                    </div>                
+					 
+					 <div class="col-xs-6 col-sm-3 col-md-3">
+                         <div class="thumbnail shadow_hotels">
+							<h4><a onclick="miracle(524);">Ком 3* <br/>Албена</a></h4>
+							
+						   <img onclick="miracle(524);" src="http://www.balkan.ru/images/2015/bulgaria_hotels/com.jpg" alt="">
+                            <div class="caption">
+             <div class="searchresults" onclick="miracle(524);" id="SearchResults524"> </div>
+			 <input style="display:none;" id="524" value="/bulgaria/albena/kom.php">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="thumbnail shadow_hotels">
+							<h4><a onclick="miracle(1833);">Холидей Вилладж 4*<br/>Дюни</a></h4>
+				
+						  <img onclick="miracle(1833);" src="http://www.balkan.ru/images/2015/bulgaria_hotels_new/holdiay_village.jpg" alt="">
+                            <div class="caption">
+             <div class="searchresults" onclick="miracle(1833);" id="SearchResults1833"> </div>
+			  <input style="display:none;" id="1833" value="/bulgaria/duni/holidei_vilidg.php">
+
+                            </div>
+                        </div>
+
+                    </div> 
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                       <div class="thumbnail shadow_hotels">
+							<h4><a onclick="miracle(1552);">Марина Бич 5*<br/>Дюни</a></h4>
+						  <img onclick="miracle(1552);" src="http://www.balkan.ru/images/2015/bulgaria_hotels_new/marina_beach.jpg" alt="">
+                            <div class="caption">
+             <div class="searchresults" onclick="miracle(1552);" id="SearchResults1552"> </div>
+			  <input style="display:none;" id="1552" value="/bulgaria/duni/marina_biich.php">
+
+                            </div>
+                        </div>
+
+                    </div>
+				
+				</div>
+			
+
+<div class="modal fade" id="modalData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+<div class="modal fade bs-example-modal-lg" id="modalDataLarge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>

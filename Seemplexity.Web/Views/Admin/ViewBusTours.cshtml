@@ -1,0 +1,63 @@
+﻿@using Seemplexity.Resources
+@model Seemplexity.Web.Models.Admin.BusTourViewModel
+
+@{
+    ViewBag.Title = "ViewBusTourTypes";
+    Layout = "_Layout.cshtml";
+}
+
+<h2>@Resources.TourTypes</h2>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TourTypes[0].Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TourTypes[0].Name)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.TourTypes)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<h2>@Resources.BusTours</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tours[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tours[0].Name)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Tours)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

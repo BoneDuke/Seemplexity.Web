@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2280DC46-B40D-4E54-A23F-09A0D0B77413}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seemplexity.Web</RootNamespace>
+    <AssemblyName>Seemplexity.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DbUp, Version=2.0.67.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlMigrations.1.0.0.117\lib\DbUp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.1.2.1389, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Mvc.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MiscUtil">
+      <HintPath>..\Seemplexity.Common\ExternalLibs\MiscUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvc.Mailer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcCheckBoxList, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcCheckBoxList.1.4.5\lib\net45\MvcCheckBoxList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\ConvertersConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountApiController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BusController.cs" />
+    <Compile Include="Controllers\BusDirectionsController.cs" />
+    <Compile Include="Controllers\ResortsController.cs" />
+    <Compile Include="Controllers\InfoController.cs" />
+    <Compile Include="Controllers\Mailers\AccountMailer.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Filters\LocalizedAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603142047439_Seemplexity.cs" />
+    <Compile Include="Migrations\201603142047439_Seemplexity.Designer.cs">
+      <DependentUpon>201603142047439_Seemplexity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelBinders\BusFilterViewModelBinder.cs" />
+    <Compile Include="ModelBinders\DateModelBinder.cs" />
+    <Compile Include="ModelBinders\TransportSchemeViewModelBinder.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Admin\BusTourViewModel.cs" />
+    <Compile Include="Models\Admin\CompareExcursionsResultModel.cs" />
+    <Compile Include="Models\Admin\CompareExcursionsViewModel.cs" />
+    <Compile Include="Models\Admin\CompareHotelsResultModel.cs" />
+    <Compile Include="Models\Admin\CompareHotelsViewModel.cs" />
+    <Compile Include="Models\Admin\EditUserViewModel.cs" />
+    <Compile Include="Models\Admin\KeyValueViewModel.cs" />
+    <Compile Include="Models\Admin\UploadExcursionsListViewModel.cs" />
+    <Compile Include="Models\Admin\UploadTouristsListViewModel.cs" />
+    <Compile Include="Models\Admin\UserViewModel.cs" />
+    <Compile Include="Models\BusFilterViewModel.cs" />
+    <Compile Include="Models\BusViewModel.cs" />
+    <Compile Include="Models\CheckBoxItem.cs" />
+    <Compile Include="Models\EmailModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TransportSchemeViewModel.cs" />
+    <Compile Include="Models\TuristVewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\HtmlExtensions.cs" />
+    <Compile Include="Utils\RuFormatDateTimeConverter.cs" />
+    <Compile Include="Utils\SettingsManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Admin.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker3.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chosen\chosen-sprite%402x.png" />
+    <Content Include="Content\chosen\chosen-sprite.png" />
+    <Content Include="Content\chosen\chosen.css" />
+    <Content Include="Content\chosen\chosen.min.css" />
+    <Content Include="Content\flag-icon.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\0093.jpg" />
+    <Content Include="Content\Images\autobus.jpg" />
+    <Content Include="Content\Images\autobus_foto.jpg" />
+    <Content Include="Content\Images\flags\4x3\ad.svg" />
+    <Content Include="Content\Images\flags\4x3\ae.svg" />
+    <Content Include="Content\Images\flags\4x3\af.svg" />
+    <Content Include="Content\Images\flags\4x3\ag.svg" />
+    <Content Include="Content\Images\flags\4x3\ai.svg" />
+    <Content Include="Content\Images\flags\4x3\al.svg" />
+    <Content Include="Content\Images\flags\4x3\am.svg" />
+    <Content Include="Content\Images\flags\4x3\ao.svg" />
+    <Content Include="Content\Images\flags\4x3\aq.svg" />
+    <Content Include="Content\Images\flags\4x3\ar.svg" />
+    <Content Include="Content\Images\flags\4x3\as.svg" />
+    <Content Include="Content\Images\flags\4x3\at.svg" />
+    <Content Include="Content\Images\flags\4x3\au.svg" />
+    <Content Include="Content\Images\flags\4x3\aw.svg" />
+    <Content Include="Content\Images\flags\4x3\ax.svg" />
+    <Content Include="Content\Images\flags\4x3\az.svg" />
+    <Content Include="Content\Images\flags\4x3\ba.svg" />
+    <Content Include="Content\Images\flags\4x3\bb.svg" />
+    <Content Include="Content\Images\flags\4x3\bd.svg" />
+    <Content Include="Content\Images\flags\4x3\be.svg" />
+    <Content Include="Content\Images\flags\4x3\bf.svg" />
+    <Content Include="Content\Images\flags\4x3\bg.svg" />
+    <Content Include="Content\Images\flags\4x3\bh.svg" />
+    <Content Include="Content\Images\flags\4x3\bi.svg" />
+    <Content Include="Content\Images\flags\4x3\bj.svg" />
+    <Content Include="Content\Images\flags\4x3\bl.svg" />
+    <Content Include="Content\Images\flags\4x3\bm.svg" />
+    <Content Include="Content\Images\flags\4x3\bn.svg" />
+    <Content Include="Content\Images\flags\4x3\bo.svg" />
+    <Content Include="Content\Images\flags\4x3\bq.svg" />
+    <Content Include="Content\Images\flags\4x3\br.svg" />
+    <Content Include="Content\Images\flags\4x3\bs.svg" />
+    <Content Include="Content\Images\flags\4x3\bt.svg" />
+    <Content Include="Content\Images\flags\4x3\bv.svg" />
+    <Content Include="Content\Images\flags\4x3\bw.svg" />
+    <Content Include="Content\Images\flags\4x3\by.svg" />
+    <Content Include="Content\Images\flags\4x3\bz.svg" />
+    <Content Include="Content\Images\flags\4x3\ca.svg" />
+    <Content Include="Content\Images\flags\4x3\cc.svg" />
+    <Content Include="Content\Images\flags\4x3\cd.svg" />
+    <Content Include="Content\Images\flags\4x3\cf.svg" />
+    <Content Include="Content\Images\flags\4x3\cg.svg" />
+    <Content Include="Content\Images\flags\4x3\ch.svg" />
+    <Content Include="Content\Images\flags\4x3\ci.svg" />
+    <Content Include="Content\Images\flags\4x3\ck.svg" />
+    <Content Include="Content\Images\flags\4x3\cl.svg" />
+    <Content Include="Content\Images\flags\4x3\cm.svg" />
+    <Content Include="Content\Images\flags\4x3\cn.svg" />
+    <Content Include="Content\Images\flags\4x3\co.svg" />
+    <Content Include="Content\Images\flags\4x3\cr.svg" />
+    <Content Include="Content\Images\flags\4x3\cu.svg" />
+    <Content Include="Content\Images\flags\4x3\cv.svg" />
+    <Content Include="Content\Images\flags\4x3\cw.svg" />
+    <Content Include="Content\Images\flags\4x3\cx.svg" />
+    <Content Include="Content\Images\flags\4x3\cy.svg" />
+    <Content Include="Content\Images\flags\4x3\cz.svg" />
+    <Content Include="Content\Images\flags\4x3\de.svg" />
+    <Content Include="Content\Images\flags\4x3\dj.svg" />
+    <Content Include="Content\Images\flags\4x3\dk.svg" />
+    <Content Include="Content\Images\flags\4x3\dm.svg" />
+    <Content Include="Content\Images\flags\4x3\do.svg" />
+    <Content Include="Content\Images\flags\4x3\dz.svg" />
+    <Content Include="Content\Images\flags\4x3\ec.svg" />
+    <Content Include="Content\Images\flags\4x3\ee.svg" />
+    <Content Include="Content\Images\flags\4x3\eg.svg" />
+    <Content Include="Content\Images\flags\4x3\eh.svg" />
+    <Content Include="Content\Images\flags\4x3\er.svg" />
+    <Content Include="Content\Images\flags\4x3\es.svg" />
+    <Content Include="Content\Images\flags\4x3\et.svg" />
+    <Content Include="Content\Images\flags\4x3\eu.svg" />
+    <Content Include="Content\Images\flags\4x3\fi.svg" />
+    <Content Include="Content\Images\flags\4x3\fj.svg" />
+    <Content Include="Content\Images\flags\4x3\fk.svg" />
+    <Content Include="Content\Images\flags\4x3\fm.svg" />
+    <Content Include="Content\Images\flags\4x3\fo.svg" />
+    <Content Include="Content\Images\flags\4x3\fr.svg" />
+    <Content Include="Content\Images\flags\4x3\ga.svg" />
+    <Content Include="Content\Images\flags\4x3\gb-eng.svg" />
+    <Content Include="Content\Images\flags\4x3\gb-sct.svg" />
+    <Content Include="Content\Images\flags\4x3\gb-wls.svg" />
+    <Content Include="Content\Images\flags\4x3\gb.svg" />
+    <Content Include="Content\Images\flags\4x3\gd.svg" />
+    <Content Include="Content\Images\flags\4x3\ge.svg" />
+    <Content Include="Content\Images\flags\4x3\gf.svg" />
+    <Content Include="Content\Images\flags\4x3\gg.svg" />
+    <Content Include="Content\Images\flags\4x3\gh.svg" />
+    <Content Include="Content\Images\flags\4x3\gi.svg" />
+    <Content Include="Content\Images\flags\4x3\gl.svg" />
+    <Content Include="Content\Images\flags\4x3\gm.svg" />
+    <Content Include="Content\Images\flags\4x3\gn.svg" />
+    <Content Include="Content\Images\flags\4x3\gp.svg" />
+    <Content Include="Content\Images\flags\4x3\gq.svg" />
+    <Content Include="Content\Images\flags\4x3\gr.svg" />
+    <Content Include="Content\Images\flags\4x3\gs.svg" />
+    <Content Include="Content\Images\flags\4x3\gt.svg" />
+    <Content Include="Content\Images\flags\4x3\gu.svg" />
+    <Content Include="Content\Images\flags\4x3\gw.svg" />
+    <Content Include="Content\Images\flags\4x3\gy.svg" />
+    <Content Include="Content\Images\flags\4x3\hk.svg" />
+    <Content Include="Content\Images\flags\4x3\hm.svg" />
+    <Content Include="Content\Images\flags\4x3\hn.svg" />
+    <Content Include="Content\Images\flags\4x3\hr.svg" />
+    <Content Include="Content\Images\flags\4x3\ht.svg" />
+    <Content Include="Content\Images\flags\4x3\hu.svg" />
+    <Content Include="Content\Images\flags\4x3\id.svg" />
+    <Content Include="Content\Images\flags\4x3\ie.svg" />
+    <Content Include="Content\Images\flags\4x3\il.svg" />
+    <Content Include="Content\Images\flags\4x3\im.svg" />
+    <Content Include="Content\Images\flags\4x3\in.svg" />
+    <Content Include="Content\Images\flags\4x3\io.svg" />
+    <Content Include="Content\Images\flags\4x3\iq.svg" />
+    <Content Include="Content\Images\flags\4x3\ir.svg" />
+    <Content Include="Content\Images\flags\4x3\is.svg" />
+    <Content Include="Content\Images\flags\4x3\it.svg" />
+    <Content Include="Content\Images\flags\4x3\je.svg" />
+    <Content Include="Content\Images\flags\4x3\jm.svg" />
+    <Content Include="Content\Images\flags\4x3\jo.svg" />
+    <Content Include="Content\Images\flags\4x3\jp.svg" />
+    <Content Include="Content\Images\flags\4x3\ke.svg" />
+    <Content Include="Content\Images\flags\4x3\kg.svg" />
+    <Content Include="Content\Images\flags\4x3\kh.svg" />
+    <Content Include="Content\Images\flags\4x3\ki.svg" />
+    <Content Include="Content\Images\flags\4x3\km.svg" />
+    <Content Include="Content\Images\flags\4x3\kn.svg" />
+    <Content Include="Content\Images\flags\4x3\kp.svg" />
+    <Content Include="Content\Images\flags\4x3\kr.svg" />
+    <Content Include="Content\Images\flags\4x3\kw.svg" />
+    <Content Include="Content\Images\flags\4x3\ky.svg" />
+    <Content Include="Content\Images\flags\4x3\kz.svg" />
+    <Content Include="Content\Images\flags\4x3\la.svg" />
+    <Content Include="Content\Images\flags\4x3\lb.svg" />
+    <Content Include="Content\Images\flags\4x3\lc.svg" />
+    <Content Include="Content\Images\flags\4x3\li.svg" />
+    <Content Include="Content\Images\flags\4x3\lk.svg" />
+    <Content Include="Content\Images\flags\4x3\lr.svg" />
+    <Content Include="Content\Images\flags\4x3\ls.svg" />
+    <Content Include="Content\Images\flags\4x3\lt.svg" />
+    <Content Include="Content\Images\flags\4x3\lu.svg" />
+    <Content Include="Content\Images\flags\4x3\lv.svg" />
+    <Content Include="Content\Images\flags\4x3\ly.svg" />
+    <Content Include="Content\Images\flags\4x3\ma.svg" />
+    <Content Include="Content\Images\flags\4x3\mc.svg" />
+    <Content Include="Content\Images\flags\4x3\md.svg" />
+    <Content Include="Content\Images\flags\4x3\me.svg" />
+    <Content Include="Content\Images\flags\4x3\mf.svg" />
+    <Content Include="Content\Images\flags\4x3\mg.svg" />
+    <Content Include="Content\Images\flags\4x3\mh.svg" />
+    <Content Include="Content\Images\flags\4x3\mk.svg" />
+    <Content Include="Content\Images\flags\4x3\ml.svg" />
+    <Content Include="Content\Images\flags\4x3\mm.svg" />
+    <Content Include="Content\Images\flags\4x3\mn.svg" />
+    <Content Include="Content\Images\flags\4x3\mo.svg" />
+    <Content Include="Content\Images\flags\4x3\mp.svg" />
+    <Content Include="Content\Images\flags\4x3\mq.svg" />
+    <Content Include="Content\Images\flags\4x3\mr.svg" />
+    <Content Include="Content\Images\flags\4x3\ms.svg" />
+    <Content Include="Content\Images\flags\4x3\mt.svg" />
+    <Content Include="Content\Images\flags\4x3\mu.svg" />
+    <Content Include="Content\Images\flags\4x3\mv.svg" />
+    <Content Include="Content\Images\flags\4x3\mw.svg" />
+    <Content Include="Content\Images\flags\4x3\mx.svg" />
+    <Content Include="Content\Images\flags\4x3\my.svg" />
+    <Content Include="Content\Images\flags\4x3\mz.svg" />
+    <Content Include="Content\Images\flags\4x3\na.svg" />
+    <Content Include="Content\Images\flags\4x3\nc.svg" />
+    <Content Include="Content\Images\flags\4x3\ne.svg" />
+    <Content Include="Content\Images\flags\4x3\nf.svg" />
+    <Content Include="Content\Images\flags\4x3\ng.svg" />
+    <Content Include="Content\Images\flags\4x3\ni.svg" />
+    <Content Include="Content\Images\flags\4x3\nl.svg" />
+    <Content Include="Content\Images\flags\4x3\no.svg" />
+    <Content Include="Content\Images\flags\4x3\np.svg" />
+    <Content Include="Content\Images\flags\4x3\nr.svg" />
+    <Content Include="Content\Images\flags\4x3\nu.svg" />
+    <Content Include="Content\Images\flags\4x3\nz.svg" />
+    <Content Include="Content\Images\flags\4x3\om.svg" />
+    <Content Include="Content\Images\flags\4x3\pa.svg" />
+    <Content Include="Content\Images\flags\4x3\pe.svg" />
+    <Content Include="Content\Images\flags\4x3\pf.svg" />
+    <Content Include="Content\Images\flags\4x3\pg.svg" />
+    <Content Include="Content\Images\flags\4x3\ph.svg" />
+    <Content Include="Content\Images\flags\4x3\pk.svg" />
+    <Content Include="Content\Images\flags\4x3\pl.svg" />
+    <Content Include="Content\Images\flags\4x3\pm.svg" />
+    <Content Include="Content\Images\flags\4x3\pn.svg" />
+    <Content Include="Content\Images\flags\4x3\pr.svg" />
+    <Content Include="Content\Images\flags\4x3\ps.svg" />
+    <Content Include="Content\Images\flags\4x3\pt.svg" />
+    <Content Include="Content\Images\flags\4x3\pw.svg" />
+    <Content Include="Content\Images\flags\4x3\py.svg" />
+    <Content Include="Content\Images\flags\4x3\qa.svg" />
+    <Content Include="Content\Images\flags\4x3\re.svg" />
+    <Content Include="Content\Images\flags\4x3\ro.svg" />
+    <Content Include="Content\Images\flags\4x3\rs.svg" />
+    <Content Include="Content\Images\flags\4x3\ru.svg" />
+    <Content Include="Content\Images\flags\4x3\rw.svg" />
+    <Content Include="Content\Images\flags\4x3\sa.svg" />
+    <Content Include="Content\Images\flags\4x3\sb.svg" />
+    <Content Include="Content\Images\flags\4x3\sc.svg" />
+    <Content Include="Content\Images\flags\4x3\sd.svg" />
+    <Content Include="Content\Images\flags\4x3\se.svg" />
+    <Content Include="Content\Images\flags\4x3\sg.svg" />
+    <Content Include="Content\Images\flags\4x3\sh.svg" />
+    <Content Include="Content\Images\flags\4x3\si.svg" />
+    <Content Include="Content\Images\flags\4x3\sj.svg" />
+    <Content Include="Content\Images\flags\4x3\sk.svg" />
+    <Content Include="Content\Images\flags\4x3\sl.svg" />
+    <Content Include="Content\Images\flags\4x3\sm.svg" />
+    <Content Include="Content\Images\flags\4x3\sn.svg" />
+    <Content Include="Content\Images\flags\4x3\so.svg" />
+    <Content Include="Content\Images\flags\4x3\sr.svg" />
+    <Content Include="Content\Images\flags\4x3\ss.svg" />
+    <Content Include="Content\Images\flags\4x3\st.svg" />
+    <Content Include="Content\Images\flags\4x3\sv.svg" />
+    <Content Include="Content\Images\flags\4x3\sx.svg" />
+    <Content Include="Content\Images\flags\4x3\sy.svg" />
+    <Content Include="Content\Images\flags\4x3\sz.svg" />
+    <Content Include="Content\Images\flags\4x3\tc.svg" />
+    <Content Include="Content\Images\flags\4x3\td.svg" />
+    <Content Include="Content\Images\flags\4x3\tf.svg" />
+    <Content Include="Content\Images\flags\4x3\tg.svg" />
+    <Content Include="Content\Images\flags\4x3\th.svg" />
+    <Content Include="Content\Images\flags\4x3\tj.svg" />
+    <Content Include="Content\Images\flags\4x3\tk.svg" />
+    <Content Include="Content\Images\flags\4x3\tl.svg" />
+    <Content Include="Content\Images\flags\4x3\tm.svg" />
+    <Content Include="Content\Images\flags\4x3\tn.svg" />
+    <Content Include="Content\Images\flags\4x3\to.svg" />
+    <Content Include="Content\Images\flags\4x3\tr.svg" />
+    <Content Include="Content\Images\flags\4x3\tt.svg" />
+    <Content Include="Content\Images\flags\4x3\tv.svg" />
+    <Content Include="Content\Images\flags\4x3\tw.svg" />
+    <Content Include="Content\Images\flags\4x3\tz.svg" />
+    <Content Include="Content\Images\flags\4x3\ua.svg" />
+    <Content Include="Content\Images\flags\4x3\ug.svg" />
+    <Content Include="Content\Images\flags\4x3\um.svg" />
+    <Content Include="Content\Images\flags\4x3\un.svg" />
+    <Content Include="Content\Images\flags\4x3\us.svg" />
+    <Content Include="Content\Images\flags\4x3\uy.svg" />
+    <Content Include="Content\Images\flags\4x3\uz.svg" />
+    <Content Include="Content\Images\flags\4x3\va.svg" />
+    <Content Include="Content\Images\flags\4x3\vc.svg" />
+    <Content Include="Content\Images\flags\4x3\ve.svg" />
+    <Content Include="Content\Images\flags\4x3\vg.svg" />
+    <Content Include="Content\Images\flags\4x3\vi.svg" />
+    <Content Include="Content\Images\flags\4x3\vn.svg" />
+    <Content Include="Content\Images\flags\4x3\vu.svg" />
+    <Content Include="Content\Images\flags\4x3\wf.svg" />
+    <Content Include="Content\Images\flags\4x3\ws.svg" />
+    <Content Include="Content\Images\flags\4x3\ye.svg" />
+    <Content Include="Content\Images\flags\4x3\yt.svg" />
+    <Content Include="Content\Images\flags\4x3\za.svg" />
+    <Content Include="Content\Images\flags\4x3\zm.svg" />
+    <Content Include="Content\Images\flags\4x3\zw.svg" />
+    <Content Include="Content\Images\flags\4x3\zz.svg" />
+    <Content Include="Content\Images\from_bulgaria.jpg" />
+    <Content Include="Content\Images\IMG_3928.JPG" />
+    <Content Include="Content\Images\IMG_3932.JPG" />
+    <Content Include="Content\Images\logo_visa_mastercard.jpg" />
+    <Content Include="Content\Images\to_bulgaria.jpg" />
+    <Content Include="Content\Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\Images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\Images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\Images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui.structure.min.css" />
+    <Content Include="Content\jquery-ui.theme.css" />
+    <Content Include="Content\jquery-ui.theme.min.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Properties\PublishProfiles\Custom.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\chosen\chosen.jquery.js" />
+    <Content Include="Scripts\chosen\chosen.jquery.min.js" />
+    <Content Include="Scripts\chosen\chosen.proto.js" />
+    <Content Include="Scripts\chosen\chosen.proto.min.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Pages\Admin\BusScheme.js" />
+    <Content Include="Scripts\Pages\Admin\CompareExcursions.js" />
+    <Content Include="Scripts\Pages\Admin\CompareHotels.js" />
+    <Content Include="Scripts\Pages\Admin\ConfirmUploadTouristsList.js" />
+    <Content Include="Scripts\Pages\Bus.js" />
+    <Content Include="Scripts\Pages\Lang.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\NotConfirmed.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Bus\Search.cshtml" />
+    <Content Include="Views\Shared\AdminSecondMenu.cshtml" />
+    <Content Include="Views\Admin\ViewUsers.cshtml" />
+    <Content Include="Views\Admin\ViewBusTours.cshtml" />
+    <Content Include="Views\Bus\TransportScheme.cshtml" />
+    <Content Include="Views\AccountMailer\ConfirmEmail.cshtml" />
+    <Content Include="Views\AccountMailer\_Layout.cshtml" />
+    <Content Include="Views\Account\ConfirmationMailSended.cshtml" />
+    <Content Include="Views\AccountMailer\BookingEmail.cshtml" />
+    <Content Include="Views\Info\Contacts_en.cshtml" />
+    <Content Include="Views\Account\GetLanguages.cshtml" />
+    <Content Include="Views\Info\Contacts_ru.cshtml" />
+    <Content Include="Views\Info\Contacts_bg.cshtml" />
+    <Content Include="Views\Info\Contacts_ro.cshtml" />
+    <Content Include="Views\Bus\Book.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TuristViewModel.cshtml" />
+    <Content Include="Views\Bus\Success.cshtml" />
+    <Content Include="Views\Shared\_BusInfo_ru.cshtml" />
+    <Content Include="Views\Shared\_BusInfo_bg.cshtml" />
+    <Content Include="Views\Shared\_BusInfo_ro.cshtml" />
+    <Content Include="Views\Shared\_BusInfo_en.cshtml" />
+    <Content Include="Views\Shared\_PayInfoFooter_bg.cshtml" />
+    <Content Include="Views\Shared\_PayInfoFooter_en.cshtml" />
+    <Content Include="Views\Shared\_PayInfoFooter_ro.cshtml" />
+    <Content Include="Views\Shared\_PayInfoFooter_ru.cshtml" />
+    <Content Include="Views\Shared\_HowToPay_bg.cshtml" />
+    <Content Include="Views\Shared\_HowToPay_en.cshtml" />
+    <Content Include="Views\Shared\_HowToPay_ro.cshtml" />
+    <Content Include="Views\Shared\_HowToPay_ru.cshtml" />
+    <Content Include="Views\Admin\ViewBusDescriptions.cshtml" />
+    <Content Include="Views\Admin\DetailsBusDescription.cshtml" />
+    <Content Include="Views\Admin\EditBusDescription.cshtml" />
+    <Content Include="Views\Admin\CreateBusDescription.cshtml" />
+    <Content Include="Views\Bus\BusDescription.cshtml" />
+    <Content Include="Views\Bus\BusDescriptions.cshtml" />
+    <Content Include="Views\Info\Directions_bg.cshtml" />
+    <Content Include="Views\Info\Directions_en.cshtml" />
+    <Content Include="Views\Info\Directions_ro.cshtml" />
+    <Content Include="Views\Info\Directions_ru.cshtml" />
+    <Content Include="Views\Info\HowToUse_bg.cshtml" />
+    <Content Include="Views\Info\HowToUse_en.cshtml" />
+    <Content Include="Views\Info\HowToUse_ro.cshtml" />
+    <Content Include="Views\Info\HowToUse_ru.cshtml" />
+    <Content Include="Views\Info\News_bg.cshtml" />
+    <Content Include="Views\Info\News_en.cshtml" />
+    <Content Include="Views\Info\News_ro.cshtml" />
+    <Content Include="Views\Info\News_ru.cshtml" />
+    <Content Include="Views\Info\ToPartners_bg.cshtml" />
+    <Content Include="Views\Info\ToPartners_en.cshtml" />
+    <Content Include="Views\Info\ToPartners_ro.cshtml" />
+    <Content Include="Views\Info\ToPartners_ru.cshtml" />
+    <Content Include="Views\Resorts\Albena_bg.cshtml" />
+    <Content Include="Views\Resorts\Albena_en.cshtml" />
+    <Content Include="Views\Resorts\Albena_ro.cshtml" />
+    <Content Include="Views\Resorts\Albena_ru.cshtml" />
+    <Content Include="Views\Resorts\Duni_bg.cshtml" />
+    <Content Include="Views\Resorts\Duni_en.cshtml" />
+    <Content Include="Views\Resorts\Duni_ro.cshtml" />
+    <Content Include="Views\Resorts\Duni_ru.cshtml" />
+    <Content Include="Views\Resorts\Elenite_bg.cshtml" />
+    <Content Include="Views\Resorts\Elenite_en.cshtml" />
+    <Content Include="Views\Resorts\Elenite_ro.cshtml" />
+    <Content Include="Views\Resorts\Elenite_ru.cshtml" />
+    <Content Include="Views\Resorts\GoldenCoast_bg.cshtml" />
+    <Content Include="Views\Resorts\GoldenCoast_en.cshtml" />
+    <Content Include="Views\Resorts\GoldenCoast_ro.cshtml" />
+    <Content Include="Views\Resorts\GoldenCoast_ru.cshtml" />
+    <Content Include="Views\Resorts\GoldenDay_bg.cshtml" />
+    <Content Include="Views\Resorts\GoldenDay_en.cshtml" />
+    <Content Include="Views\Resorts\GoldenDay_ro.cshtml" />
+    <Content Include="Views\Resorts\GoldenDay_ru.cshtml" />
+    <Content Include="Views\Resorts\GoldenSands_bg.cshtml" />
+    <Content Include="Views\Resorts\GoldenSands_en.cshtml" />
+    <Content Include="Views\Resorts\GoldenSands_ro.cshtml" />
+    <Content Include="Views\Resorts\GoldenSands_ru.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\BusDescription.cshtml" />
+    <Content Include="Views\Admin\_Layout.cshtml" />
+    <Content Include="Views\Admin\EditUser.cshtml" />
+    <Content Include="Views\Admin\CreateBusScheme.cshtml" />
+    <Content Include="Views\Admin\CreateBusSchemeFloor.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\BusSchemeItem.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\BusSchemeFloorDescription.cshtml" />
+    <Content Include="Views\Info\_UploadExcelFile.cshtml" />
+    <Content Include="Views\Admin\UploadTransferFile.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TouristTransferRow.cshtml" />
+    <Content Include="Views\Admin\CompareHotels.cshtml" />
+    <Content Include="Views\Admin\ConfirmUploadTouristsList.cshtml" />
+    <Content Include="Views\Admin\UploadExcursionFile.cshtml" />
+    <Content Include="Views\Admin\CompareExcursions.cshtml" />
+    <Content Include="Views\Admin\ConfirmUploadExcursionsList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TouristExcursionRow.cshtml" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="UploadedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Seemplexity.Avalon.BusinesLogic\Seemplexity.Avalon.BusinesLogic.csproj">
+      <Project>{88362b6c-3687-4dc2-8acf-37ec1ad64559}</Project>
+      <Name>Seemplexity.Avalon.BusinesLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seemplexity.BusinesLogic\Seemplexity.BusinesLogic.csproj">
+      <Project>{391ca779-8f0e-427c-8d76-0fff995df797}</Project>
+      <Name>Seemplexity.BusinesLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seemplexity.Common\Seemplexity.Common.csproj">
+      <Project>{bd0ed9d3-777d-46f2-ad95-5f4e118461fe}</Project>
+      <Name>Seemplexity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seemplexity.Resources\Seemplexity.Resources.csproj">
+      <Project>{25239dad-bf9d-487b-a9bb-0ded08400e7b}</Project>
+      <Name>Seemplexity.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603142047439_Seemplexity.resx">
+      <DependentUpon>201603142047439_Seemplexity.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>26301</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:26301/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,42 @@
+﻿@model Seemplexity.BusinesLogic.Model.BusSchemeFloorDescription
+    
+<div id="busSchemeFloor-@Model.FloorNumber">
+
+    <div>
+        Число строк: <input type="text" name="rowsCount" value="@Model.RowsCount" id="rowsCount-@Model.FloorNumber" />
+    </div>
+    <div>
+        Число столбцов: <input type="text" name="columnsCount" value="@Model.ColumnsCount" id="columnsCount-@Model.FloorNumber" />
+    </div>
+    <div>
+        <input type="button" value="Обновить схему" class="js-update-bus-scheme" data-floor-number="@Model.FloorNumber" data-description-id="@Model.BusDescription.Id" />
+    </div>
+
+
+    <div class="floor-number">@Model.FloorNumber</div>
+    <table class="table table-bordered table-condensed scheme-table js-transport-scheme-table" style="width: 500px;">
+        @{
+            var counter = -1;
+        }
+        @for (int row = 0; row < Model.RowsCount; row++)
+            {
+            <tr>
+                @for (int col = 0; col < Model.ColumnsCount; col++)
+                {
+                    counter++;
+                    var item = Model.Items.SingleOrDefault(i => i.ColNumber == col && i.RowNumber == row);
+                    if (item != null)
+                    {
+                        <td class="schemeItem">
+                            <input checked="checked" id="@($"Items_{counter}__IsUsable")" name="@($"Items[{counter}].IsUsable")" type="checkbox" value="@(item.IsUsable.ToString())">
+                            <input class="schemeItem" id="@($"Items_{counter}__Value")" name="@($"Items[{counter}].Value")" type="text" value="@item.Value">
+                            <input id="@($"Items_{counter}__ColNumber")" name="@($"Items[{counter}].ColNumber")" type="hidden" value="@item.ColNumber">
+                            <input id="@($"Items_{counter}__RowNumber")" name="@($"Items[{counter}].RowNumber")" type="hidden" value="@item.RowNumber">
+                        </td>
+                    }
+                }
+
+            </tr>
+        }
+    </table>
+</div>

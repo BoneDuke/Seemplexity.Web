@@ -1,0 +1,87 @@
+﻿@using Seemplexity.Resources
+@using Seemplexity.Web.Utils
+@model Seemplexity.BusinesLogic.Model.BusDescription
+
+</div>
+
+<div class="row">
+    @if (Model == null)
+    {
+        <span>@Resources.InfoNotFound</span>
+    }
+    else
+    {
+        <div class="bus-description">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Schedule)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Schedule)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DepartureTime)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DepartureTime)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TimeToSeat)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TimeToSeat)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DeparturePlace)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DeparturePlace)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.IncludeInPrice)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.IncludeInPrice)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.NotCarried)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NotCarried)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.InBus)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.InBus)
+                </dd>
+            </dl>
+
+            @foreach (var image in Model.Images)
+            {
+                @Html.Image(image.Data)
+            }
+
+        </div>
+    }

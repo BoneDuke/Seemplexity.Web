@@ -1,0 +1,53 @@
+﻿@model Seemplexity.Web.Models.Admin.UploadTouristsListViewModel
+
+@{
+    ViewBag.Title = "ConfirmUploadTouristsList";
+    Layout = "_Layout.cshtml";
+}
+
+<h2>ConfirmUploadTouristsList</h2>
+
+@using (Html.BeginForm("UploadTouristsList", "Admin", FormMethod.Post))
+{
+    <h4>Полученные данные:</h4>
+    <div style="padding-bottom: 10px;">
+        <div>
+            Тип файла: @Model.ExcelModel.Type.ToString()
+            @Html.HiddenFor(model => model.ExcelModel.Type)
+            @Html.HiddenFor(model => model.ExcelModel.AvalonPartnerKey)
+            @Html.HiddenFor(model => model.ExcelModel.AvalonPartnerName)
+        </div>
+        <div style="padding-bottom: 10px;">
+            <span style="float: left; margin-top: 5px; margin-right: 5px;">Дата заезда:</span> 
+            <input type="text" style="width: 110px; float: left;" class="form-control" name="ExcelModel.TourDate" id="date" value="@Model.ExcelModel.TourDate.ToString("dd.MM.yyyy")" readonly="readonly"/>
+        </div>
+        <div class="clearer" style="padding-bottom: 10px;"></div>
+        <div>Туристы:</div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <td>Id</td>
+                <td>ФИО</td>
+                <td>Отель</td>
+                <td>Курорт</td>
+                <td>Отель из Мастер-Тура</td>
+            </tr>
+            </thead>
+            <tbody>
+            @for (int i = 0; i < Model.ExcelModel.Tourists.Count; i++)
+            {
+                for (int j = 0; j < Model.ExcelModel.Tourists[i].Count; j++)
+                {
+                    @Html.EditorFor(model => Model.ExcelModel.Tourists[i][j], new { index1 = i, index2 = j, hotels = Model.Hotels })
+                }
+            }
+            </tbody>
+        </table>
+
+        <input type="submit" value="Сохранить" class="btn btn-success" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/scripts/pages/admin/ConfirmUploadTouristsList.js")
+}

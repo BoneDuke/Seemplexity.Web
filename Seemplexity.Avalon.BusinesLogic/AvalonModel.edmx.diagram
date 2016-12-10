@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aced617a794b406492ea18e6c594364f" Name="Diagram1" ZoomLevel="69">
+        <EntityTypeShape EntityType="AvalonModel.AddDescript1" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvalonModel.AddDescript2" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvalonModel.Service" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvalonModel.ServiceList" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvalonModel.tbl_Costs" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvalonModel.tbl_TurList" Width="1.5" PointX="3.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvalonModel.TurDate" Width="1.5" PointX="6" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvalonModel.TurService" Width="1.5" PointX="6" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="AvalonModel.A1_SVKEY" ManuallyRouted="false" />
+        <AssociationConnector Association="AvalonModel.A2_SVKEY" ManuallyRouted="false" />
+        <AssociationConnector Association="AvalonModel.SL_SVKEY" ManuallyRouted="false" />
+        <AssociationConnector Association="AvalonModel.TS_SVKEY" ManuallyRouted="false" />
+        <AssociationConnector Association="AvalonModel.TD_TRKEY" ManuallyRouted="false" />
+        <AssociationConnector Association="AvalonModel.TS_TRKEY" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AvalonModel.TipTur" Width="1.5" PointX="1.5" PointY="22.875" />
+        <AssociationConnector Association="AvalonModel.FK_tbl_TurList_TipTur" />
+        <AssociationConnector Association="AvalonModel.FK_TipTur_TipTur" />
+        <EntityTypeShape EntityType="AvalonModel.tbl_Country" Width="1.5" PointX="5.375" PointY="1.125" />
+        <AssociationConnector Association="AvalonModel.SL_CNKEY" />
+        <EntityTypeShape EntityType="AvalonModel.Vehicle" Width="1.5" PointX="8.375" PointY="13.5" />
+        <EntityTypeShape EntityType="AvalonModel.VehiclePlan" Width="1.5" PointX="10.625" PointY="10.25" />
+        <AssociationConnector Association="AvalonModel.VP_VHKEY" />
+        <EntityTypeShape EntityType="AvalonModel.HotelDictionary" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AvalonModel.tbl_Turist" Width="1.5" PointX="13.375" PointY="13.75" />
+        <EntityTypeShape EntityType="AvalonModel.TuristService" Width="1.5" PointX="15.625" PointY="17.5" />
+        <AssociationConnector Association="AvalonModel.TU_TUKEY" />
+        <EntityTypeShape EntityType="AvalonModel.ExcurDictionary" Width="1.5" PointX="15.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

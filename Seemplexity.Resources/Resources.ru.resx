@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Admin" xml:space="preserve">
+    <value>Администрирование</value>
+  </data>
+  <data name="BalkanExpress" xml:space="preserve">
+    <value>Балкан Экспресс</value>
+  </data>
+  <data name="BusTickets" xml:space="preserve">
+    <value>Автобусные билеты</value>
+  </data>
+  <data name="BusTours" xml:space="preserve">
+    <value>Автобусные туры</value>
+  </data>
+  <data name="ConfirmAccount" xml:space="preserve">
+    <value>Подтверждение EMail</value>
+  </data>
+  <data name="ConfirmAccountMessageBody" xml:space="preserve">
+    <value>Подтвердите свой EMail перейдя по ссылке: {0}</value>
+  </data>
+  <data name="ConfirmingEmail" xml:space="preserve">
+    <value>Спасибо за подтвержение почтового адреса. Пожалуйста </value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Подтвердите пароль</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Создать нового пользователя</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="PassDontMatch" xml:space="preserve">
+    <value>Пароли должны совпадать</value>
+  </data>
+  <data name="PassInvalid" xml:space="preserve">
+    <value>{0} должен быть длиной хотя бы {2} символов</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Запомнить меня?</value>
+  </data>
+  <data name="TourTypes" xml:space="preserve">
+    <value>Типы туров</value>
+  </data>
+  <data name="UsersList" xml:space="preserve">
+    <value>Список пользователей</value>
+  </data>
+  <data name="ClickToLogIn" xml:space="preserve">
+    <value>Нажмите здесь для входа в систему</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="ErrorRequest" xml:space="preserve">
+    <value>Во время запроса произошла ошибка. Мы уже занимаемся ее устранением.</value>
+  </data>
+  <data name="ConfirmationHasSended" xml:space="preserve">
+    <value>Письмо с подтверждением регистрации отправлено на вашу почту</value>
+  </data>
+  <data name="NotConfirmed" xml:space="preserve">
+    <value>Ваш почтовый адрес не подтвержден</value>
+  </data>
+  <data name="ThanksConfirmation" xml:space="preserve">
+    <value>Спасибо за регистрацию</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="AvailablePlaces" xml:space="preserve">
+    <value>Доступные места</value>
+  </data>
+  <data name="Book" xml:space="preserve">
+    <value>Забронировать</value>
+  </data>
+  <data name="Bus" xml:space="preserve">
+    <value>Автобус</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="FindBuses" xml:space="preserve">
+    <value>Найти автобусы</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Откуда</value>
+  </data>
+  <data name="NoPlaces" xml:space="preserve">
+    <value>Мест нет</value>
+  </data>
+  <data name="NumberOfPlaces" xml:space="preserve">
+    <value>Число мест</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>Запрос</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>Схема автобуса</value>
+  </data>
+  <data name="SchemeNotFound" xml:space="preserve">
+    <value>Схема автобуса не найдена</value>
+  </data>
+  <data name="TicketFrom" xml:space="preserve">
+    <value>Билет из</value>
+  </data>
+  <data name="Tickets" xml:space="preserve">
+    <value>Заказ билетов</value>
+  </data>
+  <data name="TicketsReservation" xml:space="preserve">
+    <value>Бронирование билетов</value>
+  </data>
+  <data name="TicketsReservationRegister" xml:space="preserve">
+    <value>Для бронирования билетов требуется зарегистрироваться</value>
+  </data>
+  <data name="TicketTo" xml:space="preserve">
+    <value>Билет в</value>
+  </data>
+  <data name="There" xml:space="preserve">
+    <value>Туда</value>
+  </data>
+  <data name="Where" xml:space="preserve">
+    <value>Куда</value>
+  </data>
+  <data name="RtOnly" xml:space="preserve">
+    <value>Только с обратным билетом</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Обратно</value>
+  </data>
+  <data name="When" xml:space="preserve">
+    <value>Когда</value>
+  </data>
+  <data name="HowToPay" xml:space="preserve">
+    <value>Как оплатить</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Список</value>
+  </data>
+  <data name="OurAdresses" xml:space="preserve">
+    <value>наших адресов</value>
+  </data>
+  <data name="PaymentMethods" xml:space="preserve">
+    <value>Способы оплаты</value>
+  </data>
+  <data name="PaymentMethodsCach" xml:space="preserve">
+    <value>Наличными, непосредственно перед поездкой</value>
+  </data>
+  <data name="PaymentMethodsCachOffice" xml:space="preserve">
+    <value>Наличными в нашем офисе</value>
+  </data>
+  <data name="PaymentMethodsCredtCard" xml:space="preserve">
+    <value>Кредитной картой по номеру заявки (вы получите его после выбора мест(а) и отправки заявки)</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="PassportNumber" xml:space="preserve">
+    <value>Номер паспорта</value>
+  </data>
+  <data name="PassportSeria" xml:space="preserve">
+    <value>Серия паспорта</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Booking" xml:space="preserve">
+    <value>Бронирование билетов</value>
+  </data>
+  <data name="BookingSended" xml:space="preserve">
+    <value>Заявка отправлена</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Место</value>
+  </data>
+  <data name="BusDescriptions" xml:space="preserve">
+    <value>Описание автобусов</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Обратно к списку</value>
+  </data>
+  <data name="DeparturePlace" xml:space="preserve">
+    <value>Место отправления</value>
+  </data>
+  <data name="DepartureTime" xml:space="preserve">
+    <value>Время отправления</value>
+  </data>
+  <data name="InBus" xml:space="preserve">
+    <value>В автобусе</value>
+  </data>
+  <data name="IncludeInPrice" xml:space="preserve">
+    <value>В стоимость билета входит</value>
+  </data>
+  <data name="NotCarried" xml:space="preserve">
+    <value>Трансфер не осуществляется</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Расписание</value>
+  </data>
+  <data name="TimeToSeat" xml:space="preserve">
+    <value>Время посадки</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="PartnerKey" xml:space="preserve">
+    <value>Ключ партнера</value>
+  </data>
+  <data name="ScheduleDates" xml:space="preserve">
+    <value>Даты по расписанию</value>
+  </data>
+  <data name="ServiceListKey" xml:space="preserve">
+    <value>Ключ услуги</value>
+  </data>
+  <data name="InfoNotFound" xml:space="preserve">
+    <value>Информация не найдена</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="Buses" xml:space="preserve">
+    <value>Автобусы</value>
+  </data>
+  <data name="Curorts" xml:space="preserve">
+    <value>Курорты</value>
+  </data>
+  <data name="Directions" xml:space="preserve">
+    <value>Направления</value>
+  </data>
+  <data name="HowToUse" xml:space="preserve">
+    <value>Как пользоваться</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Новости</value>
+  </data>
+  <data name="ToPartners" xml:space="preserve">
+    <value>Партнерам</value>
+  </data>
+  <data name="TransportKey" xml:space="preserve">
+    <value>Ключ транспорта</value>
+  </data>
+  <data name="ToMainSite" xml:space="preserve">
+    <value>На основной сайт</value>
+  </data>
+  <data name="EMailConfirmed" xml:space="preserve">
+    <value>EMail подтвержден</value>
+  </data>
+  <data name="EditScheme" xml:space="preserve">
+    <value>Редактировать схему</value>
+  </data>
+  <data name="CreateScheme" xml:space="preserve">
+    <value>Создать схему</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="CreateBusDescription" xml:space="preserve">
+    <value>Создать описание автобуса</value>
+  </data>
+  <data name="UploadTouristsListFile" xml:space="preserve">
+    <value>Загрузить файл с туристами</value>
+  </data>
+  <data name="UploadFile" xml:space="preserve">
+    <value>Загрузить файл</value>
+  </data>
+  <data name="UploadExcursionFile" xml:space="preserve">
+    <value>Загрузить экскурсии</value>
+  </data>
+  <data name="UploadTransferFile" xml:space="preserve">
+    <value>Загрузить трансферы</value>
+  </data>
+</root>

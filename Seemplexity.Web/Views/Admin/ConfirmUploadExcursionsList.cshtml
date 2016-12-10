@@ -1,0 +1,41 @@
+﻿@model Seemplexity.Web.Models.Admin.UploadExcursionsListViewModel
+
+@{
+    ViewBag.Title = "ConfirmUploadTouristsList";
+    Layout = "_Layout.cshtml";
+}
+
+<h2>ConfirmUploadTouristsList</h2>
+
+@using (Html.BeginForm("UploadExcursionsList", "Admin", FormMethod.Post))
+{
+    <h4>Полученные данные:</h4>
+    <div style="padding-bottom: 10px;">
+        <div class="clearer" style="padding-bottom: 10px;"></div>
+        <div>Туристы:</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Дата</td>
+                    <td>ФИО</td>
+                    <td>Отель</td>
+                    <td>Отель из Мастер-Тура</td>
+                    <td>Экскурсия</td>
+                    <td>Экскурсия из Мастер-Тура</td>
+                </tr>
+            </thead>
+            <tbody>
+            @for (int i = 0; i < Model.ExcelModel.Tourists.Count; i++)
+            {
+                @Html.EditorFor(model => Model.ExcelModel.Tourists[i], new { index1 = i, hotels = Model.Hotels, excursions = Model.Excursions })
+            }
+            </tbody>
+        </table>
+
+        <input type="submit" value="Сохранить" class="btn btn-success" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/scripts/pages/admin/CompareExcursions.js")
+}

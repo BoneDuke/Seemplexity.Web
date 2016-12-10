@@ -1,0 +1,76 @@
+﻿@using Seemplexity.Resources
+@model Seemplexity.Web.Models.TransportSchemeViewModel
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">
+                @(Request.IsAuthenticated ? @Resources.TicketsReservation : @Resources.TicketsReservationRegister)
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    @if (Model == null)
+                    {
+                        <span>@Resources.SchemeNotFound</span>
+                    }
+                    else
+                    {
+                        <form action="@Url.Action("Book")" id="TransportScheme">
+                            <span>@Resources.AvailablePlaces:</span>
+                            <table class="table table-bordered table-condensed scheme-table js-transport-scheme-table">
+                                @for (int i = 0; i < Model.Scheme.NumRows; i++)
+                                {
+                                    <tr>
+                                        @for (int j = 0; j < Model.Scheme.NumColumns; j++)
+                                        {
+                                            int num;
+                                            if (string.IsNullOrEmpty(Model.Scheme.Places[i][j]) || !int.TryParse(Model.Scheme.Places[i][j], out num))
+                                            {
+                                                <td>@Model.Scheme.Places[i][j]</td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    @*@if (Model.Scheme.Places[i][j] == "13" || Model.Scheme.Places[i][j] == "30")
+                                                    {
+                                                        <a class="button btn btn-danger btn-block btn-scheme disabled" href="#" role="button">@Model.Scheme.Places[i][j]</a>
+                                                    }
+                                                    else
+                                                    {*@
+                                                        <a class="button btn btn-success btn-block btn-scheme js-modal-transport-scheme-button" href="#" role="button">@Model.Scheme.Places[i][j]</a>
+                                                    @*}*@
+
+                                                </td>
+                                            }
+                                        }
+                                    </tr>
+                                }
+                            </table>
+
+                            <input type="hidden" name="ServiceListKey" id="ServiceListKey" value="@Model.ServiceListKey" />
+                            <input type="hidden" name="CityFrom" id="CityFrom" value="@Model.CityFrom" />
+                            <input type="hidden" name="CityTo" id="CityTo" value="@Model.CityTo" />
+                            <input type="hidden" name="Date" id="Date" value="@(Model.Date?.ToString("dd.MM.yyyy") ?? string.Empty)"/>
+
+                            <input type="hidden" name="SelectedPlaces" id="SelectedPlacesInput"/>
+                            <input type="hidden" name="ServiceListName" id="ServiceListName" value="@Model.ServiceListName" />
+                        </form>
+                    }
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            
+            <button type="button" class="btn btn-default" data-dismiss="modal">@Resources.Close</button>
+            <button type="button" class="btn btn-success js-booking-scheme-button" disabled="disabled">@Resources.Book</button>
+
+        </div>
+    </div>
+</div>

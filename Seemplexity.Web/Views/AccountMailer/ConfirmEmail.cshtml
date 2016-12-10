@@ -1,0 +1,11 @@
+﻿@model Seemplexity.Web.Models.EmailModel
+
+@{
+    ViewBag.Title = Model.Subject;
+}
+
+<div>
+    Подтвердите свой EMail перейдя по <a href="@(Model.Data["url"])">ссылке</a>
+</div>
+
+<div style="font-style: italic;">С уважением, Балкан-Экспресс</div>

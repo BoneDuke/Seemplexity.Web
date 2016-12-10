@@ -1,0 +1,14 @@
+﻿@using Seemplexity.Resources
+@model IEnumerable<Seemplexity.BusinesLogic.Model.BusDescription>
+
+@{
+    ViewBag.Title = @Resources.Buses;
+}
+
+<h2>@Resources.Buses</h2>
+
+@foreach (var bus in Model)
+{
+    <hr />
+    @Html.DisplayFor(m => bus)
+}

@@ -1,0 +1,83 @@
+﻿@model Seemplexity.BusinesLogic.Model.BusDescription
+
+@{
+    ViewBag.Title = "DetailsBusDescription";
+    Layout = "_Layout.cshtml";
+}
+
+<h2>DetailsBusDescription</h2>
+
+<div>
+    <h4>BusDescription</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Schedule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Schedule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeToSeat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeToSeat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeparturePlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeparturePlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IncludeInPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncludeInPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotCarried)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotCarried)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InBus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InBus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

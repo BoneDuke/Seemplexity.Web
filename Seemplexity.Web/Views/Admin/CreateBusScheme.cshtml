@@ -1,0 +1,45 @@
+﻿@using Seemplexity.Resources
+@model IList<Seemplexity.BusinesLogic.Model.BusSchemeFloorDescription>
+
+
+@{
+    ViewBag.Title = Resources.CreateScheme;
+    Layout = "~/Views/Admin/_Layout.cshtml";
+}
+
+<h2>@Resources.CreateScheme</h2>
+
+<div class="container body-content">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" name="busDescriptionId" id="busDescriptionId" value="@Model[0].BusDescription.Id"/>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+                <input type="button" value="Добавить этаж" class="btn btn-primary js-add-floor"/>
+            </div>
+
+            <div class="col-md-4">
+                <input type="submit" value="@Resources.Save" class="btn btn-success"/>
+            </div>
+
+            <div class="col-md-2"></div>
+        </div>
+
+        foreach (var desc in Model)
+        {
+            <div id="busSchemeFloor-@desc.FloorNumber">
+                @Html.Partial("CreateBusSchemeFloor", desc)
+            </div>
+        }
+
+
+
+        <div id="bus-floor-content"></div>
+    }
+</div>
+

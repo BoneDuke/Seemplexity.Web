@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seemplexity.Web", "Seemplexity.Web\Seemplexity.Web.csproj", "{2280DC46-B40D-4E54-A23F-09A0D0B77413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seemplexity.Resources", "Seemplexity.Resources\Seemplexity.Resources.csproj", "{25239DAD-BF9D-487B-A9BB-0DED08400E7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seemplexity.Avalon.BusinesLogic", "Seemplexity.Avalon.BusinesLogic\Seemplexity.Avalon.BusinesLogic.csproj", "{88362B6C-3687-4DC2-8ACF-37EC1AD64559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seemplexity.BusinesLogic", "Seemplexity.BusinesLogic\Seemplexity.BusinesLogic.csproj", "{391CA779-8F0E-427C-8D76-0FFF995DF797}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seemplexity.Common", "Seemplexity.Common\Seemplexity.Common.csproj", "{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seemplexity.Common.Tests", "Seemplexity.Common.Tests\Seemplexity.Common.Tests.csproj", "{33995D78-6608-426A-ABC0-AB843541F6B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Debug|x86.ActiveCfg = Debug|x86
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Debug|x86.Build.0 = Debug|x86
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Release|x86.ActiveCfg = Release|x86
+		{2280DC46-B40D-4E54-A23F-09A0D0B77413}.Release|x86.Build.0 = Release|x86
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Debug|x86.Build.0 = Debug|Any CPU
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Release|x86.ActiveCfg = Release|Any CPU
+		{25239DAD-BF9D-487B-A9BB-0DED08400E7B}.Release|x86.Build.0 = Release|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Debug|x86.Build.0 = Debug|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Release|x86.ActiveCfg = Release|Any CPU
+		{88362B6C-3687-4DC2-8ACF-37EC1AD64559}.Release|x86.Build.0 = Release|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Debug|x86.Build.0 = Debug|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Release|x86.ActiveCfg = Release|Any CPU
+		{391CA779-8F0E-427C-8D76-0FFF995DF797}.Release|x86.Build.0 = Release|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Debug|x86.Build.0 = Debug|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Release|x86.ActiveCfg = Release|Any CPU
+		{BD0ED9D3-777D-46F2-AD95-5F4E118461FE}.Release|x86.Build.0 = Release|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Debug|x86.Build.0 = Debug|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Release|x86.ActiveCfg = Release|Any CPU
+		{33995D78-6608-426A-ABC0-AB843541F6B7}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://seemplexity.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Seemplexity.Avalon.BusinesLogic\\Seemplexity.Avalon.BusinesLogic.csproj
+		SccProjectName1 = Seemplexity.Avalon.BusinesLogic
+		SccLocalPath1 = Seemplexity.Avalon.BusinesLogic
+		SccProjectUniqueName2 = Seemplexity.BusinesLogic\\Seemplexity.BusinesLogic.csproj
+		SccProjectName2 = Seemplexity.BusinesLogic
+		SccLocalPath2 = Seemplexity.BusinesLogic
+		SccProjectUniqueName3 = Seemplexity.Common\\Seemplexity.Common.csproj
+		SccProjectName3 = Seemplexity.Common
+		SccLocalPath3 = Seemplexity.Common
+		SccProjectUniqueName4 = Seemplexity.Resources\\Seemplexity.Resources.csproj
+		SccProjectName4 = Seemplexity.Resources
+		SccLocalPath4 = Seemplexity.Resources
+		SccProjectUniqueName5 = Seemplexity.Web\\Seemplexity.Web.csproj
+		SccProjectName5 = Seemplexity.Web
+		SccLocalPath5 = Seemplexity.Web
+		SccProjectUniqueName6 = Seemplexity.Common.Tests\\Seemplexity.Common.Tests.csproj
+		SccProjectName6 = Seemplexity.Common.Tests
+		SccLocalPath6 = Seemplexity.Common.Tests
+	EndGlobalSection
+EndGlobal

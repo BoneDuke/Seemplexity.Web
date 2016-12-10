@@ -1,0 +1,69 @@
+﻿@model Seemplexity.Web.Models.Admin.CompareHotelsViewModel
+
+@{
+    ViewBag.Title = "Сопоставьте отели";
+    Layout = "_Layout.cshtml";
+}
+
+<h2>Сопоставьте отели</h2>
+
+@using (Html.BeginForm("CompareHotels", "Admin", FormMethod.Post))
+{
+    <div style="padding-bottom: 10px;">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <td>Курорт</td>
+                <td>Отель</td>
+                <td>Отель из Мастер-Тура</td>
+            </tr>
+            </thead>
+            <tbody>
+            @{
+                var k = 0;
+            }
+            @for (var i = 0; i < Model.CompareHotelsModel.Count; i++)
+            {
+                for (var j = 0; j < Model.CompareHotelsModel[i].Count; j++)
+                {
+                    <tr>
+                        <td>
+                            <input type="hidden" name="@($"compareHotels[{k}].ResortName")" value="@Model.CompareHotelsModel[i][j].ResortName"/>
+                            <input type="hidden" name="@($"compareHotels[{k}].HotelName")" value="@Model.CompareHotelsModel[i][j].HotelName"/>
+                            <input type="hidden" name="@($"compareHotels[{k}].PartnerType")" value="@Model.CompareHotelsModel[i][j].PartnerType"/>
+
+                            @Model.CompareHotelsModel[i][j].ResortName
+                        </td>
+                        <td>@Model.CompareHotelsModel[i][j].HotelName</td>
+                        <td>
+                            <select class="chosen-select" name="@($"compareHotels[{k}].AvalonHotelKey")">
+                                <option value="-1">Не найден</option>
+                                @foreach (var hotel in @Model.Hotels)
+                                {
+                                    if (hotel.Id == Model.CompareHotelsModel[i][j].AvalonHotelKey)
+                                    {
+                                        <option value="@hotel.Id" selected="selected">@($"{hotel.Name} / {hotel.NameLat}")</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@hotel.Id">@($"{hotel.Name} / {hotel.NameLat}")</option>
+                                    }
+                                }
+                            </select>
+                        </td>
+                    </tr>
+
+                    k++;
+                }
+            }
+            </tbody>
+        </table>
+
+        <input type="hidden" name="ExcelFilePath" value="@Model.ExcelFilePath" />
+        <input type="button" value="Сопоставить" class="btn btn-success js-submit-with-validation" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/scripts/pages/admin/CompareHotels.js")
+}

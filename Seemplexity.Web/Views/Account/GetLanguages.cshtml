@@ -1,0 +1,26 @@
+﻿@using MiscUtil.Collections.Extensions
+@model IEnumerable<SelectListItem>
+
+<ul class="nav navbar-nav">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="img-thumbnail flag flag-icon-background flag-icon-@(Model.Single(l => l.Selected).Value) lang-icon"></div>
+        </a>
+        <ul class="dropdown-menu">
+            @foreach (var item in Model.Where(l => !l.Selected).AsSmartEnumerable())
+            {
+                <li>
+                    <a href="#" class="js-lang">
+                        <div class="img-thumbnail flag flag-icon-background flag-icon-@(item.Value.Value) lang-icon">
+                            <p>@(item.Value.Text)</p>
+                        </div>
+                    </a>
+                </li>
+                if (!item.IsLast)
+                {
+                    <li class="divider"></li>
+                }
+            }
+        </ul>
+    </li>
+</ul>

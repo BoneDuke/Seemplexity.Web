@@ -1,0 +1,11 @@
+﻿@using Seemplexity.Resources
+@{
+    ViewBag.Title = Resources.ConfirmAccount;
+}
+
+<h2>@Resources.ConfirmAccount</h2>
+<div class="bs-callout bs-callout-info">
+    <h4>
+        @Resources.ConfirmingEmail @Html.ActionLink(Resources.ClickToLogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    </h4>
+</div>

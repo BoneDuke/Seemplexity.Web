@@ -1,0 +1,31 @@
+﻿@model Seemplexity.Common.Excel.TouristTransferRow
+
+<tr>
+    <td>
+        @Model.Id
+
+        <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}][{ViewBag.index2}].Resort")" value="@Model.Resort" />
+        <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}][{ViewBag.index2}].HotelName")" value="@Model.HotelName" />
+        <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}][{ViewBag.index2}].Name")" value="@Model.Name"/>
+        <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}][{ViewBag.index2}].Surname")" value="@Model.Surname" />
+    </td>
+    <td>@($"{Model.Surname}_{Model.Name}")</td>
+    <td>@Model.HotelName</td>
+    <td>@Model.Resort</td>
+    <td>
+        <select class="chosen-select" name="@($"ExcelModel.Tourists[{ViewBag.index1}][{ViewBag.index2}].AvalonHotelKey")">
+            <option value="-1">Не найден</option>
+            @foreach (var hotel in @ViewBag.hotels)
+            {
+                if (hotel.Id == Model.AvalonHotelKey)
+                {
+                    <option value="@hotel.Id" selected="selected">@string.Format("{0} / {1}", hotel.Name, hotel.NameLat)</option>
+                }
+                else
+                {
+                    <option value="@hotel.Id">@string.Format("{0} / {1}", hotel.Name, hotel.NameLat)</option>
+                }
+            }
+        </select>
+    </td>
+</tr>

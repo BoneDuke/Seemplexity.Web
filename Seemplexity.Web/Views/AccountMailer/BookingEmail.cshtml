@@ -1,0 +1,28 @@
+﻿@model Seemplexity.Web.Models.EmailModel
+
+@{
+    ViewBag.Title = Model.Subject;
+}
+
+<div>
+     
+    Откуда: @(Model.Data["CityFromName"])<br>
+    Куда: @(Model.Data["CityToName"])<br>
+    Автобус: @(Model.Data["ServiceListName"])<br>
+    Дата: @(Model.Data["Date"])<br>
+    Число мест: @(Model.Data["SelectedPlacesCount"])<br>
+    Были забронированы следующие места: @(Model.Data["SelectedPlaces"])<br>
+
+    EMail пользователя: @(Model.Data["UserMail"])<br>
+    Телефон пользователя: @(Model.Data["PhoneNumber"])<br>
+
+    Туристы:
+    @foreach (var tur in Model.Turists)
+    {
+        <div>@($"{tur.Surname} {tur.Name} (паспорт: {tur.PassportSeria} {tur.PassportNumber})")</div>
+    }
+</div>
+
+<br>
+
+<div style="font-style: italic;">С уважением, Балкан-Экспресс</div>

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+<data name="Admin" xml:space="preserve">
+<value>Administrare</value>
+</data>
+<data name="BalkanExpress" xml:space="preserve">
+<value>Balcan Expres</value>
+</data>
+<data name="BusTickets" xml:space="preserve">
+<value>Bilete de autobuz</value>
+</data>
+<data name="BusTours" xml:space="preserve">
+<value>Calatorii cu autobuzul</value>
+</data>
+<data name="ConfirmAccount" xml:space="preserve">
+<value>Confirmare EMail</value>
+</data>
+<data name="ConfirmAccountMessageBody" xml:space="preserve">
+<value>Confirmati mail-ul Dvs dand clic pe link-ul: {0}</value>
+</data>
+<data name="ConfirmingEmail" xml:space="preserve">
+<value>Multumim pentru confirmarea mail-ului Dvs</value>
+</data>
+<data name="ConfirmPassword" xml:space="preserve">
+<value>Confirmati parola</value>
+</data>
+<data name="Create" xml:space="preserve">
+<value>Creare</value>
+</data>
+<data name="CreateNewAccount" xml:space="preserve">
+<value>Crearea acount-ului nou</value>
+</data>
+<data name="LogIn" xml:space="preserve">
+<value>Intrare</value>
+</data>
+<data name="LogOff" xml:space="preserve">
+<value>Iesire</value>
+</data>
+<data name="PassDontMatch" xml:space="preserve">
+<value>Parolele trebuie sa fie potrivite</value>
+</data>
+<data name="PassInvalid" xml:space="preserve">
+<value>{0} trebuie sa aiba macar {2} simbole</value>
+</data>
+<data name="Password" xml:space="preserve">
+<value>Parola</value>
+</data>
+<data name="PhoneNumber" xml:space="preserve">
+<value>Numar de telefon</value>
+</data>
+<data name="Register" xml:space="preserve">
+<value>Inregistrare</value>
+</data>
+<data name="RememberMe" xml:space="preserve">
+<value>Tine-ma minte pe mine?</value>
+</data>
+<data name="TourTypes" xml:space="preserve">
+<value>Tip-uri de servicii turistice</value>
+</data>
+<data name="UsersList" xml:space="preserve">
+<value>Lista user-ilor</value>
+</data>
+<data name="ClickToLogIn" xml:space="preserve">
+<value>Apasati aici pentru intrarea in sistem</value>
+</data>
+<data name="Error" xml:space="preserve">
+<value>Eroare</value>
+</data>
+<data name="ErrorRequest" xml:space="preserve">
+<value>Corectare</value>
+</data>
+<data name="ConfirmationHasSended" xml:space="preserve">
+<value>Scrisoarea cu confirmarea de inregistrare este trimisa pe mail-ul Dvs.</value>
+</data>
+<data name="NotConfirmed" xml:space="preserve">
+<value>Mail-ul Dvs nu este confirmat</value>
+</data>
+<data name="ThanksConfirmation" xml:space="preserve">
+<value>Multumim pentru inregistrarea</value>
+</data>
+<data name="Contacts" xml:space="preserve">
+<value>Contacte</value>
+</data>
+<data name="AvailablePlaces" xml:space="preserve">
+<value>Locuri disponibile</value>
+</data>
+<data name="Book" xml:space="preserve">
+<value>Rezervare</value>
+</data>
+<data name="Bus" xml:space="preserve">
+<value>Autobuz</value>
+</data>
+<data name="Close" xml:space="preserve">
+<value>Inchidere</value>
+</data>
+<data name="Country" xml:space="preserve">
+<value>Tara</value>
+</data>
+<data name="FindBuses" xml:space="preserve">
+<value>Cautarea autobuzelor</value>
+</data>
+<data name="From" xml:space="preserve">
+<value>De unde</value>
+</data>
+<data name="NoPlaces" xml:space="preserve">
+<value>Nu sunt locuri</value>
+</data>
+<data name="NumberOfPlaces" xml:space="preserve">
+<value>Numar de locuri</value>
+</data>
+<data name="Price" xml:space="preserve">
+<value>Pret</value>
+</data>
+<data name="Request" xml:space="preserve">
+<value>Cerere</value>
+</data>
+<data name="Scheme" xml:space="preserve">
+<value>Schema autobuzului</value>
+</data>
+<data name="SchemeNotFound" xml:space="preserve">
+<value>Schema autobuzului nu este gasita</value>
+</data>
+<data name="TicketFrom" xml:space="preserve">
+<value>Bilet de la</value>
+</data>
+<data name="Tickets" xml:space="preserve">
+<value>Bilete</value>
+</data>
+<data name="TicketsReservation" xml:space="preserve">
+<value>Rezervarea biletelor</value>
+</data>
+<data name="TicketsReservationRegister" xml:space="preserve">
+<value>Inregistrarea pentru rezervarea biletelor</value>
+</data>
+<data name="TicketTo" xml:space="preserve">
+<value>Bilet la</value>
+</data>
+<data name="There" xml:space="preserve">
+<value>Acolo</value>
+</data>
+<data name="Where" xml:space="preserve">
+<value>Unde</value>
+</data>
+<data name="RtOnly" xml:space="preserve">
+<value>Doar cu biletul intors</value>
+</data>
+<data name="Back" xml:space="preserve">
+<value>Intors</value>
+</data>
+<data name="When" xml:space="preserve">
+<value>Cand</value>
+</data>
+<data name="HowToPay" xml:space="preserve">
+<value>Achitare</value>
+</data>
+<data name="List" xml:space="preserve">
+<value>Lista</value>
+</data>
+<data name="OurAdresses" xml:space="preserve">
+<value>Adresele noastre</value>
+</data>
+<data name="PaymentMethods" xml:space="preserve">
+<value>Metode de achitare</value>
+</data>
+<data name="PaymentMethodsCach" xml:space="preserve">
+<value>In numerar, inainte de calatorie</value>
+</data>
+<data name="PaymentMethodsCachOffice" xml:space="preserve">
+<value>In numerar in oficiul nostru</value>
+</data>
+<data name="PaymentMethodsCredtCard" xml:space="preserve">
+<value>Cu card-ul de credit conform numarului de cerere (il primiti dupa alegerea locului si trimiterea cererii)</value>
+</data>
+</root>

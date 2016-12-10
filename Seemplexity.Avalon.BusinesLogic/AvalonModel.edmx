@@ -1,0 +1,2130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AvalonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AddDescript1">
+          <Key>
+            <PropertyRef Name="A1_KEY" />
+          </Key>
+          <Property Name="A1_KEY" Type="int" Nullable="false" />
+          <Property Name="A1_SVKEY" Type="int" />
+          <Property Name="A1_CODE" Type="varchar" MaxLength="7" />
+          <Property Name="A1_NAME" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="A1_NAMELAT" Type="varchar" MaxLength="40" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="A1_StdKey" Type="char" MaxLength="10" />
+          <Property Name="A1_ShowOrder" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AddDescript2">
+          <Key>
+            <PropertyRef Name="A2_KEY" />
+          </Key>
+          <Property Name="A2_KEY" Type="int" Nullable="false" />
+          <Property Name="A2_SVKEY" Type="int" />
+          <Property Name="A2_CODE" Type="varchar" MaxLength="7" />
+          <Property Name="A2_NAME" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="A2_NAMELAT" Type="varchar" MaxLength="40" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="A2_StdKey" Type="char" MaxLength="10" />
+          <Property Name="A2_Url" Type="varchar" MaxLength="192" />
+          <Property Name="A2_ShowOrder" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExcurDictionary">
+          <Key>
+            <PropertyRef Name="ED_KEY" />
+          </Key>
+          <Property Name="ED_CNKEY" Type="int" Nullable="false" />
+          <Property Name="ED_CTKEY" Type="int" Nullable="false" />
+          <Property Name="ED_KEY" Type="int" Nullable="false" />
+          <Property Name="ED_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ED_NAMELAT" Type="varchar" MaxLength="50" />
+          <Property Name="ED_TIMEBEG" Type="datetime" />
+          <Property Name="ED_TIMEEND" Type="datetime" />
+          <Property Name="ED_TIME" Type="varchar" MaxLength="10" />
+          <Property Name="ED_PLACEFROM" Type="varchar" MaxLength="15" />
+          <Property Name="ED_PLACETO" Type="varchar" MaxLength="15" />
+          <Property Name="ED_REMARK" Type="varchar" MaxLength="15" />
+          <Property Name="ED_COMMENT" Type="text" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="ED_StdKey" Type="char" MaxLength="10" />
+          <Property Name="ED_Url" Type="varchar" MaxLength="192" />
+          <Property Name="ED_ShowOrder" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HotelDictionary">
+          <Key>
+            <PropertyRef Name="HD_KEY" />
+          </Key>
+          <Property Name="HD_CNKEY" Type="int" Nullable="false" />
+          <Property Name="HD_CTKEY" Type="int" Nullable="false" />
+          <Property Name="HD_KEY" Type="int" Nullable="false" />
+          <Property Name="HD_NAME" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="HD_STARS" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="HD_ADDRESS" Type="varchar" MaxLength="254" />
+          <Property Name="HD_PHONE" Type="varchar" MaxLength="50" />
+          <Property Name="HD_FAX" Type="varchar" MaxLength="20" />
+          <Property Name="HD_SITE" Type="smallint" />
+          <Property Name="HD_DESCRIPT" Type="text" />
+          <Property Name="HD_PERSONNAME" Type="varchar" MaxLength="50" />
+          <Property Name="HD_PERSONAPP" Type="varchar" MaxLength="50" />
+          <Property Name="HD_CODE" Type="varchar" MaxLength="10" />
+          <Property Name="HD_RSKEY" Type="int" />
+          <Property Name="HD_EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="HD_HTTP" Type="varchar" MaxLength="254" />
+          <Property Name="HD_DESCROOM" Type="text" />
+          <Property Name="HD_DESCMEAL" Type="text" />
+          <Property Name="HD_DESCSERVICE" Type="text" />
+          <Property Name="HD_DESCSPORT" Type="text" />
+          <Property Name="HD_DESCEXCUR" Type="text" />
+          <Property Name="HD_DESCHEALTH" Type="text" />
+          <Property Name="HD_DISTANCE" Type="float" />
+          <Property Name="HD_WEB" Type="int" />
+          <Property Name="HD_DESCRAZVL" Type="text" />
+          <Property Name="HD_WEBIMAGE" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE1" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE2" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE3" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE4" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE5" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE6" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE7" Type="varchar" MaxLength="64" />
+          <Property Name="HD_WEBIMAGE8" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK1" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK2" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK3" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK4" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK5" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK6" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK7" Type="varchar" MaxLength="64" />
+          <Property Name="HD_REMARK8" Type="varchar" MaxLength="64" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="HD_StdKey" Type="char" MaxLength="10" />
+          <Property Name="HD_UNICODE" Type="varchar" MaxLength="5" />
+          <Property Name="HD_UPDATEDATE" Type="datetime" Nullable="false" />
+          <Property Name="HD_Order" Type="int" />
+          <Property Name="HD_IsCruise" Type="int" Nullable="false" />
+          <Property Name="HD_COHId" Type="int" />
+          <Property Name="HD_NAMELAT" Type="varchar" MaxLength="60" />
+          <Property Name="HD_PayHour1" Type="smalldatetime" />
+          <Property Name="HD_PayHour2" Type="smalldatetime" />
+          <Property Name="HD_Travel" Type="varchar" MaxLength="254" />
+          <Property Name="HD_PayHourNote" Type="text" />
+          <Property Name="hd_rank" Type="int" />
+          <Property Name="HD_HTTPAdditional" Type="nvarchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="SV_KEY" />
+          </Key>
+          <Property Name="SV_KEY" Type="int" Nullable="false" />
+          <Property Name="SV_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="SV_NAMELAT" Type="varchar" MaxLength="50" />
+          <Property Name="SV_TYPE" Type="smallint" />
+          <Property Name="SV_CONTROL" Type="int" />
+          <Property Name="SV_ISCITY" Type="smallint" />
+          <Property Name="SV_ISSUBCODE1" Type="smallint" />
+          <Property Name="SV_ISSUBCODE2" Type="smallint" />
+          <Property Name="SV_ROUNDBRUTTO" Type="smallint" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="SV_StdKey" Type="char" MaxLength="10" />
+          <Property Name="SV_Code" Type="varchar" MaxLength="10" />
+          <Property Name="SV_IsDuration" Type="smallint" Nullable="false" />
+          <Property Name="SV_UseManualInput" Type="smallint" Nullable="false" />
+          <Property Name="SV_QUOTED" Type="smallint" Nullable="false" />
+          <Property Name="SV_IsIndividual" Type="smallint" />
+          <Property Name="SV_LittlePercent" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SV_LittlePlace" Type="smallint" />
+          <Property Name="SV_LittleAnd" Type="bit" />
+        </EntityType>
+        <EntityType Name="ServiceList">
+          <Key>
+            <PropertyRef Name="SL_KEY" />
+          </Key>
+          <Property Name="SL_SVKEY" Type="int" Nullable="false" />
+          <Property Name="SL_KEY" Type="int" Nullable="false" />
+          <Property Name="SL_NAME" Type="varchar" MaxLength="60" />
+          <Property Name="SL_NAMELAT" Type="varchar" MaxLength="60" />
+          <Property Name="SL_TIMEBEG" Type="datetime" />
+          <Property Name="SL_TIMEEND" Type="datetime" />
+          <Property Name="SL_TIME" Type="varchar" MaxLength="5" />
+          <Property Name="SL_CNKEY" Type="int" />
+          <Property Name="SL_CTKEY" Type="int" />
+          <Property Name="SL_PLACEFROM" Type="varchar" MaxLength="40" />
+          <Property Name="SL_PLACETO" Type="varchar" MaxLength="40" />
+          <Property Name="SL_CODE" Type="varchar" MaxLength="7" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="SL_StdKey" Type="char" MaxLength="10" />
+          <Property Name="SL_DaysCountMin" Type="int" />
+          <Property Name="SL_Url" Type="varchar" MaxLength="192" />
+          <Property Name="SL_ShowOrder" Type="int" Nullable="false" />
+          <Property Name="SL_quKey" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Costs">
+          <Key>
+            <PropertyRef Name="CS_ID" />
+          </Key>
+          <Property Name="CS_SVKEY" Type="int" Nullable="false" />
+          <Property Name="CS_CODE" Type="int" Nullable="false" />
+          <Property Name="CS_SUBCODE1" Type="int" />
+          <Property Name="CS_SUBCODE2" Type="int" />
+          <Property Name="CS_PRKEY" Type="int" Nullable="false" />
+          <Property Name="CS_PKKEY" Type="int" />
+          <Property Name="CS_DATE" Type="datetime" />
+          <Property Name="CS_DATEEND" Type="datetime" />
+          <Property Name="CS_WEEK" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="CS_COSTNETTO" Type="float" Nullable="false" />
+          <Property Name="CS_COST" Type="float" Nullable="false" />
+          <Property Name="CS_DISCOUNT" Type="smallint" />
+          <Property Name="CS_TYPE" Type="smallint" />
+          <Property Name="CS_CREATOR" Type="int" Nullable="false" />
+          <Property Name="CS_RATE" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="CS_UPDDATE" Type="datetime" />
+          <Property Name="CS_LONG" Type="smallint" />
+          <Property Name="CS_BYDAY" Type="smallint" Nullable="false" />
+          <Property Name="CS_FIRSTDAYNETTO" Type="smallint" />
+          <Property Name="CS_FIRSTDAYBRUTTO" Type="smallint" />
+          <Property Name="CS_PROFIT" Type="float" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CS_CINNUM" Type="int" />
+          <Property Name="CS_TypeCalc" Type="smallint" />
+          <Property Name="cs_DateSellBeg" Type="datetime" />
+          <Property Name="cs_DateSellEnd" Type="datetime" />
+          <Property Name="CS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CS_CHECKINDATEBEG" Type="datetime" />
+          <Property Name="CS_CHECKINDATEEND" Type="datetime" />
+          <Property Name="CS_LONGMIN" Type="smallint" />
+          <Property Name="CS_TypeDivision" Type="smallint" />
+          <Property Name="CS_UPDUSER" Type="varchar" MaxLength="30" />
+          <Property Name="CS_TRFId" Type="int" Nullable="false" />
+          <Property Name="CS_COID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Country">
+          <Key>
+            <PropertyRef Name="CN_KEY" />
+          </Key>
+          <Property Name="CN_KEY" Type="int" Nullable="false" />
+          <Property Name="CN_NAME" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="CN_NAMELAT" Type="varchar" MaxLength="25" />
+          <Property Name="CN_FRAME" Type="int" />
+          <Property Name="CN_WEB" Type="int" />
+          <Property Name="CN_WEBIMAGE" Type="varchar" MaxLength="128" />
+          <Property Name="CN_WEBHTTP" Type="varchar" MaxLength="128" />
+          <Property Name="CN_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="CN_AnkLang" Type="smallint" Nullable="false" />
+          <Property Name="CN_StdKey" Type="char" MaxLength="10" />
+          <Property Name="CN_Updatedate" Type="datetime" />
+          <Property Name="CN_SMALLDESC" Type="text" />
+          <Property Name="CN_COKey" Type="int" />
+          <Property Name="CN_NameAC" Type="varchar" MaxLength="25" />
+          <Property Name="CN_Order" Type="int" />
+          <Property Name="CN_CitizenName" Type="varchar" MaxLength="50" />
+          <Property Name="CN_CitizenNameLat" Type="varchar" MaxLength="50" />
+          <Property Name="CN_INNName" Type="varchar" MaxLength="10" />
+          <Property Name="CN_CheckINN" Type="bit" Nullable="false" />
+          <Property Name="CN_PassportMinDur" Type="int" />
+          <Property Name="CN_RateKey" Type="int" />
+          <Property Name="CN_PassportMinDurCheckFrom" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Turist">
+          <Key>
+            <PropertyRef Name="TU_KEY" />
+          </Key>
+          <Property Name="TU_DGCOD" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TU_KEY" Type="int" Nullable="false" />
+          <Property Name="TU_TURDATE" Type="datetime" />
+          <Property Name="TU_NAMERUS" Type="varchar" MaxLength="35" />
+          <Property Name="TU_NAMELAT" Type="varchar" MaxLength="35" />
+          <Property Name="TU_SHORTNAME" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="TU_SEX" Type="smallint" />
+          <Property Name="TU_FNAMERUS" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TU_FNAMELAT" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TU_SNAMERUS" Type="varchar" MaxLength="15" />
+          <Property Name="TU_SNAMELAT" Type="varchar" MaxLength="15" />
+          <Property Name="TU_BIRTHDAY" Type="datetime" />
+          <Property Name="TU_BIRTHCOUNTRY" Type="varchar" MaxLength="25" />
+          <Property Name="TU_BIRTHCITY" Type="varchar" MaxLength="60" />
+          <Property Name="TU_CITIZEN" Type="varchar" MaxLength="50" />
+          <Property Name="TU_POSTINDEX" Type="varchar" MaxLength="8" />
+          <Property Name="TU_POSTCITY" Type="varchar" MaxLength="60" />
+          <Property Name="TU_POSTSTREET" Type="varchar" MaxLength="25" />
+          <Property Name="TU_POSTBILD" Type="varchar" MaxLength="10" />
+          <Property Name="TU_POSTFLAT" Type="varchar" MaxLength="4" />
+          <Property Name="TU_PHONE" Type="varchar" MaxLength="60" />
+          <Property Name="TU_PHONECODE" Type="varchar" MaxLength="5" />
+          <Property Name="TU_PASPORTTYPE" Type="varchar" MaxLength="5" />
+          <Property Name="TU_PASPORTNUM" Type="varchar" MaxLength="13" />
+          <Property Name="TU_PASPORTDATE" Type="datetime" />
+          <Property Name="TU_PASPORTDATEEND" Type="datetime" />
+          <Property Name="TU_PASPORTBYWHOM" Type="varchar" MaxLength="15" />
+          <Property Name="TU_PLACE" Type="smallint" />
+          <Property Name="TU_ISANKETA" Type="smallint" />
+          <Property Name="TU_CREATOR" Type="int" Nullable="false" />
+          <Property Name="TU_OWNER" Type="int" Nullable="false" />
+          <Property Name="TU_PASPRUSER" Type="varchar" MaxLength="10" />
+          <Property Name="TU_PASPRUNUM" Type="varchar" MaxLength="10" />
+          <Property Name="TU_PASPRUDATE" Type="datetime" />
+          <Property Name="TU_PASPRUBYWHOM" Type="varchar" MaxLength="45" />
+          <Property Name="TU_INSURPOLIS" Type="varchar" MaxLength="15" />
+          <Property Name="TU_INSURSUM" Type="float" />
+          <Property Name="TU_DISCOUNT" Type="float" />
+          <Property Name="TU_TYPEDISCOUNT" Type="float" />
+          <Property Name="TU_ID" Type="int" />
+          <Property Name="TU_ISMAIN" Type="smallint" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="TU_AgentID" Type="int" />
+          <Property Name="TU_DGKEY" Type="int" />
+          <Property Name="TU_RealSex" Type="smallint" />
+          <Property Name="TU_EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="TU_EnableSmsNotifications" Type="smallint" Nullable="false" />
+          <Property Name="TU_InsuredEvent" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_TurList">
+          <Key>
+            <PropertyRef Name="TL_KEY" />
+          </Key>
+          <Property Name="TL_CNKEY" Type="int" Nullable="false" />
+          <Property Name="TL_KEY" Type="int" Nullable="false" />
+          <Property Name="TL_NAME" Type="varchar" MaxLength="160" Nullable="false" />
+          <Property Name="TL_TYPECOUNT" Type="smallint" />
+          <Property Name="TL_PROFIT" Type="float" />
+          <Property Name="TL_PRICE" Type="float" />
+          <Property Name="TL_NDAY" Type="smallint" Nullable="false" />
+          <Property Name="TL_CREATOR" Type="int" />
+          <Property Name="TL_DESCRIPTION" Type="varchar" MaxLength="2000" />
+          <Property Name="TL_REMARK" Type="varchar" MaxLength="240" />
+          <Property Name="TL_RATE" Type="varchar" MaxLength="3" />
+          <Property Name="TL_WEBHTTP" Type="varchar" MaxLength="128" />
+          <Property Name="TL_NAMEWEB" Type="varchar" MaxLength="128" />
+          <Property Name="TL_WEB" Type="int" />
+          <Property Name="TL_DATEDOC" Type="int" />
+          <Property Name="TL_DATEDOCVISA" Type="int" />
+          <Property Name="TL_TIP" Type="int" Nullable="false" />
+          <Property Name="TL_WEBCOST" Type="text" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="TL_EMAIL" Type="varchar" MaxLength="255" />
+          <Property Name="TL_datequotes" Type="int" />
+          <Property Name="TL_datepayed" Type="int" />
+          <Property Name="TL_DfltPaymentPcnt" Type="float" />
+          <Property Name="TL_Margin" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="TL_MarginType" Type="smallint" />
+          <Property Name="TL_PRKey" Type="int" />
+          <Property Name="TL_OpKey" Type="int" />
+          <Property Name="TL_IsDisabled" Type="smallint" Nullable="false" />
+          <Property Name="TL_RGKEY" Type="int" />
+          <Property Name="TL_ADVDESC" Type="text" />
+          <Property Name="TL_ATTDESC" Type="text" />
+          <Property Name="TL_DOPDESC" Type="text" />
+          <Property Name="TL_FULLDESC" Type="text" />
+          <Property Name="TL_SMALLDESC" Type="text" />
+          <Property Name="TL_Deleted" Type="smallint" Nullable="false" />
+          <Property Name="TL_LEADDEPARTMENT" Type="int" />
+          <Property Name="TL_NameLat" Type="varchar" MaxLength="160" />
+          <Property Name="TL_CTDepartureKey" Type="int" />
+          <Property Name="tl_webHttpPers" Type="varchar" MaxLength="128" />
+          <Property Name="TL_Attribute" Type="int" Nullable="false" />
+          <Property Name="TL_CalculationAction" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipTur">
+          <Key>
+            <PropertyRef Name="TP_KEY" />
+          </Key>
+          <Property Name="TP_KEY" Type="int" Nullable="false" />
+          <Property Name="TP_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TP_TPKEY" Type="int" />
+          <Property Name="TP_NameLat" Type="varchar" MaxLength="50" />
+          <Property Name="TP_Order" Type="int" />
+        </EntityType>
+        <EntityType Name="TurDate">
+          <Key>
+            <PropertyRef Name="TD_Id" />
+          </Key>
+          <Property Name="TD_TRKEY" Type="int" Nullable="false" />
+          <Property Name="TD_DATE" Type="datetime" Nullable="false" />
+          <Property Name="TD_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TuristService">
+          <Key>
+            <PropertyRef Name="TU_IDKEY" />
+          </Key>
+          <Property Name="TU_TUKEY" Type="int" Nullable="false" />
+          <Property Name="TU_DLKEY" Type="int" Nullable="false" />
+          <Property Name="TU_NUMDOC" Type="varchar" MaxLength="30" />
+          <Property Name="TU_NUMROOM" Type="smallint" />
+          <Property Name="TU_SEAT" Type="varchar" MaxLength="4" />
+          <Property Name="TU_AREA" Type="smallint" />
+          <Property Name="TU_DOCDATE" Type="datetime" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="TU_IDKEY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TurService">
+          <Key>
+            <PropertyRef Name="TS_Key" />
+          </Key>
+          <Property Name="TS_TRKEY" Type="int" Nullable="false" />
+          <Property Name="TS_SVKEY" Type="int" Nullable="false" />
+          <Property Name="TS_PKKEY" Type="int" />
+          <Property Name="TS_NAME" Type="varchar" MaxLength="255" />
+          <Property Name="TS_DAY" Type="smallint" />
+          <Property Name="TS_CODE" Type="int" Nullable="false" />
+          <Property Name="TS_SUBCODE1" Type="int" />
+          <Property Name="TS_SUBCODE2" Type="int" />
+          <Property Name="TS_NDAYS" Type="smallint" />
+          <Property Name="TS_CNKEY" Type="int" Nullable="false" />
+          <Property Name="TS_CTKEY" Type="int" />
+          <Property Name="TS_PARTNERKEY" Type="int" />
+          <Property Name="TS_COST" Type="float" />
+          <Property Name="TS_PROFIT" Type="float" />
+          <Property Name="TS_TIMEBEG" Type="datetime" />
+          <Property Name="TS_ATTRIBUTE" Type="int" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="TS_Key" Type="int" Nullable="false" />
+          <Property Name="TS_NameLat" Type="varchar" MaxLength="255" />
+          <Property Name="TS_PRTDOGKEY" Type="int" />
+          <Property Name="TS_TAXZONEID" Type="int" />
+          <Property Name="TS_WebAttribute" Type="int" />
+          <Property Name="TS_Wait" Type="smallint" />
+          <Property Name="TS_TRFId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vehicle">
+          <Key>
+            <PropertyRef Name="VH_KEY" />
+          </Key>
+          <Property Name="VH_KEY" Type="int" Nullable="false" />
+          <Property Name="VH_HOSTKEY" Type="int" />
+          <Property Name="VH_SVKEY" Type="int" />
+          <Property Name="VH_NUMOFCOLUMN" Type="smallint" />
+          <Property Name="VH_NUMOFROW" Type="smallint" />
+          <Property Name="VH_NUMOFAREA" Type="smallint" />
+          <Property Name="VH_TITLE" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="VehiclePlan">
+          <Key>
+            <PropertyRef Name="VP_VHKEY" />
+            <PropertyRef Name="VP_VHROW" />
+            <PropertyRef Name="VP_VHAREANUMBER" />
+          </Key>
+          <Property Name="VP_VHKEY" Type="int" Nullable="false" />
+          <Property Name="VP_VHROW" Type="int" Nullable="false" />
+          <Property Name="VP_VHAREANUMBER" Type="int" Nullable="false" />
+          <Property Name="VP_SEATNUMBER1" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER2" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER3" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER4" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER5" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER6" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER7" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER8" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER9" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER10" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER11" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATNUMBER12" Type="varchar" MaxLength="4" />
+          <Property Name="VP_SEATTYPE1" Type="smallint" />
+          <Property Name="VP_SEATTYPE2" Type="smallint" />
+          <Property Name="VP_SEATTYPE3" Type="smallint" />
+          <Property Name="VP_SEATTYPE4" Type="smallint" />
+          <Property Name="VP_SEATTYPE5" Type="smallint" />
+          <Property Name="VP_SEATTYPE6" Type="smallint" />
+          <Property Name="VP_SEATTYPE7" Type="smallint" />
+          <Property Name="VP_SEATTYPE8" Type="smallint" />
+          <Property Name="VP_SEATTYPE9" Type="smallint" />
+          <Property Name="VP_SEATTYPE10" Type="smallint" />
+          <Property Name="VP_SEATTYPE11" Type="smallint" />
+          <Property Name="VP_SEATTYPE12" Type="smallint" />
+          <Property Name="VP_SEATMEN1" Type="smallint" />
+          <Property Name="VP_SEATMEN2" Type="smallint" />
+          <Property Name="VP_SEATMEN3" Type="smallint" />
+          <Property Name="VP_SEATMEN4" Type="smallint" />
+          <Property Name="VP_SEATMEN5" Type="smallint" />
+          <Property Name="VP_SEATMEN6" Type="smallint" />
+          <Property Name="VP_SEATMEN7" Type="smallint" />
+          <Property Name="VP_SEATMEN8" Type="smallint" />
+          <Property Name="VP_SEATMEN9" Type="smallint" />
+          <Property Name="VP_SEATMEN10" Type="smallint" />
+          <Property Name="VP_SEATMEN11" Type="smallint" />
+          <Property Name="VP_SEATMEN12" Type="smallint" />
+          <Property Name="ROWID" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <Association Name="A1_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AddDescript1" Type="Self.AddDescript1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="AddDescript1">
+              <PropertyRef Name="A1_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="A2_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AddDescript2" Type="Self.AddDescript2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="AddDescript2">
+              <PropertyRef Name="A2_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_TurList_TipTur">
+          <End Role="TipTur" Type="Self.TipTur" Multiplicity="1" />
+          <End Role="tbl_TurList" Type="Self.tbl_TurList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipTur">
+              <PropertyRef Name="TP_KEY" />
+            </Principal>
+            <Dependent Role="tbl_TurList">
+              <PropertyRef Name="TL_TIP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipTur_TipTur">
+          <End Role="TipTur" Type="Self.TipTur" Multiplicity="0..1" />
+          <End Role="TipTur1" Type="Self.TipTur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipTur">
+              <PropertyRef Name="TP_KEY" />
+            </Principal>
+            <Dependent Role="TipTur1">
+              <PropertyRef Name="TP_TPKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SL_CNKEY">
+          <End Role="tbl_Country" Type="Self.tbl_Country" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ServiceList" Type="Self.ServiceList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Country">
+              <PropertyRef Name="CN_KEY" />
+            </Principal>
+            <Dependent Role="ServiceList">
+              <PropertyRef Name="SL_CNKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SL_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ServiceList" Type="Self.ServiceList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="ServiceList">
+              <PropertyRef Name="SL_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TD_TRKEY">
+          <End Role="tbl_TurList" Type="Self.tbl_TurList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TurDate" Type="Self.TurDate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_TurList">
+              <PropertyRef Name="TL_KEY" />
+            </Principal>
+            <Dependent Role="TurDate">
+              <PropertyRef Name="TD_TRKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TS_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="1" />
+          <End Role="TurService" Type="Self.TurService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="TurService">
+              <PropertyRef Name="TS_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TS_TRKEY">
+          <End Role="tbl_TurList" Type="Self.tbl_TurList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TurService" Type="Self.TurService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_TurList">
+              <PropertyRef Name="TL_KEY" />
+            </Principal>
+            <Dependent Role="TurService">
+              <PropertyRef Name="TS_TRKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TU_TUKEY">
+          <End Role="tbl_Turist" Type="Self.tbl_Turist" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TuristService" Type="Self.TuristService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Turist">
+              <PropertyRef Name="TU_KEY" />
+            </Principal>
+            <Dependent Role="TuristService">
+              <PropertyRef Name="TU_TUKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VP_VHKEY">
+          <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VehiclePlan" Type="Self.VehiclePlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehicle">
+              <PropertyRef Name="VH_KEY" />
+            </Principal>
+            <Dependent Role="VehiclePlan">
+              <PropertyRef Name="VP_VHKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetNewKeys" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sTable" Type="varchar" Mode="In" />
+          <Parameter Name="nKeyCount" Type="int" Mode="In" />
+          <Parameter Name="nNewKey" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="GetServiceCost" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="svKey" Type="int" Mode="In" />
+          <Parameter Name="code" Type="int" Mode="In" />
+          <Parameter Name="code1" Type="int" Mode="In" />
+          <Parameter Name="code2" Type="int" Mode="In" />
+          <Parameter Name="prKey" Type="int" Mode="In" />
+          <Parameter Name="packetKey" Type="int" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="days" Type="int" Mode="In" />
+          <Parameter Name="resRate" Type="varchar" Mode="In" />
+          <Parameter Name="men" Type="int" Mode="In" />
+          <Parameter Name="discountPercent" Type="decimal" Mode="In" />
+          <Parameter Name="margin" Type="decimal" Mode="In" />
+          <Parameter Name="marginType" Type="int" Mode="In" />
+          <Parameter Name="sellDate" Type="datetime" Mode="In" />
+          <Parameter Name="netto" Type="decimal" Mode="InOut" />
+          <Parameter Name="brutto" Type="decimal" Mode="InOut" />
+          <Parameter Name="discount" Type="decimal" Mode="InOut" />
+          <Parameter Name="nettoDetail" Type="varchar" Mode="InOut" />
+          <Parameter Name="sBadRate" Type="varchar" Mode="InOut" />
+          <Parameter Name="dtBadDate" Type="datetime" Mode="InOut" />
+          <Parameter Name="sDetailed" Type="varchar" Mode="InOut" />
+          <Parameter Name="nSPId" Type="int" Mode="InOut" />
+          <Parameter Name="useDiscountDays" Type="int" Mode="InOut" />
+          <Parameter Name="tourKey" Type="int" Mode="In" />
+          <Parameter Name="tourDate" Type="datetime" Mode="In" />
+          <Parameter Name="tourDays" Type="int" Mode="In" />
+          <Parameter Name="includeAddCost" Type="bit" Mode="In" />
+          <Parameter Name="isCommission" Type="bit" Mode="InOut" />
+        </Function>
+        <Function Name="InsDogList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sDogovor" Type="varchar" Mode="In" />
+          <Parameter Name="dTour" Type="datetime" Mode="In" />
+          <Parameter Name="nSvKey" Type="int" Mode="In" />
+          <Parameter Name="sService" Type="varchar" Mode="In" />
+          <Parameter Name="nDay" Type="int" Mode="In" />
+          <Parameter Name="nCode" Type="int" Mode="In" />
+          <Parameter Name="nCode1" Type="int" Mode="In" />
+          <Parameter Name="nCode2" Type="int" Mode="In" />
+          <Parameter Name="nNDays" Type="int" Mode="In" />
+          <Parameter Name="nCountry" Type="int" Mode="In" />
+          <Parameter Name="nCity" Type="int" Mode="In" />
+          <Parameter Name="nPartner" Type="int" Mode="In" />
+          <Parameter Name="nAgent" Type="int" Mode="In" />
+          <Parameter Name="nMen" Type="int" Mode="In" />
+          <Parameter Name="nNetto" Type="money" Mode="In" />
+          <Parameter Name="nBrutto" Type="money" Mode="In" />
+          <Parameter Name="nDiscount" Type="money" Mode="In" />
+          <Parameter Name="nPaket" Type="int" Mode="In" />
+          <Parameter Name="nTour" Type="int" Mode="In" />
+          <Parameter Name="nAttribute" Type="int" Mode="In" />
+          <Parameter Name="nControl" Type="int" Mode="In" />
+          <Parameter Name="nCreator" Type="int" Mode="In" />
+          <Parameter Name="nOwner" Type="int" Mode="In" />
+          <Parameter Name="dBeg" Type="datetime" Mode="In" />
+          <Parameter Name="dEnd" Type="datetime" Mode="In" />
+          <Parameter Name="tTime" Type="datetime" Mode="In" />
+          <Parameter Name="p_nIsComtmntFirst" Type="int" Mode="In" />
+          <Parameter Name="bRet" Type="int" Mode="InOut" />
+          <Parameter Name="nPrmPlaceNoHave" Type="money" Mode="InOut" />
+          <Parameter Name="dPrmBadDate" Type="datetime" Mode="InOut" />
+          <Parameter Name="nNewKey" Type="int" Mode="InOut" />
+          <Parameter Name="nDGKey" Type="int" Mode="In" />
+          <Parameter Name="sComment" Type="varchar" Mode="In" />
+          <Parameter Name="sFormulaNetto" Type="varchar" Mode="In" />
+          <Parameter Name="sFormulaBrutto" Type="varchar" Mode="In" />
+          <Parameter Name="sFormulaDiscount" Type="varchar" Mode="In" />
+          <Parameter Name="sServiceLat" Type="varchar" Mode="In" />
+          <Parameter Name="nPrtDog" Type="int" Mode="In" />
+          <Parameter Name="nTaxZone" Type="int" Mode="In" />
+          <Parameter Name="bWait" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="InsDogovor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nReturn" Type="int" Mode="InOut" />
+          <Parameter Name="nKeyDogovor" Type="int" Mode="InOut" />
+          <Parameter Name="sDogovor" Type="varchar" Mode="In" />
+          <Parameter Name="dTour" Type="datetime" Mode="In" />
+          <Parameter Name="nDays" Type="int" Mode="In" />
+          <Parameter Name="nTour" Type="int" Mode="In" />
+          <Parameter Name="nCountry" Type="int" Mode="In" />
+          <Parameter Name="nCity" Type="int" Mode="In" />
+          <Parameter Name="nMen" Type="smallint" Mode="In" />
+          <Parameter Name="sRate" Type="varchar" Mode="In" />
+          <Parameter Name="nPrice" Type="money" Mode="In" />
+          <Parameter Name="nPayed" Type="money" Mode="In" />
+          <Parameter Name="nDiscount" Type="money" Mode="In" />
+          <Parameter Name="nDiscountKey" Type="int" Mode="In" />
+          <Parameter Name="nPcnt" Type="smallint" Mode="In" />
+          <Parameter Name="nDiscountSum" Type="money" Mode="In" />
+          <Parameter Name="nCauseDiscount" Type="int" Mode="In" />
+          <Parameter Name="nAgent" Type="int" Mode="In" />
+          <Parameter Name="nOper" Type="int" Mode="In" />
+          <Parameter Name="sOper" Type="varchar" Mode="In" />
+          <Parameter Name="sMainMen" Type="varchar" Mode="In" />
+          <Parameter Name="sMainMenPhone" Type="varchar" Mode="In" />
+          <Parameter Name="sMainMenAdress" Type="varchar" Mode="In" />
+          <Parameter Name="sMainMenPasport" Type="varchar" Mode="In" />
+          <Parameter Name="nOwner" Type="int" Mode="In" />
+          <Parameter Name="nStatus" Type="int" Mode="In" />
+          <Parameter Name="nPrintVaucher" Type="smallint" Mode="In" />
+          <Parameter Name="nPrintDogovor" Type="smallint" Mode="In" />
+          <Parameter Name="nAdvertiseKey" Type="int" Mode="In" />
+          <Parameter Name="nLocked" Type="smallint" Mode="In" />
+          <Parameter Name="dVisaDate" Type="datetime" Mode="In" />
+          <Parameter Name="dPaymentDate" Type="datetime" Mode="In" />
+          <Parameter Name="dPPaymentDate" Type="datetime" Mode="In" />
+          <Parameter Name="nRazmerPPayment" Type="int" Mode="In" />
+          <Parameter Name="nPercentPPayment" Type="int" Mode="In" />
+          <Parameter Name="sDocument" Type="varchar" Mode="In" />
+          <Parameter Name="nLeadDepartmentKey" Type="int" Mode="In" />
+          <Parameter Name="sMainMenEMail" Type="varchar" Mode="In" />
+          <Parameter Name="sMainMenComment" Type="varchar" Mode="In" />
+          <Parameter Name="nDupUserKey" Type="int" Mode="In" />
+          <Parameter Name="nBookingTypeKey" Type="int" Mode="In" />
+          <Parameter Name="nPartnerDogovorKey" Type="int" Mode="In" />
+          <Parameter Name="nCityDepartureKey" Type="int" Mode="In" />
+          <Parameter Name="nFilialKey" Type="int" Mode="In" />
+          <Parameter Name="sOldDogovor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="MakeFullSVName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nCountry" Type="int" Mode="In" />
+          <Parameter Name="nCity" Type="int" Mode="In" />
+          <Parameter Name="nSvKey" Type="int" Mode="In" />
+          <Parameter Name="nCode" Type="int" Mode="In" />
+          <Parameter Name="nNDays" Type="int" Mode="In" />
+          <Parameter Name="nCode1" Type="int" Mode="In" />
+          <Parameter Name="nCode2" Type="int" Mode="In" />
+          <Parameter Name="nPartner" Type="int" Mode="In" />
+          <Parameter Name="dServDate" Type="datetime" Mode="In" />
+          <Parameter Name="sServiceByHand" Type="varchar" Mode="In" />
+          <Parameter Name="sResult" Type="varchar" Mode="InOut" />
+          <Parameter Name="sResultLat" Type="varchar" Mode="InOut" />
+          <Parameter Name="dTimeBeg" Type="datetime" Mode="InOut" />
+          <Parameter Name="dTimeEnd" Type="datetime" Mode="InOut" />
+        </Function>
+        <Function Name="MakePutName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="countryKey" Type="int" Mode="In" />
+          <Parameter Name="cityKey" Type="int" Mode="In" />
+          <Parameter Name="tourKey" Type="int" Mode="In" />
+          <Parameter Name="partnerKey" Type="int" Mode="In" />
+          <Parameter Name="sFormat0" Type="varchar" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="AvalonModelStoreContainer">
+          <EntitySet Name="AddDescript1" EntityType="Self.AddDescript1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AddDescript2" EntityType="Self.AddDescript2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExcurDictionary" EntityType="Self.ExcurDictionary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotelDictionary" EntityType="Self.HotelDictionary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceList" EntityType="Self.ServiceList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Costs" EntityType="Self.tbl_Costs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Country" EntityType="Self.tbl_Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Turist" EntityType="Self.tbl_Turist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_TurList" EntityType="Self.tbl_TurList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipTur" EntityType="Self.TipTur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TurDate" EntityType="Self.TurDate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TuristService" EntityType="Self.TuristService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TurService" EntityType="Self.TurService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VehiclePlan" EntityType="Self.VehiclePlan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="A1_SVKEY" Association="Self.A1_SVKEY">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="AddDescript1" EntitySet="AddDescript1" />
+          </AssociationSet>
+          <AssociationSet Name="A2_SVKEY" Association="Self.A2_SVKEY">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="AddDescript2" EntitySet="AddDescript2" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_TurList_TipTur" Association="Self.FK_tbl_TurList_TipTur">
+            <End Role="TipTur" EntitySet="TipTur" />
+            <End Role="tbl_TurList" EntitySet="tbl_TurList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipTur_TipTur" Association="Self.FK_TipTur_TipTur">
+            <End Role="TipTur" EntitySet="TipTur" />
+            <End Role="TipTur1" EntitySet="TipTur" />
+          </AssociationSet>
+          <AssociationSet Name="SL_CNKEY" Association="Self.SL_CNKEY">
+            <End Role="tbl_Country" EntitySet="tbl_Country" />
+            <End Role="ServiceList" EntitySet="ServiceList" />
+          </AssociationSet>
+          <AssociationSet Name="SL_SVKEY" Association="Self.SL_SVKEY">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="ServiceList" EntitySet="ServiceList" />
+          </AssociationSet>
+          <AssociationSet Name="TD_TRKEY" Association="Self.TD_TRKEY">
+            <End Role="tbl_TurList" EntitySet="tbl_TurList" />
+            <End Role="TurDate" EntitySet="TurDate" />
+          </AssociationSet>
+          <AssociationSet Name="TS_SVKEY" Association="Self.TS_SVKEY">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="TurService" EntitySet="TurService" />
+          </AssociationSet>
+          <AssociationSet Name="TS_TRKEY" Association="Self.TS_TRKEY">
+            <End Role="tbl_TurList" EntitySet="tbl_TurList" />
+            <End Role="TurService" EntitySet="TurService" />
+          </AssociationSet>
+          <AssociationSet Name="TU_TUKEY" Association="Self.TU_TUKEY">
+            <End Role="tbl_Turist" EntitySet="tbl_Turist" />
+            <End Role="TuristService" EntitySet="TuristService" />
+          </AssociationSet>
+          <AssociationSet Name="VP_VHKEY" Association="Self.VP_VHKEY">
+            <End Role="Vehicle" EntitySet="Vehicle" />
+            <End Role="VehiclePlan" EntitySet="VehiclePlan" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AvalonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AddDescript1">
+          <Key>
+            <PropertyRef Name="A1_KEY" />
+          </Key>
+          <Property Name="A1_KEY" Type="Int32" Nullable="false" />
+          <Property Name="A1_SVKEY" Type="Int32" />
+          <Property Name="A1_CODE" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="A1_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="A1_NAMELAT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="A1_StdKey" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="A1_ShowOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Service" Relationship="Self.A1_SVKEY" FromRole="AddDescript1" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="AddDescript2">
+          <Key>
+            <PropertyRef Name="A2_KEY" />
+          </Key>
+          <Property Name="A2_KEY" Type="Int32" Nullable="false" />
+          <Property Name="A2_SVKEY" Type="Int32" />
+          <Property Name="A2_CODE" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="A2_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="A2_NAMELAT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="A2_StdKey" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="A2_Url" Type="String" MaxLength="192" FixedLength="false" Unicode="false" />
+          <Property Name="A2_ShowOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Service" Relationship="Self.A2_SVKEY" FromRole="AddDescript2" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="SV_KEY" />
+          </Key>
+          <Property Name="SV_KEY" Type="Int32" Nullable="false" />
+          <Property Name="SV_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SV_NAMELAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SV_TYPE" Type="Int16" />
+          <Property Name="SV_CONTROL" Type="Int32" />
+          <Property Name="SV_ISCITY" Type="Int16" />
+          <Property Name="SV_ISSUBCODE1" Type="Int16" />
+          <Property Name="SV_ISSUBCODE2" Type="Int16" />
+          <Property Name="SV_ROUNDBRUTTO" Type="Int16" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SV_StdKey" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="SV_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SV_IsDuration" Type="Int16" Nullable="false" />
+          <Property Name="SV_UseManualInput" Type="Int16" Nullable="false" />
+          <Property Name="SV_QUOTED" Type="Int16" Nullable="false" />
+          <Property Name="SV_IsIndividual" Type="Int16" />
+          <Property Name="SV_LittlePercent" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SV_LittlePlace" Type="Int16" />
+          <Property Name="SV_LittleAnd" Type="Boolean" />
+          <NavigationProperty Name="AddDescript1" Relationship="Self.A1_SVKEY" FromRole="Service" ToRole="AddDescript1" />
+          <NavigationProperty Name="AddDescript2" Relationship="Self.A2_SVKEY" FromRole="Service" ToRole="AddDescript2" />
+          <NavigationProperty Name="ServiceLists" Relationship="Self.SL_SVKEY" FromRole="Service" ToRole="ServiceList" />
+          <NavigationProperty Name="TurServices" Relationship="Self.TS_SVKEY" FromRole="Service" ToRole="TurService" />
+        </EntityType>
+        <EntityType Name="ServiceList">
+          <Key>
+            <PropertyRef Name="SL_KEY" />
+          </Key>
+          <Property Name="SL_SVKEY" Type="Int32" Nullable="false" />
+          <Property Name="SL_KEY" Type="Int32" Nullable="false" />
+          <Property Name="SL_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SL_NAMELAT" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SL_TIMEBEG" Type="DateTime" Precision="3" />
+          <Property Name="SL_TIMEEND" Type="DateTime" Precision="3" />
+          <Property Name="SL_TIME" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="SL_CNKEY" Type="Int32" />
+          <Property Name="SL_CTKEY" Type="Int32" />
+          <Property Name="SL_PLACEFROM" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SL_PLACETO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SL_CODE" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SL_StdKey" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="SL_DaysCountMin" Type="Int32" />
+          <Property Name="SL_Url" Type="String" MaxLength="192" FixedLength="false" Unicode="false" />
+          <Property Name="SL_ShowOrder" Type="Int32" Nullable="false" />
+          <Property Name="SL_quKey" Type="Int32" />
+          <NavigationProperty Name="Service" Relationship="Self.SL_SVKEY" FromRole="ServiceList" ToRole="Service" />
+          <NavigationProperty Name="tbl_Country" Relationship="AvalonModel.SL_CNKEY" FromRole="ServiceList" ToRole="tbl_Country" />
+        </EntityType>
+        <EntityType Name="tbl_Costs">
+          <Key>
+            <PropertyRef Name="CS_ID" />
+          </Key>
+          <Property Name="CS_SVKEY" Type="Int32" Nullable="false" />
+          <Property Name="CS_CODE" Type="Int32" Nullable="false" />
+          <Property Name="CS_SUBCODE1" Type="Int32" />
+          <Property Name="CS_SUBCODE2" Type="Int32" />
+          <Property Name="CS_PRKEY" Type="Int32" Nullable="false" />
+          <Property Name="CS_PKKEY" Type="Int32" />
+          <Property Name="CS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CS_DATEEND" Type="DateTime" Precision="3" />
+          <Property Name="CS_WEEK" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CS_COSTNETTO" Type="Double" Nullable="false" />
+          <Property Name="CS_COST" Type="Double" Nullable="false" />
+          <Property Name="CS_DISCOUNT" Type="Int16" />
+          <Property Name="CS_TYPE" Type="Int16" />
+          <Property Name="CS_CREATOR" Type="Int32" Nullable="false" />
+          <Property Name="CS_RATE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CS_UPDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CS_LONG" Type="Int16" />
+          <Property Name="CS_BYDAY" Type="Int16" Nullable="false" />
+          <Property Name="CS_FIRSTDAYNETTO" Type="Int16" />
+          <Property Name="CS_FIRSTDAYBRUTTO" Type="Int16" />
+          <Property Name="CS_PROFIT" Type="Double" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CS_CINNUM" Type="Int32" />
+          <Property Name="CS_TypeCalc" Type="Int16" />
+          <Property Name="cs_DateSellBeg" Type="DateTime" Precision="3" />
+          <Property Name="cs_DateSellEnd" Type="DateTime" Precision="3" />
+          <Property Name="CS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CS_CHECKINDATEBEG" Type="DateTime" Precision="3" />
+          <Property Name="CS_CHECKINDATEEND" Type="DateTime" Precision="3" />
+          <Property Name="CS_LONGMIN" Type="Int16" />
+          <Property Name="CS_TypeDivision" Type="Int16" />
+          <Property Name="CS_UPDUSER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CS_TRFId" Type="Int32" Nullable="false" />
+          <Property Name="CS_COID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_TurList">
+          <Key>
+            <PropertyRef Name="TL_KEY" />
+          </Key>
+          <Property Name="TL_CNKEY" Type="Int32" Nullable="false" />
+          <Property Name="TL_KEY" Type="Int32" Nullable="false" />
+          <Property Name="TL_NAME" Type="String" MaxLength="160" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TL_TYPECOUNT" Type="Int16" />
+          <Property Name="TL_PROFIT" Type="Double" />
+          <Property Name="TL_PRICE" Type="Double" />
+          <Property Name="TL_NDAY" Type="Int16" Nullable="false" />
+          <Property Name="TL_CREATOR" Type="Int32" />
+          <Property Name="TL_DESCRIPTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="TL_REMARK" Type="String" MaxLength="240" FixedLength="false" Unicode="false" />
+          <Property Name="TL_RATE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="TL_WEBHTTP" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="TL_NAMEWEB" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="TL_WEB" Type="Int32" />
+          <Property Name="TL_DATEDOC" Type="Int32" />
+          <Property Name="TL_DATEDOCVISA" Type="Int32" />
+          <Property Name="TL_TIP" Type="Int32" Nullable="false" />
+          <Property Name="TL_WEBCOST" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TL_EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TL_datequotes" Type="Int32" />
+          <Property Name="TL_datepayed" Type="Int32" />
+          <Property Name="TL_DfltPaymentPcnt" Type="Double" />
+          <Property Name="TL_Margin" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TL_MarginType" Type="Int16" />
+          <Property Name="TL_PRKey" Type="Int32" />
+          <Property Name="TL_OpKey" Type="Int32" />
+          <Property Name="TL_IsDisabled" Type="Int16" Nullable="false" />
+          <Property Name="TL_RGKEY" Type="Int32" />
+          <Property Name="TL_ADVDESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TL_ATTDESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TL_DOPDESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TL_FULLDESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TL_SMALLDESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TL_Deleted" Type="Int16" Nullable="false" />
+          <Property Name="TL_LEADDEPARTMENT" Type="Int32" />
+          <Property Name="TL_NameLat" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+          <Property Name="TL_CTDepartureKey" Type="Int32" />
+          <Property Name="tl_webHttpPers" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="TL_Attribute" Type="Int32" Nullable="false" />
+          <Property Name="TL_CalculationAction" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TurDates" Relationship="Self.TD_TRKEY" FromRole="tbl_TurList" ToRole="TurDate" />
+          <NavigationProperty Name="TurServices" Relationship="Self.TS_TRKEY" FromRole="tbl_TurList" ToRole="TurService" />
+          <NavigationProperty Name="TipTur" Relationship="AvalonModel.FK_tbl_TurList_TipTur" FromRole="tbl_TurList" ToRole="TipTur" />
+        </EntityType>
+        <EntityType Name="TurDate">
+          <Key>
+            <PropertyRef Name="TD_Id" />
+          </Key>
+          <Property Name="TD_TRKEY" Type="Int32" Nullable="false" />
+          <Property Name="TD_DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TD_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tbl_TurList" Relationship="Self.TD_TRKEY" FromRole="TurDate" ToRole="tbl_TurList" />
+        </EntityType>
+        <EntityType Name="TurService">
+          <Key>
+            <PropertyRef Name="TS_Key" />
+          </Key>
+          <Property Name="TS_TRKEY" Type="Int32" Nullable="false" />
+          <Property Name="TS_SVKEY" Type="Int32" Nullable="false" />
+          <Property Name="TS_PKKEY" Type="Int32" />
+          <Property Name="TS_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TS_DAY" Type="Int16" />
+          <Property Name="TS_CODE" Type="Int32" Nullable="false" />
+          <Property Name="TS_SUBCODE1" Type="Int32" />
+          <Property Name="TS_SUBCODE2" Type="Int32" />
+          <Property Name="TS_NDAYS" Type="Int16" />
+          <Property Name="TS_CNKEY" Type="Int32" Nullable="false" />
+          <Property Name="TS_CTKEY" Type="Int32" />
+          <Property Name="TS_PARTNERKEY" Type="Int32" />
+          <Property Name="TS_COST" Type="Double" />
+          <Property Name="TS_PROFIT" Type="Double" />
+          <Property Name="TS_TIMEBEG" Type="DateTime" Precision="3" />
+          <Property Name="TS_ATTRIBUTE" Type="Int32" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TS_Key" Type="Int32" Nullable="false" />
+          <Property Name="TS_NameLat" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TS_PRTDOGKEY" Type="Int32" />
+          <Property Name="TS_TAXZONEID" Type="Int32" />
+          <Property Name="TS_WebAttribute" Type="Int32" />
+          <Property Name="TS_Wait" Type="Int16" />
+          <Property Name="TS_TRFId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Service" Relationship="Self.TS_SVKEY" FromRole="TurService" ToRole="Service" />
+          <NavigationProperty Name="tbl_TurList" Relationship="Self.TS_TRKEY" FromRole="TurService" ToRole="tbl_TurList" />
+        </EntityType>
+        <Association Name="A1_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AddDescript1" Type="Self.AddDescript1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="AddDescript1">
+              <PropertyRef Name="A1_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="A2_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AddDescript2" Type="Self.AddDescript2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="AddDescript2">
+              <PropertyRef Name="A2_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SL_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ServiceList" Type="Self.ServiceList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="ServiceList">
+              <PropertyRef Name="SL_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TS_SVKEY">
+          <End Role="Service" Type="Self.Service" Multiplicity="1" />
+          <End Role="TurService" Type="Self.TurService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="SV_KEY" />
+            </Principal>
+            <Dependent Role="TurService">
+              <PropertyRef Name="TS_SVKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TD_TRKEY">
+          <End Role="tbl_TurList" Type="Self.tbl_TurList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TurDate" Type="Self.TurDate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_TurList">
+              <PropertyRef Name="TL_KEY" />
+            </Principal>
+            <Dependent Role="TurDate">
+              <PropertyRef Name="TD_TRKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TS_TRKEY">
+          <End Role="tbl_TurList" Type="Self.tbl_TurList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TurService" Type="Self.TurService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_TurList">
+              <PropertyRef Name="TL_KEY" />
+            </Principal>
+            <Dependent Role="TurService">
+              <PropertyRef Name="TS_TRKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Avalon" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AddDescript1" EntityType="Self.AddDescript1" />
+          <EntitySet Name="AddDescript2" EntityType="Self.AddDescript2" />
+          <EntitySet Name="Services" EntityType="Self.Service" />
+          <EntitySet Name="ServiceLists" EntityType="Self.ServiceList" />
+          <EntitySet Name="tbl_Costs" EntityType="Self.tbl_Costs" />
+          <EntitySet Name="tbl_TurList" EntityType="Self.tbl_TurList" />
+          <EntitySet Name="TurDates" EntityType="Self.TurDate" />
+          <EntitySet Name="TurServices" EntityType="Self.TurService" />
+          <AssociationSet Name="A1_SVKEY" Association="Self.A1_SVKEY">
+            <End Role="Service" EntitySet="Services" />
+            <End Role="AddDescript1" EntitySet="AddDescript1" />
+          </AssociationSet>
+          <AssociationSet Name="A2_SVKEY" Association="Self.A2_SVKEY">
+            <End Role="Service" EntitySet="Services" />
+            <End Role="AddDescript2" EntitySet="AddDescript2" />
+          </AssociationSet>
+          <AssociationSet Name="SL_SVKEY" Association="Self.SL_SVKEY">
+            <End Role="Service" EntitySet="Services" />
+            <End Role="ServiceList" EntitySet="ServiceLists" />
+          </AssociationSet>
+          <AssociationSet Name="TS_SVKEY" Association="Self.TS_SVKEY">
+            <End Role="Service" EntitySet="Services" />
+            <End Role="TurService" EntitySet="TurServices" />
+          </AssociationSet>
+          <AssociationSet Name="TD_TRKEY" Association="Self.TD_TRKEY">
+            <End Role="tbl_TurList" EntitySet="tbl_TurList" />
+            <End Role="TurDate" EntitySet="TurDates" />
+          </AssociationSet>
+          <AssociationSet Name="TS_TRKEY" Association="Self.TS_TRKEY">
+            <End Role="tbl_TurList" EntitySet="tbl_TurList" />
+            <End Role="TurService" EntitySet="TurServices" />
+          </AssociationSet>
+          <FunctionImport Name="GetServiceCost">
+            <Parameter Name="svKey" Mode="In" Type="Int32" />
+            <Parameter Name="code" Mode="In" Type="Int32" />
+            <Parameter Name="code1" Mode="In" Type="Int32" />
+            <Parameter Name="code2" Mode="In" Type="Int32" />
+            <Parameter Name="prKey" Mode="In" Type="Int32" />
+            <Parameter Name="packetKey" Mode="In" Type="Int32" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="days" Mode="In" Type="Int32" />
+            <Parameter Name="resRate" Mode="In" Type="String" />
+            <Parameter Name="men" Mode="In" Type="Int32" />
+            <Parameter Name="discountPercent" Mode="In" Type="Decimal" />
+            <Parameter Name="margin" Mode="In" Type="Decimal" />
+            <Parameter Name="marginType" Mode="In" Type="Int32" />
+            <Parameter Name="sellDate" Mode="In" Type="DateTime" />
+            <Parameter Name="netto" Mode="InOut" Type="Decimal" />
+            <Parameter Name="brutto" Mode="InOut" Type="Decimal" />
+            <Parameter Name="discount" Mode="InOut" Type="Decimal" />
+            <Parameter Name="nettoDetail" Mode="InOut" Type="String" />
+            <Parameter Name="sBadRate" Mode="InOut" Type="String" />
+            <Parameter Name="dtBadDate" Mode="InOut" Type="DateTime" />
+            <Parameter Name="sDetailed" Mode="InOut" Type="String" />
+            <Parameter Name="nSPId" Mode="InOut" Type="Int32" />
+            <Parameter Name="useDiscountDays" Mode="InOut" Type="Int32" />
+            <Parameter Name="tourKey" Mode="In" Type="Int32" />
+            <Parameter Name="tourDate" Mode="In" Type="DateTime" />
+            <Parameter Name="tourDays" Mode="In" Type="Int32" />
+            <Parameter Name="includeAddCost" Mode="In" Type="Boolean" />
+            <Parameter Name="isCommission" Mode="InOut" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="InsDogList">
+            <Parameter Name="sDogovor" Mode="In" Type="String" />
+            <Parameter Name="dTour" Mode="In" Type="DateTime" />
+            <Parameter Name="nSvKey" Mode="In" Type="Int32" />
+            <Parameter Name="sService" Mode="In" Type="String" />
+            <Parameter Name="nDay" Mode="In" Type="Int32" />
+            <Parameter Name="nCode" Mode="In" Type="Int32" />
+            <Parameter Name="nCode1" Mode="In" Type="Int32" />
+            <Parameter Name="nCode2" Mode="In" Type="Int32" />
+            <Parameter Name="nNDays" Mode="In" Type="Int32" />
+            <Parameter Name="nCountry" Mode="In" Type="Int32" />
+            <Parameter Name="nCity" Mode="In" Type="Int32" />
+            <Parameter Name="nPartner" Mode="In" Type="Int32" />
+            <Parameter Name="nAgent" Mode="In" Type="Int32" />
+            <Parameter Name="nMen" Mode="In" Type="Int32" />
+            <Parameter Name="nNetto" Mode="In" Type="Decimal" />
+            <Parameter Name="nBrutto" Mode="In" Type="Decimal" />
+            <Parameter Name="nDiscount" Mode="In" Type="Decimal" />
+            <Parameter Name="nPaket" Mode="In" Type="Int32" />
+            <Parameter Name="nTour" Mode="In" Type="Int32" />
+            <Parameter Name="nAttribute" Mode="In" Type="Int32" />
+            <Parameter Name="nControl" Mode="In" Type="Int32" />
+            <Parameter Name="nCreator" Mode="In" Type="Int32" />
+            <Parameter Name="nOwner" Mode="In" Type="Int32" />
+            <Parameter Name="dBeg" Mode="In" Type="DateTime" />
+            <Parameter Name="dEnd" Mode="In" Type="DateTime" />
+            <Parameter Name="tTime" Mode="In" Type="DateTime" />
+            <Parameter Name="p_nIsComtmntFirst" Mode="In" Type="Int32" />
+            <Parameter Name="bRet" Mode="InOut" Type="Int32" />
+            <Parameter Name="nPrmPlaceNoHave" Mode="InOut" Type="Decimal" />
+            <Parameter Name="dPrmBadDate" Mode="InOut" Type="DateTime" />
+            <Parameter Name="nNewKey" Mode="InOut" Type="Int32" />
+            <Parameter Name="nDGKey" Mode="In" Type="Int32" />
+            <Parameter Name="sComment" Mode="In" Type="String" />
+            <Parameter Name="sFormulaNetto" Mode="In" Type="String" />
+            <Parameter Name="sFormulaBrutto" Mode="In" Type="String" />
+            <Parameter Name="sFormulaDiscount" Mode="In" Type="String" />
+            <Parameter Name="sServiceLat" Mode="In" Type="String" />
+            <Parameter Name="nPrtDog" Mode="In" Type="Int32" />
+            <Parameter Name="nTaxZone" Mode="In" Type="Int32" />
+            <Parameter Name="bWait" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="InsDogovor">
+            <Parameter Name="nReturn" Mode="InOut" Type="Int32" />
+            <Parameter Name="nKeyDogovor" Mode="InOut" Type="Int32" />
+            <Parameter Name="sDogovor" Mode="In" Type="String" />
+            <Parameter Name="dTour" Mode="In" Type="DateTime" />
+            <Parameter Name="nDays" Mode="In" Type="Int32" />
+            <Parameter Name="nTour" Mode="In" Type="Int32" />
+            <Parameter Name="nCountry" Mode="In" Type="Int32" />
+            <Parameter Name="nCity" Mode="In" Type="Int32" />
+            <Parameter Name="nMen" Mode="In" Type="Int16" />
+            <Parameter Name="sRate" Mode="In" Type="String" />
+            <Parameter Name="nPrice" Mode="In" Type="Decimal" />
+            <Parameter Name="nPayed" Mode="In" Type="Decimal" />
+            <Parameter Name="nDiscount" Mode="In" Type="Decimal" />
+            <Parameter Name="nDiscountKey" Mode="In" Type="Int32" />
+            <Parameter Name="nPcnt" Mode="In" Type="Int16" />
+            <Parameter Name="nDiscountSum" Mode="In" Type="Decimal" />
+            <Parameter Name="nCauseDiscount" Mode="In" Type="Int32" />
+            <Parameter Name="nAgent" Mode="In" Type="Int32" />
+            <Parameter Name="nOper" Mode="In" Type="Int32" />
+            <Parameter Name="sOper" Mode="In" Type="String" />
+            <Parameter Name="sMainMen" Mode="In" Type="String" />
+            <Parameter Name="sMainMenPhone" Mode="In" Type="String" />
+            <Parameter Name="sMainMenAdress" Mode="In" Type="String" />
+            <Parameter Name="sMainMenPasport" Mode="In" Type="String" />
+            <Parameter Name="nOwner" Mode="In" Type="Int32" />
+            <Parameter Name="nStatus" Mode="In" Type="Int32" />
+            <Parameter Name="nPrintVaucher" Mode="In" Type="Int16" />
+            <Parameter Name="nPrintDogovor" Mode="In" Type="Int16" />
+            <Parameter Name="nAdvertiseKey" Mode="In" Type="Int32" />
+            <Parameter Name="nLocked" Mode="In" Type="Int16" />
+            <Parameter Name="dVisaDate" Mode="In" Type="DateTime" />
+            <Parameter Name="dPaymentDate" Mode="In" Type="DateTime" />
+            <Parameter Name="dPPaymentDate" Mode="In" Type="DateTime" />
+            <Parameter Name="nRazmerPPayment" Mode="In" Type="Int32" />
+            <Parameter Name="nPercentPPayment" Mode="In" Type="Int32" />
+            <Parameter Name="sDocument" Mode="In" Type="String" />
+            <Parameter Name="nLeadDepartmentKey" Mode="In" Type="Int32" />
+            <Parameter Name="sMainMenEMail" Mode="In" Type="String" />
+            <Parameter Name="sMainMenComment" Mode="In" Type="String" />
+            <Parameter Name="nDupUserKey" Mode="In" Type="Int32" />
+            <Parameter Name="nBookingTypeKey" Mode="In" Type="Int32" />
+            <Parameter Name="nPartnerDogovorKey" Mode="In" Type="Int32" />
+            <Parameter Name="nCityDepartureKey" Mode="In" Type="Int32" />
+            <Parameter Name="nFilialKey" Mode="In" Type="Int32" />
+            <Parameter Name="sOldDogovor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="MakePutName">
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="countryKey" Mode="In" Type="Int32" />
+            <Parameter Name="cityKey" Mode="In" Type="Int32" />
+            <Parameter Name="tourKey" Mode="In" Type="Int32" />
+            <Parameter Name="partnerKey" Mode="In" Type="Int32" />
+            <Parameter Name="sFormat0" Mode="In" Type="String" />
+            <Parameter Name="name" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="TipTurs" EntityType="AvalonModel.TipTur" />
+          <AssociationSet Name="FK_tbl_TurList_TipTur" Association="AvalonModel.FK_tbl_TurList_TipTur">
+            <End Role="TipTur" EntitySet="TipTurs" />
+            <End Role="tbl_TurList" EntitySet="tbl_TurList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipTur_TipTur" Association="AvalonModel.FK_TipTur_TipTur">
+            <End Role="TipTur" EntitySet="TipTurs" />
+            <End Role="TipTur1" EntitySet="TipTurs" />
+          </AssociationSet>
+          <EntitySet Name="tbl_Country" EntityType="AvalonModel.tbl_Country" />
+          <AssociationSet Name="SL_CNKEY" Association="AvalonModel.SL_CNKEY">
+            <End Role="tbl_Country" EntitySet="tbl_Country" />
+            <End Role="ServiceList" EntitySet="ServiceLists" />
+          </AssociationSet>
+          <EntitySet Name="Vehicles" EntityType="AvalonModel.Vehicle" />
+          <EntitySet Name="VehiclePlans" EntityType="AvalonModel.VehiclePlan" />
+          <AssociationSet Name="VP_VHKEY" Association="AvalonModel.VP_VHKEY">
+            <End Role="Vehicle" EntitySet="Vehicles" />
+            <End Role="VehiclePlan" EntitySet="VehiclePlans" />
+          </AssociationSet>
+          <EntitySet Name="HotelDictionaries" EntityType="AvalonModel.HotelDictionary" />
+          <EntitySet Name="tbl_Turist" EntityType="AvalonModel.tbl_Turist" />
+          <FunctionImport Name="GetNewKeys">
+            <Parameter Name="sTable" Mode="In" Type="String" />
+            <Parameter Name="nKeyCount" Mode="In" Type="Int32" />
+            <Parameter Name="nNewKey" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="TuristServices" EntityType="AvalonModel.TuristService" />
+          <AssociationSet Name="TU_TUKEY" Association="AvalonModel.TU_TUKEY">
+            <End Role="tbl_Turist" EntitySet="tbl_Turist" />
+            <End Role="TuristService" EntitySet="TuristServices" />
+          </AssociationSet>
+          <FunctionImport Name="MakeFullSVName">
+            <Parameter Name="nCountry" Mode="In" Type="Int32" />
+            <Parameter Name="nCity" Mode="In" Type="Int32" />
+            <Parameter Name="nSvKey" Mode="In" Type="Int32" />
+            <Parameter Name="nCode" Mode="In" Type="Int32" />
+            <Parameter Name="nNDays" Mode="In" Type="Int32" />
+            <Parameter Name="nCode1" Mode="In" Type="Int32" />
+            <Parameter Name="nCode2" Mode="In" Type="Int32" />
+            <Parameter Name="nPartner" Mode="In" Type="Int32" />
+            <Parameter Name="dServDate" Mode="In" Type="DateTime" />
+            <Parameter Name="sServiceByHand" Mode="In" Type="String" />
+            <Parameter Name="sResult" Mode="InOut" Type="String" />
+            <Parameter Name="sResultLat" Mode="InOut" Type="String" />
+            <Parameter Name="dTimeBeg" Mode="InOut" Type="DateTime" />
+            <Parameter Name="dTimeEnd" Mode="InOut" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="ExcurDictionaries" EntityType="AvalonModel.ExcurDictionary" />
+        </EntityContainer>
+        <EntityType Name="TipTur">
+          <Key>
+            <PropertyRef Name="TP_KEY" />
+          </Key>
+          <Property Name="TP_KEY" Type="Int32" Nullable="false" />
+          <Property Name="TP_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TP_TPKEY" Type="Int32" />
+          <Property Name="TP_NameLat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TP_Order" Type="Int32" />
+          <NavigationProperty Name="tbl_TurList" Relationship="AvalonModel.FK_tbl_TurList_TipTur" FromRole="TipTur" ToRole="tbl_TurList" />
+          <NavigationProperty Name="TipTur1" Relationship="AvalonModel.FK_TipTur_TipTur" FromRole="TipTur" ToRole="TipTur1" />
+          <NavigationProperty Name="TipTur2" Relationship="AvalonModel.FK_TipTur_TipTur" FromRole="TipTur1" ToRole="TipTur" />
+        </EntityType>
+        <Association Name="FK_tbl_TurList_TipTur">
+          <End Type="AvalonModel.TipTur" Role="TipTur" Multiplicity="1" />
+          <End Type="AvalonModel.tbl_TurList" Role="tbl_TurList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipTur">
+              <PropertyRef Name="TP_KEY" />
+            </Principal>
+            <Dependent Role="tbl_TurList">
+              <PropertyRef Name="TL_TIP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipTur_TipTur">
+          <End Type="AvalonModel.TipTur" Role="TipTur" Multiplicity="0..1" />
+          <End Type="AvalonModel.TipTur" Role="TipTur1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipTur">
+              <PropertyRef Name="TP_KEY" />
+            </Principal>
+            <Dependent Role="TipTur1">
+              <PropertyRef Name="TP_TPKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tbl_Country">
+          <Key>
+            <PropertyRef Name="CN_KEY" />
+          </Key>
+          <Property Name="CN_KEY" Type="Int32" Nullable="false" />
+          <Property Name="CN_NAME" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CN_NAMELAT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CN_FRAME" Type="Int32" />
+          <Property Name="CN_WEB" Type="Int32" />
+          <Property Name="CN_WEBIMAGE" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="CN_WEBHTTP" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="CN_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CN_AnkLang" Type="Int16" Nullable="false" />
+          <Property Name="CN_StdKey" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CN_Updatedate" Type="DateTime" Precision="3" />
+          <Property Name="CN_SMALLDESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CN_COKey" Type="Int32" />
+          <Property Name="CN_NameAC" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CN_Order" Type="Int32" />
+          <Property Name="CN_CitizenName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CN_CitizenNameLat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CN_INNName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CN_CheckINN" Type="Boolean" Nullable="false" />
+          <Property Name="CN_PassportMinDur" Type="Int32" />
+          <Property Name="CN_RateKey" Type="Int32" />
+          <Property Name="CN_PassportMinDurCheckFrom" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ServiceLists" Relationship="AvalonModel.SL_CNKEY" FromRole="tbl_Country" ToRole="ServiceList" />
+        </EntityType>
+        <Association Name="SL_CNKEY">
+          <End Type="AvalonModel.tbl_Country" Role="tbl_Country" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AvalonModel.ServiceList" Role="ServiceList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Country">
+              <PropertyRef Name="CN_KEY" />
+            </Principal>
+            <Dependent Role="ServiceList">
+              <PropertyRef Name="SL_CNKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Vehicle">
+          <Key>
+            <PropertyRef Name="VH_KEY" />
+          </Key>
+          <Property Name="VH_KEY" Type="Int32" Nullable="false" />
+          <Property Name="VH_HOSTKEY" Type="Int32" />
+          <Property Name="VH_SVKEY" Type="Int32" />
+          <Property Name="VH_NUMOFCOLUMN" Type="Int16" />
+          <Property Name="VH_NUMOFROW" Type="Int16" />
+          <Property Name="VH_NUMOFAREA" Type="Int16" />
+          <Property Name="VH_TITLE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="VehiclePlans" Relationship="AvalonModel.VP_VHKEY" FromRole="Vehicle" ToRole="VehiclePlan" />
+        </EntityType>
+        <EntityType Name="VehiclePlan">
+          <Key>
+            <PropertyRef Name="VP_VHKEY" />
+            <PropertyRef Name="VP_VHROW" />
+            <PropertyRef Name="VP_VHAREANUMBER" />
+          </Key>
+          <Property Name="VP_VHKEY" Type="Int32" Nullable="false" />
+          <Property Name="VP_VHROW" Type="Int32" Nullable="false" />
+          <Property Name="VP_VHAREANUMBER" Type="Int32" Nullable="false" />
+          <Property Name="VP_SEATNUMBER1" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER3" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER4" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER5" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER6" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER7" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER8" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER9" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER10" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER11" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATNUMBER12" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VP_SEATTYPE1" Type="Int16" />
+          <Property Name="VP_SEATTYPE2" Type="Int16" />
+          <Property Name="VP_SEATTYPE3" Type="Int16" />
+          <Property Name="VP_SEATTYPE4" Type="Int16" />
+          <Property Name="VP_SEATTYPE5" Type="Int16" />
+          <Property Name="VP_SEATTYPE6" Type="Int16" />
+          <Property Name="VP_SEATTYPE7" Type="Int16" />
+          <Property Name="VP_SEATTYPE8" Type="Int16" />
+          <Property Name="VP_SEATTYPE9" Type="Int16" />
+          <Property Name="VP_SEATTYPE10" Type="Int16" />
+          <Property Name="VP_SEATTYPE11" Type="Int16" />
+          <Property Name="VP_SEATTYPE12" Type="Int16" />
+          <Property Name="VP_SEATMEN1" Type="Int16" />
+          <Property Name="VP_SEATMEN2" Type="Int16" />
+          <Property Name="VP_SEATMEN3" Type="Int16" />
+          <Property Name="VP_SEATMEN4" Type="Int16" />
+          <Property Name="VP_SEATMEN5" Type="Int16" />
+          <Property Name="VP_SEATMEN6" Type="Int16" />
+          <Property Name="VP_SEATMEN7" Type="Int16" />
+          <Property Name="VP_SEATMEN8" Type="Int16" />
+          <Property Name="VP_SEATMEN9" Type="Int16" />
+          <Property Name="VP_SEATMEN10" Type="Int16" />
+          <Property Name="VP_SEATMEN11" Type="Int16" />
+          <Property Name="VP_SEATMEN12" Type="Int16" />
+          <Property Name="ROWID" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Vehicle" Relationship="AvalonModel.VP_VHKEY" FromRole="VehiclePlan" ToRole="Vehicle" />
+        </EntityType>
+        <Association Name="VP_VHKEY">
+          <End Type="AvalonModel.Vehicle" Role="Vehicle" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AvalonModel.VehiclePlan" Role="VehiclePlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehicle">
+              <PropertyRef Name="VH_KEY" />
+            </Principal>
+            <Dependent Role="VehiclePlan">
+              <PropertyRef Name="VP_VHKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="HotelDictionary">
+          <Key>
+            <PropertyRef Name="HD_KEY" />
+          </Key>
+          <Property Name="HD_CNKEY" Type="Int32" Nullable="false" />
+          <Property Name="HD_CTKEY" Type="Int32" Nullable="false" />
+          <Property Name="HD_KEY" Type="Int32" Nullable="false" />
+          <Property Name="HD_NAME" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="HD_STARS" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="HD_ADDRESS" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="HD_PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HD_FAX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HD_SITE" Type="Int16" />
+          <Property Name="HD_DESCRIPT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_PERSONNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HD_PERSONAPP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HD_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HD_RSKEY" Type="Int32" />
+          <Property Name="HD_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HD_HTTP" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="HD_DESCROOM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_DESCMEAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_DESCSERVICE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_DESCSPORT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_DESCEXCUR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_DESCHEALTH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_DISTANCE" Type="Double" />
+          <Property Name="HD_WEB" Type="Int32" />
+          <Property Name="HD_DESCRAZVL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE1" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE2" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE3" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE4" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE5" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE6" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE7" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_WEBIMAGE8" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK1" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK2" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK3" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK4" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK5" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK6" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK7" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="HD_REMARK8" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="ROWID" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="HD_StdKey" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="HD_UNICODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="HD_UPDATEDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HD_Order" Type="Int32" />
+          <Property Name="HD_IsCruise" Type="Int32" Nullable="false" />
+          <Property Name="HD_COHId" Type="Int32" />
+          <Property Name="HD_NAMELAT" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="HD_PayHour1" Type="DateTime" Precision="0" />
+          <Property Name="HD_PayHour2" Type="DateTime" Precision="0" />
+          <Property Name="HD_Travel" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="HD_PayHourNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hd_rank" Type="Int32" />
+          <Property Name="HD_HTTPAdditional" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Turist">
+          <Key>
+            <PropertyRef Name="TU_KEY" />
+          </Key>
+          <Property Name="TU_DGCOD" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TU_KEY" Type="Int32" Nullable="false" />
+          <Property Name="TU_TURDATE" Type="DateTime" Precision="3" />
+          <Property Name="TU_NAMERUS" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="TU_NAMELAT" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="TU_SHORTNAME" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="TU_SEX" Type="Int16" />
+          <Property Name="TU_FNAMERUS" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TU_FNAMELAT" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TU_SNAMERUS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TU_SNAMELAT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TU_BIRTHDAY" Type="DateTime" Precision="3" />
+          <Property Name="TU_BIRTHCOUNTRY" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="TU_BIRTHCITY" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TU_CITIZEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TU_POSTINDEX" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="TU_POSTCITY" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TU_POSTSTREET" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="TU_POSTBILD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TU_POSTFLAT" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PHONE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PHONECODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PASPORTTYPE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PASPORTNUM" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PASPORTDATE" Type="DateTime" Precision="3" />
+          <Property Name="TU_PASPORTDATEEND" Type="DateTime" Precision="3" />
+          <Property Name="TU_PASPORTBYWHOM" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PLACE" Type="Int16" />
+          <Property Name="TU_ISANKETA" Type="Int16" />
+          <Property Name="TU_CREATOR" Type="Int32" Nullable="false" />
+          <Property Name="TU_OWNER" Type="Int32" Nullable="false" />
+          <Property Name="TU_PASPRUSER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PASPRUNUM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TU_PASPRUDATE" Type="DateTime" Precision="3" />
+          <Property Name="TU_PASPRUBYWHOM" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="TU_INSURPOLIS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TU_INSURSUM" Type="Double" />
+          <Property Name="TU_DISCOUNT" Type="Double" />
+          <Property Name="TU_TYPEDISCOUNT" Type="Double" />
+          <Property Name="TU_ID" Type="Int32" />
+          <Property Name="TU_ISMAIN" Type="Int16" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TU_AgentID" Type="Int32" />
+          <Property Name="TU_DGKEY" Type="Int32" />
+          <Property Name="TU_RealSex" Type="Int16" />
+          <Property Name="TU_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TU_EnableSmsNotifications" Type="Int16" Nullable="false" />
+          <Property Name="TU_InsuredEvent" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TuristServices" Relationship="AvalonModel.TU_TUKEY" FromRole="tbl_Turist" ToRole="TuristService" />
+        </EntityType>
+        <EntityType Name="TuristService">
+          <Key>
+            <PropertyRef Name="TU_IDKEY" />
+          </Key>
+          <Property Name="TU_TUKEY" Type="Int32" Nullable="false" />
+          <Property Name="TU_DLKEY" Type="Int32" Nullable="false" />
+          <Property Name="TU_NUMDOC" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TU_NUMROOM" Type="Int16" />
+          <Property Name="TU_SEAT" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="TU_AREA" Type="Int16" />
+          <Property Name="TU_DOCDATE" Type="DateTime" Precision="3" />
+          <Property Name="ROWID" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TU_IDKEY" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tbl_Turist" Relationship="AvalonModel.TU_TUKEY" FromRole="TuristService" ToRole="tbl_Turist" />
+        </EntityType>
+        <Association Name="TU_TUKEY">
+          <End Type="AvalonModel.tbl_Turist" Role="tbl_Turist" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AvalonModel.TuristService" Role="TuristService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Turist">
+              <PropertyRef Name="TU_KEY" />
+            </Principal>
+            <Dependent Role="TuristService">
+              <PropertyRef Name="TU_TUKEY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ExcurDictionary">
+          <Key>
+            <PropertyRef Name="ED_KEY" />
+          </Key>
+          <Property Name="ED_CNKEY" Type="Int32" Nullable="false" />
+          <Property Name="ED_CTKEY" Type="Int32" Nullable="false" />
+          <Property Name="ED_KEY" Type="Int32" Nullable="false" />
+          <Property Name="ED_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ED_NAMELAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ED_TIMEBEG" Type="DateTime" Precision="3" />
+          <Property Name="ED_TIMEEND" Type="DateTime" Precision="3" />
+          <Property Name="ED_TIME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ED_PLACEFROM" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ED_PLACETO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ED_REMARK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ED_COMMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ROWID" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ED_StdKey" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ED_Url" Type="String" MaxLength="192" FixedLength="false" Unicode="false" />
+          <Property Name="ED_ShowOrder" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AvalonModelStoreContainer" CdmEntityContainer="Avalon">
+          <EntitySetMapping Name="AddDescript1">
+            <EntityTypeMapping TypeName="AvalonModel.AddDescript1">
+              <MappingFragment StoreEntitySet="AddDescript1">
+                <ScalarProperty Name="A1_KEY" ColumnName="A1_KEY" />
+                <ScalarProperty Name="A1_SVKEY" ColumnName="A1_SVKEY" />
+                <ScalarProperty Name="A1_CODE" ColumnName="A1_CODE" />
+                <ScalarProperty Name="A1_NAME" ColumnName="A1_NAME" />
+                <ScalarProperty Name="A1_NAMELAT" ColumnName="A1_NAMELAT" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="A1_StdKey" ColumnName="A1_StdKey" />
+                <ScalarProperty Name="A1_ShowOrder" ColumnName="A1_ShowOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AddDescript2">
+            <EntityTypeMapping TypeName="AvalonModel.AddDescript2">
+              <MappingFragment StoreEntitySet="AddDescript2">
+                <ScalarProperty Name="A2_KEY" ColumnName="A2_KEY" />
+                <ScalarProperty Name="A2_SVKEY" ColumnName="A2_SVKEY" />
+                <ScalarProperty Name="A2_CODE" ColumnName="A2_CODE" />
+                <ScalarProperty Name="A2_NAME" ColumnName="A2_NAME" />
+                <ScalarProperty Name="A2_NAMELAT" ColumnName="A2_NAMELAT" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="A2_StdKey" ColumnName="A2_StdKey" />
+                <ScalarProperty Name="A2_Url" ColumnName="A2_Url" />
+                <ScalarProperty Name="A2_ShowOrder" ColumnName="A2_ShowOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="AvalonModel.Service">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="SV_KEY" ColumnName="SV_KEY" />
+                <ScalarProperty Name="SV_NAME" ColumnName="SV_NAME" />
+                <ScalarProperty Name="SV_NAMELAT" ColumnName="SV_NAMELAT" />
+                <ScalarProperty Name="SV_TYPE" ColumnName="SV_TYPE" />
+                <ScalarProperty Name="SV_CONTROL" ColumnName="SV_CONTROL" />
+                <ScalarProperty Name="SV_ISCITY" ColumnName="SV_ISCITY" />
+                <ScalarProperty Name="SV_ISSUBCODE1" ColumnName="SV_ISSUBCODE1" />
+                <ScalarProperty Name="SV_ISSUBCODE2" ColumnName="SV_ISSUBCODE2" />
+                <ScalarProperty Name="SV_ROUNDBRUTTO" ColumnName="SV_ROUNDBRUTTO" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="SV_StdKey" ColumnName="SV_StdKey" />
+                <ScalarProperty Name="SV_Code" ColumnName="SV_Code" />
+                <ScalarProperty Name="SV_IsDuration" ColumnName="SV_IsDuration" />
+                <ScalarProperty Name="SV_UseManualInput" ColumnName="SV_UseManualInput" />
+                <ScalarProperty Name="SV_QUOTED" ColumnName="SV_QUOTED" />
+                <ScalarProperty Name="SV_IsIndividual" ColumnName="SV_IsIndividual" />
+                <ScalarProperty Name="SV_LittlePercent" ColumnName="SV_LittlePercent" />
+                <ScalarProperty Name="SV_LittlePlace" ColumnName="SV_LittlePlace" />
+                <ScalarProperty Name="SV_LittleAnd" ColumnName="SV_LittleAnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceLists">
+            <EntityTypeMapping TypeName="AvalonModel.ServiceList">
+              <MappingFragment StoreEntitySet="ServiceList">
+                <ScalarProperty Name="SL_SVKEY" ColumnName="SL_SVKEY" />
+                <ScalarProperty Name="SL_KEY" ColumnName="SL_KEY" />
+                <ScalarProperty Name="SL_NAME" ColumnName="SL_NAME" />
+                <ScalarProperty Name="SL_NAMELAT" ColumnName="SL_NAMELAT" />
+                <ScalarProperty Name="SL_TIMEBEG" ColumnName="SL_TIMEBEG" />
+                <ScalarProperty Name="SL_TIMEEND" ColumnName="SL_TIMEEND" />
+                <ScalarProperty Name="SL_TIME" ColumnName="SL_TIME" />
+                <ScalarProperty Name="SL_CNKEY" ColumnName="SL_CNKEY" />
+                <ScalarProperty Name="SL_CTKEY" ColumnName="SL_CTKEY" />
+                <ScalarProperty Name="SL_PLACEFROM" ColumnName="SL_PLACEFROM" />
+                <ScalarProperty Name="SL_PLACETO" ColumnName="SL_PLACETO" />
+                <ScalarProperty Name="SL_CODE" ColumnName="SL_CODE" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="SL_StdKey" ColumnName="SL_StdKey" />
+                <ScalarProperty Name="SL_DaysCountMin" ColumnName="SL_DaysCountMin" />
+                <ScalarProperty Name="SL_Url" ColumnName="SL_Url" />
+                <ScalarProperty Name="SL_ShowOrder" ColumnName="SL_ShowOrder" />
+                <ScalarProperty Name="SL_quKey" ColumnName="SL_quKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Costs">
+            <EntityTypeMapping TypeName="AvalonModel.tbl_Costs">
+              <MappingFragment StoreEntitySet="tbl_Costs">
+                <ScalarProperty Name="CS_SVKEY" ColumnName="CS_SVKEY" />
+                <ScalarProperty Name="CS_CODE" ColumnName="CS_CODE" />
+                <ScalarProperty Name="CS_SUBCODE1" ColumnName="CS_SUBCODE1" />
+                <ScalarProperty Name="CS_SUBCODE2" ColumnName="CS_SUBCODE2" />
+                <ScalarProperty Name="CS_PRKEY" ColumnName="CS_PRKEY" />
+                <ScalarProperty Name="CS_PKKEY" ColumnName="CS_PKKEY" />
+                <ScalarProperty Name="CS_DATE" ColumnName="CS_DATE" />
+                <ScalarProperty Name="CS_DATEEND" ColumnName="CS_DATEEND" />
+                <ScalarProperty Name="CS_WEEK" ColumnName="CS_WEEK" />
+                <ScalarProperty Name="CS_COSTNETTO" ColumnName="CS_COSTNETTO" />
+                <ScalarProperty Name="CS_COST" ColumnName="CS_COST" />
+                <ScalarProperty Name="CS_DISCOUNT" ColumnName="CS_DISCOUNT" />
+                <ScalarProperty Name="CS_TYPE" ColumnName="CS_TYPE" />
+                <ScalarProperty Name="CS_CREATOR" ColumnName="CS_CREATOR" />
+                <ScalarProperty Name="CS_RATE" ColumnName="CS_RATE" />
+                <ScalarProperty Name="CS_UPDDATE" ColumnName="CS_UPDDATE" />
+                <ScalarProperty Name="CS_LONG" ColumnName="CS_LONG" />
+                <ScalarProperty Name="CS_BYDAY" ColumnName="CS_BYDAY" />
+                <ScalarProperty Name="CS_FIRSTDAYNETTO" ColumnName="CS_FIRSTDAYNETTO" />
+                <ScalarProperty Name="CS_FIRSTDAYBRUTTO" ColumnName="CS_FIRSTDAYBRUTTO" />
+                <ScalarProperty Name="CS_PROFIT" ColumnName="CS_PROFIT" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="CS_CINNUM" ColumnName="CS_CINNUM" />
+                <ScalarProperty Name="CS_TypeCalc" ColumnName="CS_TypeCalc" />
+                <ScalarProperty Name="cs_DateSellBeg" ColumnName="cs_DateSellBeg" />
+                <ScalarProperty Name="cs_DateSellEnd" ColumnName="cs_DateSellEnd" />
+                <ScalarProperty Name="CS_ID" ColumnName="CS_ID" />
+                <ScalarProperty Name="CS_CHECKINDATEBEG" ColumnName="CS_CHECKINDATEBEG" />
+                <ScalarProperty Name="CS_CHECKINDATEEND" ColumnName="CS_CHECKINDATEEND" />
+                <ScalarProperty Name="CS_LONGMIN" ColumnName="CS_LONGMIN" />
+                <ScalarProperty Name="CS_TypeDivision" ColumnName="CS_TypeDivision" />
+                <ScalarProperty Name="CS_UPDUSER" ColumnName="CS_UPDUSER" />
+                <ScalarProperty Name="CS_TRFId" ColumnName="CS_TRFId" />
+                <ScalarProperty Name="CS_COID" ColumnName="CS_COID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_TurList">
+            <EntityTypeMapping TypeName="AvalonModel.tbl_TurList">
+              <MappingFragment StoreEntitySet="tbl_TurList">
+                <ScalarProperty Name="TL_CNKEY" ColumnName="TL_CNKEY" />
+                <ScalarProperty Name="TL_KEY" ColumnName="TL_KEY" />
+                <ScalarProperty Name="TL_NAME" ColumnName="TL_NAME" />
+                <ScalarProperty Name="TL_TYPECOUNT" ColumnName="TL_TYPECOUNT" />
+                <ScalarProperty Name="TL_PROFIT" ColumnName="TL_PROFIT" />
+                <ScalarProperty Name="TL_PRICE" ColumnName="TL_PRICE" />
+                <ScalarProperty Name="TL_NDAY" ColumnName="TL_NDAY" />
+                <ScalarProperty Name="TL_CREATOR" ColumnName="TL_CREATOR" />
+                <ScalarProperty Name="TL_DESCRIPTION" ColumnName="TL_DESCRIPTION" />
+                <ScalarProperty Name="TL_REMARK" ColumnName="TL_REMARK" />
+                <ScalarProperty Name="TL_RATE" ColumnName="TL_RATE" />
+                <ScalarProperty Name="TL_WEBHTTP" ColumnName="TL_WEBHTTP" />
+                <ScalarProperty Name="TL_NAMEWEB" ColumnName="TL_NAMEWEB" />
+                <ScalarProperty Name="TL_WEB" ColumnName="TL_WEB" />
+                <ScalarProperty Name="TL_DATEDOC" ColumnName="TL_DATEDOC" />
+                <ScalarProperty Name="TL_DATEDOCVISA" ColumnName="TL_DATEDOCVISA" />
+                <ScalarProperty Name="TL_TIP" ColumnName="TL_TIP" />
+                <ScalarProperty Name="TL_WEBCOST" ColumnName="TL_WEBCOST" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="TL_EMAIL" ColumnName="TL_EMAIL" />
+                <ScalarProperty Name="TL_datequotes" ColumnName="TL_datequotes" />
+                <ScalarProperty Name="TL_datepayed" ColumnName="TL_datepayed" />
+                <ScalarProperty Name="TL_DfltPaymentPcnt" ColumnName="TL_DfltPaymentPcnt" />
+                <ScalarProperty Name="TL_Margin" ColumnName="TL_Margin" />
+                <ScalarProperty Name="TL_MarginType" ColumnName="TL_MarginType" />
+                <ScalarProperty Name="TL_PRKey" ColumnName="TL_PRKey" />
+                <ScalarProperty Name="TL_OpKey" ColumnName="TL_OpKey" />
+                <ScalarProperty Name="TL_IsDisabled" ColumnName="TL_IsDisabled" />
+                <ScalarProperty Name="TL_RGKEY" ColumnName="TL_RGKEY" />
+                <ScalarProperty Name="TL_ADVDESC" ColumnName="TL_ADVDESC" />
+                <ScalarProperty Name="TL_ATTDESC" ColumnName="TL_ATTDESC" />
+                <ScalarProperty Name="TL_DOPDESC" ColumnName="TL_DOPDESC" />
+                <ScalarProperty Name="TL_FULLDESC" ColumnName="TL_FULLDESC" />
+                <ScalarProperty Name="TL_SMALLDESC" ColumnName="TL_SMALLDESC" />
+                <ScalarProperty Name="TL_Deleted" ColumnName="TL_Deleted" />
+                <ScalarProperty Name="TL_LEADDEPARTMENT" ColumnName="TL_LEADDEPARTMENT" />
+                <ScalarProperty Name="TL_NameLat" ColumnName="TL_NameLat" />
+                <ScalarProperty Name="TL_CTDepartureKey" ColumnName="TL_CTDepartureKey" />
+                <ScalarProperty Name="tl_webHttpPers" ColumnName="tl_webHttpPers" />
+                <ScalarProperty Name="TL_Attribute" ColumnName="TL_Attribute" />
+                <ScalarProperty Name="TL_CalculationAction" ColumnName="TL_CalculationAction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TurDates">
+            <EntityTypeMapping TypeName="AvalonModel.TurDate">
+              <MappingFragment StoreEntitySet="TurDate">
+                <ScalarProperty Name="TD_TRKEY" ColumnName="TD_TRKEY" />
+                <ScalarProperty Name="TD_DATE" ColumnName="TD_DATE" />
+                <ScalarProperty Name="TD_Id" ColumnName="TD_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TurServices">
+            <EntityTypeMapping TypeName="AvalonModel.TurService">
+              <MappingFragment StoreEntitySet="TurService">
+                <ScalarProperty Name="TS_TRKEY" ColumnName="TS_TRKEY" />
+                <ScalarProperty Name="TS_SVKEY" ColumnName="TS_SVKEY" />
+                <ScalarProperty Name="TS_PKKEY" ColumnName="TS_PKKEY" />
+                <ScalarProperty Name="TS_NAME" ColumnName="TS_NAME" />
+                <ScalarProperty Name="TS_DAY" ColumnName="TS_DAY" />
+                <ScalarProperty Name="TS_CODE" ColumnName="TS_CODE" />
+                <ScalarProperty Name="TS_SUBCODE1" ColumnName="TS_SUBCODE1" />
+                <ScalarProperty Name="TS_SUBCODE2" ColumnName="TS_SUBCODE2" />
+                <ScalarProperty Name="TS_NDAYS" ColumnName="TS_NDAYS" />
+                <ScalarProperty Name="TS_CNKEY" ColumnName="TS_CNKEY" />
+                <ScalarProperty Name="TS_CTKEY" ColumnName="TS_CTKEY" />
+                <ScalarProperty Name="TS_PARTNERKEY" ColumnName="TS_PARTNERKEY" />
+                <ScalarProperty Name="TS_COST" ColumnName="TS_COST" />
+                <ScalarProperty Name="TS_PROFIT" ColumnName="TS_PROFIT" />
+                <ScalarProperty Name="TS_TIMEBEG" ColumnName="TS_TIMEBEG" />
+                <ScalarProperty Name="TS_ATTRIBUTE" ColumnName="TS_ATTRIBUTE" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="TS_Key" ColumnName="TS_Key" />
+                <ScalarProperty Name="TS_NameLat" ColumnName="TS_NameLat" />
+                <ScalarProperty Name="TS_PRTDOGKEY" ColumnName="TS_PRTDOGKEY" />
+                <ScalarProperty Name="TS_TAXZONEID" ColumnName="TS_TAXZONEID" />
+                <ScalarProperty Name="TS_WebAttribute" ColumnName="TS_WebAttribute" />
+                <ScalarProperty Name="TS_Wait" ColumnName="TS_Wait" />
+                <ScalarProperty Name="TS_TRFId" ColumnName="TS_TRFId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetServiceCost" FunctionName="AvalonModel.Store.GetServiceCost" />
+          <FunctionImportMapping FunctionImportName="InsDogList" FunctionName="AvalonModel.Store.InsDogList" />
+          <FunctionImportMapping FunctionImportName="InsDogovor" FunctionName="AvalonModel.Store.InsDogovor" />
+          <FunctionImportMapping FunctionImportName="MakePutName" FunctionName="AvalonModel.Store.MakePutName" />
+          <EntitySetMapping Name="TipTurs">
+            <EntityTypeMapping TypeName="AvalonModel.TipTur">
+              <MappingFragment StoreEntitySet="TipTur">
+                <ScalarProperty Name="TP_Order" ColumnName="TP_Order" />
+                <ScalarProperty Name="TP_NameLat" ColumnName="TP_NameLat" />
+                <ScalarProperty Name="TP_TPKEY" ColumnName="TP_TPKEY" />
+                <ScalarProperty Name="TP_NAME" ColumnName="TP_NAME" />
+                <ScalarProperty Name="TP_KEY" ColumnName="TP_KEY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Country">
+            <EntityTypeMapping TypeName="AvalonModel.tbl_Country">
+              <MappingFragment StoreEntitySet="tbl_Country">
+                <ScalarProperty Name="CN_PassportMinDurCheckFrom" ColumnName="CN_PassportMinDurCheckFrom" />
+                <ScalarProperty Name="CN_RateKey" ColumnName="CN_RateKey" />
+                <ScalarProperty Name="CN_PassportMinDur" ColumnName="CN_PassportMinDur" />
+                <ScalarProperty Name="CN_CheckINN" ColumnName="CN_CheckINN" />
+                <ScalarProperty Name="CN_INNName" ColumnName="CN_INNName" />
+                <ScalarProperty Name="CN_CitizenNameLat" ColumnName="CN_CitizenNameLat" />
+                <ScalarProperty Name="CN_CitizenName" ColumnName="CN_CitizenName" />
+                <ScalarProperty Name="CN_Order" ColumnName="CN_Order" />
+                <ScalarProperty Name="CN_NameAC" ColumnName="CN_NameAC" />
+                <ScalarProperty Name="CN_COKey" ColumnName="CN_COKey" />
+                <ScalarProperty Name="CN_SMALLDESC" ColumnName="CN_SMALLDESC" />
+                <ScalarProperty Name="CN_Updatedate" ColumnName="CN_Updatedate" />
+                <ScalarProperty Name="CN_StdKey" ColumnName="CN_StdKey" />
+                <ScalarProperty Name="CN_AnkLang" ColumnName="CN_AnkLang" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="CN_CODE" ColumnName="CN_CODE" />
+                <ScalarProperty Name="CN_WEBHTTP" ColumnName="CN_WEBHTTP" />
+                <ScalarProperty Name="CN_WEBIMAGE" ColumnName="CN_WEBIMAGE" />
+                <ScalarProperty Name="CN_WEB" ColumnName="CN_WEB" />
+                <ScalarProperty Name="CN_FRAME" ColumnName="CN_FRAME" />
+                <ScalarProperty Name="CN_NAMELAT" ColumnName="CN_NAMELAT" />
+                <ScalarProperty Name="CN_NAME" ColumnName="CN_NAME" />
+                <ScalarProperty Name="CN_KEY" ColumnName="CN_KEY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vehicles">
+            <EntityTypeMapping TypeName="AvalonModel.Vehicle">
+              <MappingFragment StoreEntitySet="Vehicle">
+                <ScalarProperty Name="VH_TITLE" ColumnName="VH_TITLE" />
+                <ScalarProperty Name="VH_NUMOFAREA" ColumnName="VH_NUMOFAREA" />
+                <ScalarProperty Name="VH_NUMOFROW" ColumnName="VH_NUMOFROW" />
+                <ScalarProperty Name="VH_NUMOFCOLUMN" ColumnName="VH_NUMOFCOLUMN" />
+                <ScalarProperty Name="VH_SVKEY" ColumnName="VH_SVKEY" />
+                <ScalarProperty Name="VH_HOSTKEY" ColumnName="VH_HOSTKEY" />
+                <ScalarProperty Name="VH_KEY" ColumnName="VH_KEY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehiclePlans">
+            <EntityTypeMapping TypeName="AvalonModel.VehiclePlan">
+              <MappingFragment StoreEntitySet="VehiclePlan">
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="VP_SEATMEN12" ColumnName="VP_SEATMEN12" />
+                <ScalarProperty Name="VP_SEATMEN11" ColumnName="VP_SEATMEN11" />
+                <ScalarProperty Name="VP_SEATMEN10" ColumnName="VP_SEATMEN10" />
+                <ScalarProperty Name="VP_SEATMEN9" ColumnName="VP_SEATMEN9" />
+                <ScalarProperty Name="VP_SEATMEN8" ColumnName="VP_SEATMEN8" />
+                <ScalarProperty Name="VP_SEATMEN7" ColumnName="VP_SEATMEN7" />
+                <ScalarProperty Name="VP_SEATMEN6" ColumnName="VP_SEATMEN6" />
+                <ScalarProperty Name="VP_SEATMEN5" ColumnName="VP_SEATMEN5" />
+                <ScalarProperty Name="VP_SEATMEN4" ColumnName="VP_SEATMEN4" />
+                <ScalarProperty Name="VP_SEATMEN3" ColumnName="VP_SEATMEN3" />
+                <ScalarProperty Name="VP_SEATMEN2" ColumnName="VP_SEATMEN2" />
+                <ScalarProperty Name="VP_SEATMEN1" ColumnName="VP_SEATMEN1" />
+                <ScalarProperty Name="VP_SEATTYPE12" ColumnName="VP_SEATTYPE12" />
+                <ScalarProperty Name="VP_SEATTYPE11" ColumnName="VP_SEATTYPE11" />
+                <ScalarProperty Name="VP_SEATTYPE10" ColumnName="VP_SEATTYPE10" />
+                <ScalarProperty Name="VP_SEATTYPE9" ColumnName="VP_SEATTYPE9" />
+                <ScalarProperty Name="VP_SEATTYPE8" ColumnName="VP_SEATTYPE8" />
+                <ScalarProperty Name="VP_SEATTYPE7" ColumnName="VP_SEATTYPE7" />
+                <ScalarProperty Name="VP_SEATTYPE6" ColumnName="VP_SEATTYPE6" />
+                <ScalarProperty Name="VP_SEATTYPE5" ColumnName="VP_SEATTYPE5" />
+                <ScalarProperty Name="VP_SEATTYPE4" ColumnName="VP_SEATTYPE4" />
+                <ScalarProperty Name="VP_SEATTYPE3" ColumnName="VP_SEATTYPE3" />
+                <ScalarProperty Name="VP_SEATTYPE2" ColumnName="VP_SEATTYPE2" />
+                <ScalarProperty Name="VP_SEATTYPE1" ColumnName="VP_SEATTYPE1" />
+                <ScalarProperty Name="VP_SEATNUMBER12" ColumnName="VP_SEATNUMBER12" />
+                <ScalarProperty Name="VP_SEATNUMBER11" ColumnName="VP_SEATNUMBER11" />
+                <ScalarProperty Name="VP_SEATNUMBER10" ColumnName="VP_SEATNUMBER10" />
+                <ScalarProperty Name="VP_SEATNUMBER9" ColumnName="VP_SEATNUMBER9" />
+                <ScalarProperty Name="VP_SEATNUMBER8" ColumnName="VP_SEATNUMBER8" />
+                <ScalarProperty Name="VP_SEATNUMBER7" ColumnName="VP_SEATNUMBER7" />
+                <ScalarProperty Name="VP_SEATNUMBER6" ColumnName="VP_SEATNUMBER6" />
+                <ScalarProperty Name="VP_SEATNUMBER5" ColumnName="VP_SEATNUMBER5" />
+                <ScalarProperty Name="VP_SEATNUMBER4" ColumnName="VP_SEATNUMBER4" />
+                <ScalarProperty Name="VP_SEATNUMBER3" ColumnName="VP_SEATNUMBER3" />
+                <ScalarProperty Name="VP_SEATNUMBER2" ColumnName="VP_SEATNUMBER2" />
+                <ScalarProperty Name="VP_SEATNUMBER1" ColumnName="VP_SEATNUMBER1" />
+                <ScalarProperty Name="VP_VHAREANUMBER" ColumnName="VP_VHAREANUMBER" />
+                <ScalarProperty Name="VP_VHROW" ColumnName="VP_VHROW" />
+                <ScalarProperty Name="VP_VHKEY" ColumnName="VP_VHKEY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotelDictionaries">
+            <EntityTypeMapping TypeName="AvalonModel.HotelDictionary">
+              <MappingFragment StoreEntitySet="HotelDictionary">
+                <ScalarProperty Name="HD_HTTPAdditional" ColumnName="HD_HTTPAdditional" />
+                <ScalarProperty Name="hd_rank" ColumnName="hd_rank" />
+                <ScalarProperty Name="HD_PayHourNote" ColumnName="HD_PayHourNote" />
+                <ScalarProperty Name="HD_Travel" ColumnName="HD_Travel" />
+                <ScalarProperty Name="HD_PayHour2" ColumnName="HD_PayHour2" />
+                <ScalarProperty Name="HD_PayHour1" ColumnName="HD_PayHour1" />
+                <ScalarProperty Name="HD_NAMELAT" ColumnName="HD_NAMELAT" />
+                <ScalarProperty Name="HD_COHId" ColumnName="HD_COHId" />
+                <ScalarProperty Name="HD_IsCruise" ColumnName="HD_IsCruise" />
+                <ScalarProperty Name="HD_Order" ColumnName="HD_Order" />
+                <ScalarProperty Name="HD_UPDATEDATE" ColumnName="HD_UPDATEDATE" />
+                <ScalarProperty Name="HD_UNICODE" ColumnName="HD_UNICODE" />
+                <ScalarProperty Name="HD_StdKey" ColumnName="HD_StdKey" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="HD_REMARK8" ColumnName="HD_REMARK8" />
+                <ScalarProperty Name="HD_REMARK7" ColumnName="HD_REMARK7" />
+                <ScalarProperty Name="HD_REMARK6" ColumnName="HD_REMARK6" />
+                <ScalarProperty Name="HD_REMARK5" ColumnName="HD_REMARK5" />
+                <ScalarProperty Name="HD_REMARK4" ColumnName="HD_REMARK4" />
+                <ScalarProperty Name="HD_REMARK3" ColumnName="HD_REMARK3" />
+                <ScalarProperty Name="HD_REMARK2" ColumnName="HD_REMARK2" />
+                <ScalarProperty Name="HD_REMARK1" ColumnName="HD_REMARK1" />
+                <ScalarProperty Name="HD_REMARK" ColumnName="HD_REMARK" />
+                <ScalarProperty Name="HD_WEBIMAGE8" ColumnName="HD_WEBIMAGE8" />
+                <ScalarProperty Name="HD_WEBIMAGE7" ColumnName="HD_WEBIMAGE7" />
+                <ScalarProperty Name="HD_WEBIMAGE6" ColumnName="HD_WEBIMAGE6" />
+                <ScalarProperty Name="HD_WEBIMAGE5" ColumnName="HD_WEBIMAGE5" />
+                <ScalarProperty Name="HD_WEBIMAGE4" ColumnName="HD_WEBIMAGE4" />
+                <ScalarProperty Name="HD_WEBIMAGE3" ColumnName="HD_WEBIMAGE3" />
+                <ScalarProperty Name="HD_WEBIMAGE2" ColumnName="HD_WEBIMAGE2" />
+                <ScalarProperty Name="HD_WEBIMAGE1" ColumnName="HD_WEBIMAGE1" />
+                <ScalarProperty Name="HD_WEBIMAGE" ColumnName="HD_WEBIMAGE" />
+                <ScalarProperty Name="HD_DESCRAZVL" ColumnName="HD_DESCRAZVL" />
+                <ScalarProperty Name="HD_WEB" ColumnName="HD_WEB" />
+                <ScalarProperty Name="HD_DISTANCE" ColumnName="HD_DISTANCE" />
+                <ScalarProperty Name="HD_DESCHEALTH" ColumnName="HD_DESCHEALTH" />
+                <ScalarProperty Name="HD_DESCEXCUR" ColumnName="HD_DESCEXCUR" />
+                <ScalarProperty Name="HD_DESCSPORT" ColumnName="HD_DESCSPORT" />
+                <ScalarProperty Name="HD_DESCSERVICE" ColumnName="HD_DESCSERVICE" />
+                <ScalarProperty Name="HD_DESCMEAL" ColumnName="HD_DESCMEAL" />
+                <ScalarProperty Name="HD_DESCROOM" ColumnName="HD_DESCROOM" />
+                <ScalarProperty Name="HD_HTTP" ColumnName="HD_HTTP" />
+                <ScalarProperty Name="HD_EMAIL" ColumnName="HD_EMAIL" />
+                <ScalarProperty Name="HD_RSKEY" ColumnName="HD_RSKEY" />
+                <ScalarProperty Name="HD_CODE" ColumnName="HD_CODE" />
+                <ScalarProperty Name="HD_PERSONAPP" ColumnName="HD_PERSONAPP" />
+                <ScalarProperty Name="HD_PERSONNAME" ColumnName="HD_PERSONNAME" />
+                <ScalarProperty Name="HD_DESCRIPT" ColumnName="HD_DESCRIPT" />
+                <ScalarProperty Name="HD_SITE" ColumnName="HD_SITE" />
+                <ScalarProperty Name="HD_FAX" ColumnName="HD_FAX" />
+                <ScalarProperty Name="HD_PHONE" ColumnName="HD_PHONE" />
+                <ScalarProperty Name="HD_ADDRESS" ColumnName="HD_ADDRESS" />
+                <ScalarProperty Name="HD_STARS" ColumnName="HD_STARS" />
+                <ScalarProperty Name="HD_NAME" ColumnName="HD_NAME" />
+                <ScalarProperty Name="HD_KEY" ColumnName="HD_KEY" />
+                <ScalarProperty Name="HD_CTKEY" ColumnName="HD_CTKEY" />
+                <ScalarProperty Name="HD_CNKEY" ColumnName="HD_CNKEY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Turist">
+            <EntityTypeMapping TypeName="AvalonModel.tbl_Turist">
+              <MappingFragment StoreEntitySet="tbl_Turist">
+                <ScalarProperty Name="TU_InsuredEvent" ColumnName="TU_InsuredEvent" />
+                <ScalarProperty Name="TU_EnableSmsNotifications" ColumnName="TU_EnableSmsNotifications" />
+                <ScalarProperty Name="TU_EMAIL" ColumnName="TU_EMAIL" />
+                <ScalarProperty Name="TU_RealSex" ColumnName="TU_RealSex" />
+                <ScalarProperty Name="TU_DGKEY" ColumnName="TU_DGKEY" />
+                <ScalarProperty Name="TU_AgentID" ColumnName="TU_AgentID" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="TU_ISMAIN" ColumnName="TU_ISMAIN" />
+                <ScalarProperty Name="TU_ID" ColumnName="TU_ID" />
+                <ScalarProperty Name="TU_TYPEDISCOUNT" ColumnName="TU_TYPEDISCOUNT" />
+                <ScalarProperty Name="TU_DISCOUNT" ColumnName="TU_DISCOUNT" />
+                <ScalarProperty Name="TU_INSURSUM" ColumnName="TU_INSURSUM" />
+                <ScalarProperty Name="TU_INSURPOLIS" ColumnName="TU_INSURPOLIS" />
+                <ScalarProperty Name="TU_PASPRUBYWHOM" ColumnName="TU_PASPRUBYWHOM" />
+                <ScalarProperty Name="TU_PASPRUDATE" ColumnName="TU_PASPRUDATE" />
+                <ScalarProperty Name="TU_PASPRUNUM" ColumnName="TU_PASPRUNUM" />
+                <ScalarProperty Name="TU_PASPRUSER" ColumnName="TU_PASPRUSER" />
+                <ScalarProperty Name="TU_OWNER" ColumnName="TU_OWNER" />
+                <ScalarProperty Name="TU_CREATOR" ColumnName="TU_CREATOR" />
+                <ScalarProperty Name="TU_ISANKETA" ColumnName="TU_ISANKETA" />
+                <ScalarProperty Name="TU_PLACE" ColumnName="TU_PLACE" />
+                <ScalarProperty Name="TU_PASPORTBYWHOM" ColumnName="TU_PASPORTBYWHOM" />
+                <ScalarProperty Name="TU_PASPORTDATEEND" ColumnName="TU_PASPORTDATEEND" />
+                <ScalarProperty Name="TU_PASPORTDATE" ColumnName="TU_PASPORTDATE" />
+                <ScalarProperty Name="TU_PASPORTNUM" ColumnName="TU_PASPORTNUM" />
+                <ScalarProperty Name="TU_PASPORTTYPE" ColumnName="TU_PASPORTTYPE" />
+                <ScalarProperty Name="TU_PHONECODE" ColumnName="TU_PHONECODE" />
+                <ScalarProperty Name="TU_PHONE" ColumnName="TU_PHONE" />
+                <ScalarProperty Name="TU_POSTFLAT" ColumnName="TU_POSTFLAT" />
+                <ScalarProperty Name="TU_POSTBILD" ColumnName="TU_POSTBILD" />
+                <ScalarProperty Name="TU_POSTSTREET" ColumnName="TU_POSTSTREET" />
+                <ScalarProperty Name="TU_POSTCITY" ColumnName="TU_POSTCITY" />
+                <ScalarProperty Name="TU_POSTINDEX" ColumnName="TU_POSTINDEX" />
+                <ScalarProperty Name="TU_CITIZEN" ColumnName="TU_CITIZEN" />
+                <ScalarProperty Name="TU_BIRTHCITY" ColumnName="TU_BIRTHCITY" />
+                <ScalarProperty Name="TU_BIRTHCOUNTRY" ColumnName="TU_BIRTHCOUNTRY" />
+                <ScalarProperty Name="TU_BIRTHDAY" ColumnName="TU_BIRTHDAY" />
+                <ScalarProperty Name="TU_SNAMELAT" ColumnName="TU_SNAMELAT" />
+                <ScalarProperty Name="TU_SNAMERUS" ColumnName="TU_SNAMERUS" />
+                <ScalarProperty Name="TU_FNAMELAT" ColumnName="TU_FNAMELAT" />
+                <ScalarProperty Name="TU_FNAMERUS" ColumnName="TU_FNAMERUS" />
+                <ScalarProperty Name="TU_SEX" ColumnName="TU_SEX" />
+                <ScalarProperty Name="TU_SHORTNAME" ColumnName="TU_SHORTNAME" />
+                <ScalarProperty Name="TU_NAMELAT" ColumnName="TU_NAMELAT" />
+                <ScalarProperty Name="TU_NAMERUS" ColumnName="TU_NAMERUS" />
+                <ScalarProperty Name="TU_TURDATE" ColumnName="TU_TURDATE" />
+                <ScalarProperty Name="TU_KEY" ColumnName="TU_KEY" />
+                <ScalarProperty Name="TU_DGCOD" ColumnName="TU_DGCOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetNewKeys" FunctionName="AvalonModel.Store.GetNewKeys" />
+          <EntitySetMapping Name="TuristServices">
+            <EntityTypeMapping TypeName="AvalonModel.TuristService">
+              <MappingFragment StoreEntitySet="TuristService">
+                <ScalarProperty Name="TU_IDKEY" ColumnName="TU_IDKEY" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="TU_DOCDATE" ColumnName="TU_DOCDATE" />
+                <ScalarProperty Name="TU_AREA" ColumnName="TU_AREA" />
+                <ScalarProperty Name="TU_SEAT" ColumnName="TU_SEAT" />
+                <ScalarProperty Name="TU_NUMROOM" ColumnName="TU_NUMROOM" />
+                <ScalarProperty Name="TU_NUMDOC" ColumnName="TU_NUMDOC" />
+                <ScalarProperty Name="TU_DLKEY" ColumnName="TU_DLKEY" />
+                <ScalarProperty Name="TU_TUKEY" ColumnName="TU_TUKEY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="MakeFullSVName" FunctionName="AvalonModel.Store.MakeFullSVName" />
+          <EntitySetMapping Name="ExcurDictionaries">
+            <EntityTypeMapping TypeName="AvalonModel.ExcurDictionary">
+              <MappingFragment StoreEntitySet="ExcurDictionary">
+                <ScalarProperty Name="ED_ShowOrder" ColumnName="ED_ShowOrder" />
+                <ScalarProperty Name="ED_Url" ColumnName="ED_Url" />
+                <ScalarProperty Name="ED_StdKey" ColumnName="ED_StdKey" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="ED_COMMENT" ColumnName="ED_COMMENT" />
+                <ScalarProperty Name="ED_REMARK" ColumnName="ED_REMARK" />
+                <ScalarProperty Name="ED_PLACETO" ColumnName="ED_PLACETO" />
+                <ScalarProperty Name="ED_PLACEFROM" ColumnName="ED_PLACEFROM" />
+                <ScalarProperty Name="ED_TIME" ColumnName="ED_TIME" />
+                <ScalarProperty Name="ED_TIMEEND" ColumnName="ED_TIMEEND" />
+                <ScalarProperty Name="ED_TIMEBEG" ColumnName="ED_TIMEBEG" />
+                <ScalarProperty Name="ED_NAMELAT" ColumnName="ED_NAMELAT" />
+                <ScalarProperty Name="ED_NAME" ColumnName="ED_NAME" />
+                <ScalarProperty Name="ED_KEY" ColumnName="ED_KEY" />
+                <ScalarProperty Name="ED_CTKEY" ColumnName="ED_CTKEY" />
+                <ScalarProperty Name="ED_CNKEY" ColumnName="ED_CNKEY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

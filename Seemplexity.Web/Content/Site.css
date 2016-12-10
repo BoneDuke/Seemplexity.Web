@@ -1,0 +1,264 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+	/* background: white url(../Content/images/autobus.jpg) center top no-repeat fixed; */
+	background-color: white;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+	background-color: rgba(228, 231, 236, 0.65);
+	min-height:50px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+.clearer {
+    clear: both
+}
+
+/*.search-form div{
+    width: 380px;
+    float:left;
+}*/
+
+.result-table {
+    padding-top: 30px;
+    min-height: 50px;
+}
+
+.search-form {
+    font-size: large;
+}
+
+.result-table thead {
+    font-size: large;
+}
+
+.scheme-table td {
+    text-align: center;
+}
+
+.btn-scheme {
+    padding: 0px;
+}
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout-info h4 {
+    color: #1b809e;
+}
+
+.bs-callout-info h4 a {
+    font-weight: bold;
+}
+
+.bs-callout-info, .bs-callout-info h4 {
+    border-left-color: #1b809e;
+}
+
+.bs-callout-danger h4  {
+    color: #ce4844;
+}
+
+.bs-callout-danger {
+    border-left-color: #ce4844;
+}
+
+#dateFrom, #dateTo, #date {
+    background-color: white;
+}
+
+.lang-icon {
+    width: 28px;
+    height: 21px;
+    border: 0;
+}
+
+.flag p {
+    margin-left: 30px;
+}
+
+.search-form .checkbox {
+    margin-top: 0;
+}
+
+.search-form .checkbox label {
+    font-size: medium;
+    font-weight: normal;
+
+}
+
+.info-link {
+    font-size: large !important;
+    cursor: pointer;
+    padding-top: 8px;
+}
+
+.bus-description {
+    margin: 20px;
+}
+
+.bus-description dt {
+    width: 260px;
+}
+
+.bus-description dd {
+    margin-left: 280px;
+}
+
+.bus-description img  {
+    max-width: 800px;
+}
+
+.schemeItem {
+    width: 70px;
+    padding: 0px !important;
+}
+
+.schemeItemButton {
+    width: 70px;
+}
+
+/*---------------------------------*/
+		
+	
+.caption {
+    /*height: 130px; */
+	height:68px;
+    overflow: hidden;
+	margin: -53px 0 0 0;
+    position: absolute;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+.thumbnail h4 {
+    text-align: center;
+}
+.thumbnail img {
+    width: 100%;
+	cursor:pointer;
+	/*max-height:157px;*/
+}
+.thumbnail a {
+	cursor:pointer;
+}
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+
+.searchresults {
+cursor:pointer;
+}
+.searchresults a {
+color: red!important;
+}
+.searchresults span.rub {
+background-color: white;
+    padding: 2px 2px 6px 0;
+}
+
+
+        body {
+            padding-bottom: 0px;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #222;
+            border-color: #080808;
+            color: #9d9d9d;
+            padding-top: 40px;
+            padding-bottom: 30px;
+        }
+
+            footer a {
+                color: white;
+                padding: 0 10px 0px;
+            }
+
+            footer .container {
+                margin: 0 auto;
+            }
+
+        .wtih_top10 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+   
+	.bury {
+    position: relative;
+    width: 100%;
+    margin: -72px 0 0 0;
+    padding: 80px 0 0 0;
+    box-shadow: inset 0 -275px 300px -300px #000;
+    background-image: url(https://d1veuho0pmz1bg.cloudfront.net/assets/final/bg/3-ac5b172bc9a9e652ef6358a61fd3a5c3.jpg);
+    background-color: transparent;
+    background-position: center bottom;
+    background-size: cover;
+	height:auto; 
+	}
+		
+	
+.bury_title {
+    position: relative;
+    z-index: 0;
+     margin:90px auto;
+    color: #FFF;
+    text-shadow: 1px 1px 10px #333;
+    text-align: center;
+}
+
+.rwx-10 {
+margin-top:10px;
+}
+
+
+.expo-table h4 {
+font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #000000;
+    text-align: center !important;
+	}
+/*---------------------------------*/
+
+.UploadTouristsListFileForm {
+    padding-bottom: 20px;
+}
+
+.UploadTouristsListFileForm input[type="file"] {
+    display: inline;
+}
+
+.chosen-select {
+    width: 100%;
+}

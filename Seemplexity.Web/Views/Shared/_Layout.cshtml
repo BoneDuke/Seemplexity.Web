@@ -1,0 +1,79 @@
+﻿@using System.Threading
+@using Seemplexity.Resources
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @Scripts.Render("~/Scripts/Pages/Lang.js")
+
+    @RenderSection("head", false)
+
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @if (Request.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("AdminPartners")))
+                    {
+                        <li>@Html.ActionLink(Resources.Admin, "Index", "Admin")</li>
+                    }
+                    <li>@Html.ActionLink(Resources.Search, "Index", "Bus")</li>
+                    @*<li><a href="#" type="button" data-toggle="modal" data-target="#HowToPay" data-modal-div="HowToPay">@Resources.HowToPay</a></li>*@
+                    <li>@Html.ActionLink(Resources.Directions, "Directions", "Info")</li>
+                   <!-- <li>@Html.ActionLink(Resources.News, "News", "Info")</li>-->
+                    <li>@Html.ActionLink(Resources.Contacts, "Contacts", "Info")</li> 
+                    <li>@Html.ActionLink(Resources.Buses, "BusDescriptions", "Bus")</li>
+                    <li>@Html.ActionLink(Resources.ToPartners, "ToPartners", "Info")</li>
+                    <!--<li>@Html.ActionLink(Resources.HowToUse, "HowToUse", "Info")</li> -->
+                </ul>
+
+
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <!--<div class="container body-content"> -->
+	<div class="bury">
+<h1 class="bury_title">@ViewBag.Title</h1>
+        @RenderBody()
+        <hr/>
+
+     <!--   @Html.Partial("_BusInfo_" + Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName)
+
+      <!--  <footer> -->
+            @Html.Partial("_HowToPay_" + Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName)
+            @Html.Partial("_PayInfoFooter_" + Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName)
+
+        <!--</footer>-->
+    </div> 
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

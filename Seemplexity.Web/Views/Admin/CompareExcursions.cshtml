@@ -1,0 +1,95 @@
+﻿@model Seemplexity.Web.Models.Admin.CompareExcursionsViewModel
+
+@{
+    ViewBag.Title = "Сопоставьте отели";
+    Layout = "_Layout.cshtml";
+}
+
+<h2>Сопоставьте экскурсии</h2>
+
+@using (Html.BeginForm("CompareExcursions", "Admin", FormMethod.Post))
+{
+    <div style="padding-bottom: 10px;">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <td>Экскурсия</td>
+                <td>Экскурсия из Мастер-Тура</td>
+            </tr>
+            </thead>
+            <tbody>
+            @for (var i = 0; i < Model.CompareExcursionsModel.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="hidden" name="@($"compareExcursions[{i}].ExcursionName")" value="@Model.CompareExcursionsModel[i].ExcursionName" />
+                        @Model.CompareExcursionsModel[i].ExcursionName
+                    </td>
+                    <td>
+                        <select class="chosen-select" name="@($"compareExcursions[{i}].AvalonExcursionKey")">
+                            <option value="-1">Не найден</option>
+                            @foreach (var excursion in @Model.Excursions)
+                            {
+                                if (excursion.Id == Model.CompareExcursionsModel[i].AvalonExcursionKey)
+                                {
+                                    <option value="@excursion.Id" selected="selected">@($"{excursion.Name} / {excursion.NameLat}")</option>
+                                }
+                                else
+                                {
+                                    <option value="@excursion.Id">@($"{excursion.Name} / {excursion.NameLat}")</option>
+                                }
+                            }
+                        </select>
+                    </td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Отель</td>
+                    <td>Отель из Мастер-Тура</td>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var i = 0; i < Model.CompareHotelsModel.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <input type="hidden" name="@($"compareHotels[{i}].HotelName")" value="@Model.CompareHotelsModel[i].HotelName" />
+                            @Model.CompareHotelsModel[i].HotelName
+                        </td>
+                        <td>
+                            <select class="chosen-select" name="@($"compareHotels[{i}].AvalonHotelKey")">
+                                <option value="-1">Не найден</option>
+                                @foreach (var hotel in @Model.Hotels)
+                                {
+                                    if (hotel.Id == Model.CompareHotelsModel[i].AvalonHotelKey)
+                                    {
+                                        <option value="@hotel.Id" selected="selected">@($"{hotel.Name} / {hotel.NameLat}")</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@hotel.Id">@($"{hotel.Name} / {hotel.NameLat}")</option>
+                                    }
+                                }
+                            </select>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+        <input type="hidden" name="ExcelFilePath" value="@Model.ExcelFilePath" />
+        <input type="button" value="Сопоставить" class="btn btn-success js-submit-with-validation" />
+    </div>
+                    }
+
+@section Scripts {
+    @Scripts.Render("~/scripts/pages/admin/CompareExcursions.js")
+}

@@ -1,0 +1,26 @@
+﻿@using Seemplexity.Resources
+
+@{
+    ViewBag.Title = @Resources.UploadTouristsListFile;
+    Layout = "_Layout.cshtml";
+}
+
+
+
+@if (!string.IsNullOrEmpty(ViewBag.DgCodes))
+{
+    <h4>
+        Были созданы путевки с номерами: <strong>@ViewBag.DgCodes</strong>
+    </h4>
+       
+}
+
+<h4>Загрузите файл расширением xls</h4>
+
+<div class="UploadTouristsListFileForm">
+    @using (Html.BeginForm("UploadExcursionFile", "Admin", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        <input type="file" name="file"/>
+        <input type="submit" value="@Resources.Save" class="btn btn-success"/>
+    }
+</div>

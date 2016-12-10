@@ -1,0 +1,54 @@
+﻿@model Seemplexity.Common.Excel.TouristExcursionRow
+
+<tr>
+    <td>
+
+        @Model.Date.ToString("dd.MM.yyyy")
+
+        <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}].Date")" value="@Model.Date" />
+        <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}].HotelName")" value="@Model.HotelName"/>
+        <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}].ExcursionName")" value="@Model.ExcursionName"/>
+
+        @for (int i = 0; i < Model.Tourists.Count; i++)
+        {
+            <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}].Tourists[{i}].Name")" value="@Model.Tourists[i].Name"/>
+            <input type="hidden" name="@($"ExcelModel.Tourists[{ViewBag.index1}].Tourists[{i}].Surname")" value="@Model.Tourists[i].Surname"/>
+        }
+
+    </td>
+    <td>@(string.Join(",", Model.Tourists.Select(t => $"{t.Name} {t.Surname}").ToList()))</td>
+    <td>@Model.HotelName</td>
+    <td>
+        <select class="chosen-select" name="@($"ExcelModel.Tourists[{ViewBag.index1}].AvalonHotelKey")" style="width: 300px;">
+            <option value="-1">Не найден</option>
+            @foreach (var hotel in @ViewBag.hotels)
+            {
+                if (hotel.Id == Model.AvalonHotelKey)
+                {
+                    <option value="@hotel.Id" selected="selected">@string.Format("{0} / {1}", hotel.Name, hotel.NameLat)</option>
+                }
+                else
+                {
+                    <option value="@hotel.Id">@string.Format("{0} / {1}", hotel.Name, hotel.NameLat)</option>
+                }
+            }
+        </select>
+    </td>
+    <td>@Model.ExcursionName</td>
+    <td>
+        <select class="chosen-select" name="@($"ExcelModel.Tourists[{ViewBag.index1}].AvalonExcursionKey")" style="width: 300px;">
+            <option value="-1">Не найден</option>
+            @foreach (var excursion in @ViewBag.excursions)
+            {
+                if (excursion.Id == Model.AvalonExcursionKey)
+                {
+                    <option value="@excursion.Id" selected="selected">@string.Format("{0} / {1}", excursion.Name, excursion.NameLat)</option>
+                }
+                else
+                {
+                    <option value="@excursion.Id">@string.Format("{0} / {1}", excursion.Name, excursion.NameLat)</option>
+                }
+            }
+        </select>
+    </td>
+</tr>

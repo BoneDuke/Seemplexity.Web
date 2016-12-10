@@ -1,0 +1,79 @@
+﻿@model Seemplexity.BusinesLogic.Model.BusSchemeFloorDescription
+
+<div class="row js-floor-number">
+    <div class="col-md-12">
+
+        <input type="hidden" name="@($"FloorDescriptions[{Model.FloorNumber - 1}].FloorNumber")" value="@Model.FloorNumber" />
+        <input type="hidden" name="@($"FloorDescriptions[{Model.FloorNumber - 1}].RowsCount")" value="@Model.RowsCount" id="rowsCount-@Model.FloorNumber" />
+        <input type="hidden" name="@($"FloorDescriptions[{Model.FloorNumber - 1}].ColumnsCount")" value="@Model.ColumnsCount" id="columnsCount-@Model.FloorNumber" />
+
+        <h4>Этаж @Model.FloorNumber</h4>
+        <table class="table table-bordered scheme-table js-transport-scheme-table" style="width: 10px;">
+            @{
+                var counter = -1;
+            }
+            @for (var row = -1; row < 15; row++)
+            {
+                <tr>
+                    @for (var col = -1; col < 10; col++)
+                    {
+                        <td class="schemeItem">
+                            @if (row == -1 && col == -1)
+                            {
+                                <span>&nbsp;</span>
+                            }
+                            else if (row < 0 || col < 0)
+                            {
+                                if (col >= 0)
+                                {
+                                    <a class="button btn btn-default schemeItemButton js-update-bus-scheme"
+                                       data-column="@(col + 1)"
+                                       data-floor-number="@Model.FloorNumber"
+                                       data-description-id="@Model.BusDescription.Id">@(col + 1)</a>
+                                }
+                                else
+                                {
+                                    <a class="button btn btn-default schemeItemButton js-update-bus-scheme"
+                                       data-row="@(row + 1)"
+                                       data-floor-number="@Model.FloorNumber"
+                                       data-description-id="@Model.BusDescription.Id">@(row + 1)</a>
+                                }
+                            }
+                            else
+                            {
+                                var item = Model.Items.SingleOrDefault(it => it.ColNumber == col && it.RowNumber == row);
+                                if (item != null)
+                                {
+                                    counter++;
+                                    var btnClass = item.IsUsable ? "btn-success" : "btn-default";
+
+                                    <input type="text" value="@item.Value"
+                                           name="@($"FloorDescriptions[{Model.FloorNumber - 1}].Items[{counter}].Value")"
+                                           class="btn @btnClass schemeItemButton js-bus-scheme-item"
+                                           data-floor-number="@Model.FloorNumber"
+                                           data-row-number="@row"
+                                           data-column-number="@col"
+                                           data-counter="@counter" />
+
+                                     <input type="hidden" id="@($"FloorDescriptions_{Model.FloorNumber}_Items_{counter}_IsUsable")" name="@($"FloorDescriptions[{Model.FloorNumber - 1}].Items[{counter}].IsUsable")" value="@(item.IsUsable.ToString())">
+
+                                     <input id="@($"Items_{Model.FloorNumber}_{counter}_ColNumber")" name="@($"FloorDescriptions[{Model.FloorNumber - 1}].Items[{counter}].ColNumber")" type="hidden" value="@item.ColNumber">
+                                     <input id="@($"Items_{Model.FloorNumber}_{counter}_RowNumber")" name="@($"FloorDescriptions[{Model.FloorNumber - 1}].Items[{counter}].RowNumber")" type="hidden" value="@item.RowNumber">
+                                }
+                                else
+                                {
+                                    <span>&nbsp;</span>
+                                }
+                            }
+                        </td>
+                    }
+                </tr>
+            }
+
+        </table>
+
+
+        @*<input type="text" name="@($"FloorDescriptions[{Model.FloorNumber}].Description")" style="width: 150px;" />*@
+
+    </div>
+</div>
